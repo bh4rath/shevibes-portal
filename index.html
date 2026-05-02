@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SheVibes — Cohort 0</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=M+PLUS+1:wght@400;500;600;700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'M PLUS 1', sans-serif;
+}
+
+h1, h2 {
+  font-family: 'Carter One', cursive;
+}
+
+:root {
+  --bg:         #111013;
+  --sidebar-bg: #1C1A1F;
+  --active-bg:  rgba(245,197,24,0.08);
+  --accent:     #F5C518;
+  --green:      #4CAF50;
+  --card-bg:    #1C1A1F;
+  --text:       #EDE8DA;
+  --muted:      rgba(237,232,218,0.70);
+  --border:     rgba(255,255,255,0.08);
+  --cream:      #F5EDDA;
+  --cream-text: #3D3425;
+  --sidebar-w:  230px;
+  --nav-h:      60px;
+}
+
+html, body {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'M PLUS 1', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+button { font-family: 'M PLUS 1', sans-serif; }
+
+/* ─── SIDEBAR ─── */
+#sidebar {
+  position: fixed;
+  top: 0; left: 0;
+  width: var(--sidebar-w);
+  height: 100vh;
+  background: var(--sidebar-bg);
+  border-right: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  flex-direction: column;
+  z-index: 300;
+  transition: transform .24s ease;
+}
+
+.sb-top {
+  padding: 20px 16px 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.pifo-logo {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 16px;
+}
+.pifo-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+.pifo-wordmark {
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: .4px;
+  color: var(--text);
+}
+
+.sb-back {
+  font-size: 12px;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: color .15s;
+  width: fit-content;
+}
+.sb-back:hover { color: var(--text); }
+
+.sb-title { font-weight: 700; font-size: 15px; color: var(--text); line-height: 1.25; }
+.sb-sub   { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+.sb-nav { flex: 1; padding: 8px 0; overflow-y: auto; }
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'M PLUS 1', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  padding: 10px 16px;
+  cursor: pointer;
+  border-left: 3px solid transparent;
+  border-radius: 6px;
+  margin: 2px 8px;
+  transition: background .15s, color .15s;
+  user-select: none;
+}
+.nav-item:hover { background: rgba(255,255,255,.04); }
+.nav-item.active {
+  background: var(--active-bg);
+  color: var(--accent);
+  border-left-color: var(--accent);
+  padding-left: 13px;
+}
+
+.nav-icon { font-size: 15px; width: 20px; text-align: center; flex-shrink: 0; }
+.nav-label { flex: 1; }
+.nav-badge {
+  background: var(--accent);
+  color: #000;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 7px;
+  border-radius: 20px;
+  line-height: 16px;
+}
+
+.sb-streak {
+  padding: 14px 16px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.streak-icon { font-size: 20px; }
+.streak-num  { font-size: 22px; font-weight: 700; color: var(--accent); line-height: 1; }
+.streak-lbl  { font-size: 10px; color: var(--muted); letter-spacing: .9px; text-transform: uppercase; margin-top: 1px; }
+
+/* ─── OVERLAY (mobile) ─── */
+#overlay {
+  display: none;
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,.65);
+  z-index: 200;
+}
+#overlay.show { display: block; }
+
+/* ─── NAVBAR ─── */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: var(--sidebar-w);
+  right: 0;
+  height: var(--nav-h);
+  background: var(--sidebar-bg);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 26px;
+  z-index: 100;
+}
+
+.nb-left  { display: flex; align-items: center; gap: 8px; }
+.nb-right { display: flex; align-items: center; gap: 14px; }
+
+.nb-logo  { font-weight: 700; font-size: 16px; color: var(--text); }
+
+#hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 6px;
+  line-height: 1;
+}
+
+.theme-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: color .15s;
+}
+.theme-btn:hover { color: var(--accent); }
+
+.user-name { font-size: 13px; color: var(--muted); font-weight: 500; }
+.avatar {
+  width: 33px; height: 33px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #000;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ─── MAIN ─── */
+#main {
+  margin-left: var(--sidebar-w);
+  margin-top: var(--nav-h);
+  padding: 40px;
+  min-height: calc(100vh - var(--nav-h));
+  background: var(--bg);
+}
+
+/* ─── DAY NAV BAR ─── */
+.day-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 34px;
+  flex-wrap: wrap;
+}
+
+.day-arrow {
+  width: 33px; height: 33px;
+  border-radius: 6px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 14px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  transition: background .15s;
+  flex-shrink: 0;
+}
+.day-arrow:hover { background: rgba(255,255,255,.06); }
+
+.day-pill {
+  padding: 6px 15px;
+  border-radius: 22px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  cursor: pointer;
+  border: none;
+  transition: background .15s, color .15s;
+  white-space: nowrap;
+}
+.day-pill.current  { background: var(--accent); color: #000; }
+.day-pill.other    { background: var(--card-bg); color: var(--muted); border: 1px solid var(--border); }
+.day-pill.other:hover { background: rgba(255,255,255,.06); color: var(--text); }
+
+/* ─── SECTIONS ─── */
+.page { display: none; max-width: 720px; }
+.page.show { display: block; animation: fadeUp .2s ease; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── HOME ─── */
+.home-done-row {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--green);
+  letter-spacing: .4px;
+  margin-bottom: 18px;
+  display: flex; align-items: center; gap: 7px;
+}
+
+.home-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 34px 32px;
+  max-width: 500px;
+  cursor: pointer;
+  transition: border-color .15s;
+}
+.home-card:hover { border-color: rgba(255,255,255,0.16); }
+
+.home-check {
+  width: 62px; height: 62px;
+  border-radius: 12px;
+  background: var(--green);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 30px;
+  margin-bottom: 22px;
+}
+
+.home-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 9px;
+}
+
+.home-sub {
+  font-size: 13.5px;
+  color: var(--muted);
+  line-height: 1.55;
+  margin-bottom: 18px;
+}
+
+.home-badge {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--green);
+}
+
+/* ─── PAGE HEADERS ─── */
+.page-title {
+  font-family: 'Carter One', cursive;
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.page-title.upright { color: var(--text); }
+.page-sub {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+/* ─── PROGRESS ─── */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 14px;
+  margin-bottom: 34px;
+}
+.stat-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 22px 16px 18px;
+  text-align: center;
+}
+.stat-num   { font-size: 34px; font-weight: 700; color: var(--accent); line-height: 1; margin-bottom: 7px; }
+.stat-label { font-size: 11px; font-weight: 600; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; }
+
+.prog-heading {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.day-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 36px);
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.dcircle {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .1s;
+}
+.dcircle:hover { transform: scale(1.1); }
+.dcircle.done     { background: var(--green); color: #fff; }
+.dcircle.today    { background: var(--green); color: #fff; outline: 2.5px solid var(--accent); outline-offset: 2px; }
+.dcircle.upcoming { background: transparent; border: 2px solid rgba(255,255,255,0.12); color: rgba(255,255,255,0.15); cursor: default; }
+.dcircle.upcoming:hover { transform: none; }
+
+.legend {
+  display: flex; gap: 20px; flex-wrap: wrap;
+}
+.leg-item {
+  display: flex; align-items: center; gap: 7px;
+  font-size: 12px; color: var(--muted);
+}
+.leg-dot {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ─── REFLECTIONS ─── */
+.ref-list { display: flex; flex-direction: column; gap: 11px; }
+
+.ref-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.ref-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  cursor: pointer;
+  transition: background .15s;
+}
+.ref-header:hover { background: rgba(255,255,255,.025); }
+
+.ref-meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.ref-day  { font-size: 11px; font-weight: 700; color: var(--accent); letter-spacing: .8px; text-transform: uppercase; }
+.ref-name { font-size: 13.5px; color: var(--muted); }
+.ref-date { font-size: 11px; color: var(--muted); opacity: 0.7; }
+.ref-open { font-size: 12.5px; color: var(--accent); font-weight: 500; white-space: nowrap; }
+
+.ref-body { display: none; padding: 0 18px 18px; }
+.ref-body.open { display: block; }
+
+.cream-card {
+  background: #F5EDDA;
+  color: #3D3425;
+  border-radius: 8px;
+  padding: 24px 24px 40px;
+  font-family: Georgia, "Palatino Linotype", "Book Antiqua", serif;
+  font-size: 14.5px;
+  line-height: 1.7;
+  position: relative;
+  border: none;
+  margin-top: 16px;
+}
+.cream-date {
+  font-size: 12px;
+  color: #6B5D47;
+  font-family: 'M PLUS 1', sans-serif;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+.cream-p { margin-bottom: 0; }
+.reflected-badge {
+  position: absolute;
+  bottom: 12px; right: 14px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #9B8E7A;
+  font-family: 'M PLUS 1', sans-serif;
+  letter-spacing: .3px;
+}
+
+/* ─── RESOURCES ─── */
+.res-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  gap: 12px;
+}
+.add-btn {
+  background: var(--accent);
+  color: #000;
+  border: none;
+  padding: 9px 17px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: opacity .15s;
+}
+.add-btn:hover { opacity: .85; }
+
+.res-list { display: flex; flex-direction: column; gap: 9px; }
+.res-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 13px 18px;
+  display: flex; align-items: center; gap: 14px;
+  cursor: pointer;
+  transition: background .15s;
+}
+.res-card:hover { background: rgba(255,255,255,.04); }
+
+.res-icon {
+  width: 36px; height: 36px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; color: var(--muted);
+  flex-shrink: 0;
+}
+.res-name { flex: 1; font-size: 14px; font-weight: 500; color: var(--text); }
+.res-badge {
+  background: rgba(255,255,255,.06);
+  color: var(--muted);
+  font-size: 10px; font-weight: 600;
+  padding: 2px 8px; border-radius: 4px;
+  letter-spacing: .5px; text-transform: uppercase;
+}
+
+/* ─── DAY CONTENT ─── */
+.back-btn {
+  font-size: 13px; color: var(--muted);
+  cursor: pointer;
+  display: inline-flex; align-items: center; gap: 5px;
+  margin-bottom: 22px;
+  transition: color .15s;
+}
+.back-btn:hover { color: var(--text); }
+
+.day-label-row {
+  display: flex; align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.day-label {
+  font-family: 'M PLUS 1', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.day-check {
+  width: 27px; height: 27px;
+  border-radius: 50%;
+  background: var(--green);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; color: #fff;
+}
+
+hr.div { border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 24px 0; }
+
+.d-title {
+  font-family: 'Carter One', cursive;
+  font-size: 36px;
+  font-weight: 400;
+  color: #EDE8DA;
+  line-height: 1.2;
+  margin: 16px 0 4px;
+}
+.d-theme {
+  font-family: 'M PLUS 1', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(237,232,218,0.80);
+}
+
+.c-section { margin-top: 32px; margin-bottom: 0; }
+.c-heading {
+  font-family: 'Carter One', cursive;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+  margin: 0 0 16px;
+}
+.c-body { font-size: 15px; color: #EDE8DA; line-height: 1.85; }
+.c-body p { margin-bottom: 14px; }
+.c-body p:last-child { margin-bottom: 0; }
+.c-body ol { padding-left: 20px; margin-bottom: 12px; }
+.c-body li { margin-bottom: 7px; }
+
+.green-box {
+  background: rgba(76,175,80,.1);
+  border: 1px solid rgba(76,175,80,.28);
+  border-radius: 9px;
+  padding: 14px 18px;
+  display: flex; align-items: center; gap: 12px;
+  margin-top: 14px;
+}
+.green-box-icon { font-size: 18px; }
+.green-box-text { font-size: 13.5px; font-weight: 500; color: var(--green); }
+
+.zones-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 12px;
+  margin-top: 6px;
+}
+.zone-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 15px;
+}
+.zone-h {
+  font-family: 'Carter One', cursive;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.zone-t { font-size: 13px; color: var(--muted); line-height: 1.55; }
+.zones-footer { font-size: 14px; color: var(--text); line-height: 1.78; margin-top: 14px; }
+
+.watch-btn {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 13px; font-weight: 500;
+  cursor: pointer;
+  display: inline-flex; align-items: center; gap: 7px;
+  transition: background .15s;
+  margin-top: 4px;
+}
+.watch-btn:hover { background: rgba(255,255,255,.06); }
+
+.stretch-note {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.prompt-box {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  padding: 16px;
+  margin-top: 6px;
+}
+.prompt-box p { font-size: 15px; color: #EDE8DA; line-height: 1.85; margin-bottom: 11px; }
+.prompt-box p:last-child { margin-bottom: 0; }
+
+.your-ref-h {
+  font-family: 'Carter One', cursive;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--accent);
+  margin-bottom: 0;
+}
+
+/* ─── COMING SOON ─── */
+.coming-soon {
+  text-align: center;
+  padding: 90px 20px;
+}
+.cs-day   { font-size: 13px; font-weight: 700; color: var(--accent); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px; }
+.cs-title { font-size: 22px; font-weight: 700; color: var(--muted); }
+
+/* ─── FOOTER ─── */
+.footer {
+  margin-top: 52px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  font-size: 12px;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* ─── EMPTY STATE ─── */
+.empty-state {
+  text-align: center;
+  padding: 70px 20px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 768px) {
+  #sidebar { transform: translateX(-100%); }
+  #sidebar.open { transform: translateX(0); }
+  #overlay.show { display: block; }
+  #hamburger { display: flex; align-items: center; }
+  #navbar { left: 0; }
+  #main { margin-left: 0; padding: 24px 18px 60px; }
+  .stat-grid { grid-template-columns: 1fr 1fr; }
+  .zones-grid { grid-template-columns: 1fr; }
+  .day-nav { gap: 5px; }
+  .day-pill { padding: 5px 11px; font-size: 11px; }
+  .d-title { font-size: 24px; }
+}
+@media (max-width: 480px) {
+  .stat-grid { grid-template-columns: 1fr; }
+  .user-name { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ════ SIDEBAR ════ -->
+<nav id="sidebar" role="navigation" aria-label="Main navigation">
+
+  <div class="sb-top">
+    <div class="pifo-logo">
+      <div class="pifo-dot"></div>
+      <span class="pifo-wordmark">pifo</span>
+    </div>
+    <div class="sb-back" onclick="void(0)">&#8592; SheVibes</div>
+    <div class="sb-title">SheVibes</div>
+    <div class="sb-sub">Cohort 0</div>
+  </div>
+
+  <div class="sb-nav">
+    <div class="nav-item active" data-page="home" onclick="nav('home')">
+      <span class="nav-icon">🔥</span>
+      <span class="nav-label">Home</span>
+    </div>
+    <div class="nav-item" data-page="links" onclick="nav('links')">
+      <span class="nav-icon">🔗</span>
+      <span class="nav-label">All Links</span>
+    </div>
+    <div class="nav-item" data-page="progress" onclick="nav('progress')">
+      <span class="nav-icon">⊙</span>
+      <span class="nav-label">Progress</span>
+    </div>
+    <div class="nav-item" data-page="reflections" onclick="nav('reflections')">
+      <span class="nav-icon">✏️</span>
+      <span class="nav-label">Reflections</span>
+      <span class="nav-badge">27</span>
+    </div>
+    <div class="nav-item" data-page="resources" onclick="nav('resources')">
+      <span class="nav-icon">📖</span>
+      <span class="nav-label">Resources</span>
+      <span class="nav-badge">27</span>
+    </div>
+    <div class="nav-item" data-page="questions" onclick="nav('questions')">
+      <span class="nav-icon">❓</span>
+      <span class="nav-label">Questions</span>
+    </div>
+  </div>
+
+  <div class="sb-streak">
+    <span class="streak-icon">🔥</span>
+    <div>
+      <div class="streak-num">26</div>
+      <div class="streak-lbl">Day Streak</div>
+    </div>
+  </div>
+
+</nav>
+
+<!-- ════ OVERLAY ════ -->
+<div id="overlay" onclick="closeSidebar()"></div>
+
+<!-- ════ NAVBAR ════ -->
+<header id="navbar">
+  <div class="nb-left">
+    <button id="hamburger" onclick="toggleSidebar()" aria-label="Toggle menu">&#9776;</button>
+    <div class="pifo-logo" style="margin-bottom:0;">
+      <div class="pifo-dot"></div>
+      <span class="nb-logo">pifo</span>
+    </div>
+  </div>
+  <div class="nb-right">
+    <button class="theme-btn" title="Toggle theme">&#9728;</button>
+    <span class="user-name">Bharath S</span>
+    <div class="avatar">BS</div>
+  </div>
+</header>
+
+<!-- ════ MAIN ════ -->
+<main id="main">
+
+  <!-- Day navigation bar -->
+  <div class="day-nav" id="dayNav">
+    <button class="day-arrow" onclick="prevDay()" aria-label="Previous day">&#8592;</button>
+    <button class="day-pill current" id="pill-0">DAY 1</button>
+    <button class="day-pill other"   id="pill-1">DAY 2</button>
+    <button class="day-pill other"   id="pill-2">DAY 3</button>
+    <button class="day-pill other"   id="pill-3">DAY 4</button>
+    <button class="day-pill other"   id="pill-4">DAY 5</button>
+    <button class="day-arrow" onclick="nextDay()" aria-label="Next day">&#8594;</button>
+  </div>
+
+  <!-- ── HOME ── -->
+  <section id="page-home" class="page show">
+    <div class="home-done-row">&#10003;&nbsp;COMPLETED &mdash; DAY 1</div>
+    <div class="home-card" onclick="goToDay(1)" title="View Day 1 content">
+      <div class="home-check">&#10003;</div>
+      <div class="home-title">Onboarding</div>
+      <div class="home-sub">Welcome to She Vibes. Community agreement, tool setup, the She&nbsp;Vibes philosophy. Why this cohort exists.</div>
+      <div class="home-badge">Challenge completed!</div>
+    </div>
+    <div class="footer">Bharath S &middot; She Vibes 66-Day AI Learning Journey &middot; Day 27 of 66</div>
+  </section>
+
+  <!-- ── ALL LINKS ── -->
+  <section id="page-links" class="page">
+    <div class="page-title upright">All Links</div>
+    <div class="page-sub">Every shared link from the cohort, in one place.</div>
+    <div class="empty-state">No links have been added yet.</div>
+    <div class="footer">Bharath S &middot; She Vibes 66-Day AI Learning Journey &middot; Day 27 of 66</div>
+  </section>
+
+  <!-- ── PROGRESS ── -->
+  <section id="page-progress" class="page">
+    <div class="page-title upright">Progress</div>
+
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-num">27</div>
+        <div class="stat-label">Streak</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">27</div>
+        <div class="stat-label">Resources</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">0</div>
+        <div class="stat-label">Questions</div>
+      </div>
+    </div>
+
+    <div class="prog-heading">Daily Progress</div>
+    <div class="day-grid" id="dayGrid"></div>
+
+    <div class="legend">
+      <div class="leg-item"><div class="leg-dot" style="background:var(--green)"></div>Completed</div>
+      <div class="leg-item"><div class="leg-dot" style="background:#c0392b"></div>Missed</div>
+      <div class="leg-item"><div class="leg-dot" style="background:var(--accent)"></div>Today</div>
+      <div class="leg-item"><div class="leg-dot" style="background:transparent;border:2px solid #303030"></div>Upcoming</div>
+    </div>
+
+    <div class="footer">Bharath S &middot; She Vibes 66-Day AI Learning Journey &middot; Day 27 of 66</div>
+  </section>
+
+  <!-- ── REFLECTIONS ── -->
+  <section id="page-reflections" class="page">
+    <div class="page-title">Reflections</div>
+    <div class="page-sub">Everything you&rsquo;ve submitted so far</div>
+    <div class="ref-list" id="refList"></div>
+    <div class="footer">Bharath S &middot; She Vibes 66-Day AI Learning Journey &middot; Day 27 of 66</div>
+  </section>
+
+  <!-- ── RESOURCES ── -->
+  <section id="page-resources" class="page">
+    <div class="res-header">
+      <div>
+        <div class="page-title">Resources</div>
+        <div class="page-sub">27 resources shared</div>
+      </div>
+      <button class="add-btn">+ Add Resource</button>
+    </div>
+    <div class="res-list" id="resList"></div>
+    <div class="footer">Bharath S &middot; She Vibes 66-Day AI Learning Journey &middot; Day 27 of 66</div>
+  </section>
+
+  <!-- ── QUESTIONS ── -->
+  <section id="page-questions" class="page">
+    <div class="page-title upright">Questions</div>
+    <div class="page-sub">Questions you&rsquo;ve raised during the cohort</div>
+    <div class="empty-state">No questions submitted yet.</div>
+    <div class="footer">Bharath S &middot; She Vibes 66-Day AI Learning Journey &middot; Day 27 of 66</div>
+  </section>
+
+  <!-- ── DAY CONTENT (rendered by JS) ── -->
+  <section id="page-day" class="page"></section>
+
+</main><!-- /main -->
+
+<script>
+/* ━━━━━━━━━━━━━━━━━━━━  DATA  ━━━━━━━━━━━━━━━━━━━━ */
+const TODAY      = 27;
+const TOTAL_DAYS = 66;
+const PILL_COUNT = 5;
+
+const DAY_TITLES = {
+  1:  `Onboarding`,
+  2:  `It's Not Magic. It's Math.`,
+  3:  `The Seventy Year Journey`,
+  4:  `How AI Actually Reads You`,
+  5:  `The Prediction Machine`,
+  6:  `Training, Fine-tuning, and You`,
+  7:  `The Layers You Never See`,
+  8:  `Reflection: Week 1`,
+  9:  `What is a Prompt?`,
+  10: `Simple Prompts That Work`,
+  11: `Role, Context, Task`,
+  12: `When It Gets It Wrong`,
+  13: `Complex Prompts for Complex Tasks`,
+  14: `Prompting Across Tools`,
+  15: `Reflection: Week 2`,
+  16: `What is Context?`,
+  17: `Connecting AI to Your World`,
+  18: `What is an MCP?`,
+  19: `Building Your First Integration`,
+  20: `Context in Practice`,
+  21: `RAG and Beyond`,
+  22: `Reflection: Week 3`,
+  23: `What is an AI Agent?`,
+  24: `How Agents Work`,
+  25: `Your First Agent`,
+  26: `Agent Use Cases`,
+  27: `Multi-Agent Systems`
+};
+
+const DAY_THEMES = {
+  1:  `Welcome to She Vibes. Community agreement, tool setup, the She Vibes philosophy. Why this cohort exists.`,
+  2:  `Everything AI does is math. 70 years of research. Stop fearing it, start understanding it.`,
+  3:  `From perceptrons in the 1950s to transformers today. The winters, the breakthroughs, the moment everything changed.`,
+  4:  `Tokens, embeddings, vectors. When you type a sentence, AI sees numbers. Why context and punctuation matter.`,
+  5:  `Next token prediction, softmax, probability distributions. Why AI hallucinates — it's guessing, not lying.`,
+  6:  `Pretraining, RLHF, posttraining. How the model learned everything. You've been part of training AI.`,
+  7:  `From raw model to chat interface. APIs, wrappers, products built on top. Claude and ChatGPT are interfaces — underneath is math.`,
+  8:  `What shifted in how you see AI this week? Share one before/after on WhatsApp.`,
+  9:  `A prompt is an instruction, a conversation, a specification. The quality of your output starts here.`,
+  10: `Clear, specific, direct. The anatomy of a prompt that gets results. Practice with everyday tasks.`,
+  11: `The three-part prompt framework. Tell AI who it is, what it knows, what you need. See the difference.`,
+  12: `Debugging your prompts. When AI fails, it's information. How to iterate, refine, and fix.`,
+  13: `Chaining prompts, multi-step instructions, system prompts. Building workflows through language.`,
+  14: `Same principles, different tools. ChatGPT, Claude, Gemini, Copilot — how to be tool-agnostic.`,
+  15: `Share your best prompt from this week. What made it work?`,
+  16: `Context windows, memory, and why AI forgets. The more relevant context you give, the better it performs.`,
+  17: `APIs, integrations, connectors. How AI reaches beyond its training to your actual data.`,
+  18: `Model Context Protocol. How AI connects to live tools — your calendar, email, files. The magic of real-time context.`,
+  19: `Connect AI to one tool you already use. See what becomes possible when context flows freely.`,
+  20: `Real use cases: AI that reads your emails, summarises your day, knows your projects. Build one for yourself.`,
+  21: `Retrieval Augmented Generation. How AI can search your own documents. The future of personal AI.`,
+  22: `What did you connect AI to this week? Share a screenshot of what became possible.`,
+  23: `Agents are AI that acts, not just answers. Autonomous, repeatable, scalable. The shift from tool to colleague.`,
+  24: `Planning, tools, memory, action loops. The anatomy of an agent that works while you sleep.`,
+  25: `Build a simple automation. Something that runs without you. Experience what autonomy feels like.`,
+  26: `Content agents, research agents, scheduling agents. Map real problems in your life to agent solutions.`,
+  27: `Agents that talk to agents. Orchestration, handoffs, specialisation. The autonomous workforce explained.`
+};
+
+const DAY_REFLECTIONS = {
+  1:  `I see AI as a tool that can solve any problems as well as something that is exciting but overwhelming. ChatGPT is the first one which I tried and it was just amazing to see the output it generated. I am using it for my day to day work like writing emails, generating SQL queries, analyse requirements, generate test cases. But I still feel I am not fully utilizing its potential. We mostly fail in doing or taking action on something but now AI is taking care of it, so we need to use it efficiently. Its like a smart friend whom you have always with you who can do wonders.`,
+  2:  `I have been thinking that AI is kind of a customised google search engine. So Instead of googling you ask any question and it will fetch the relevant answer. But I was totally wrong. After today's build I clearly understood that AI is a super smart pattern matching engine. It's job is to predict the next best word, then next and thereby creating a helpful answer and all that is done in a fraction of a second. It has been trained with lots of lots of text so it creates a pattern. Like a kid learn the language from us, similarly it learns how words go together and learns the language. It doesn't have any feeling, emotions or it doesn't think like how we humans do. So whatever AI is generating we need to double check. We also need to understand where AI can go wrong. It can generate incorrect answers confidently.`,
+  3:  `Today's build had helped me to understand the history of AI. Its a 70 years long. What surprised me is when the AI beats the world chess champion Gary kasparow. IBMs deep blue super computer has defeated a well renowned chess champion and a specialist. For me this was a surprise. This is path breaking in the history of AI. That moment just changed the perspective of AI. Even elon musk thought that it would take atleast 2026 this to happen. The other thing that surprised me is that the AI also won against a Go game champion. Looks like the introduction of Transformer architecture had changed the way AI was working. All the gpt and llms core is the transformer architecture.`,
+  4:  `Today's build helped me to understand tokenization. AI understands numbers and not words. Any question that we ask an LLM, it's just split the sentence into multiple chunks called tokens. Then it assigns a unique number for all the tokens. Spaces and punctuations are all considered as token. Then what happens next is all the math. It generates the next best word based on the probability. So AI just understands numbers. The more detailed question we ask then it will navigate to different parts inside the modal and thus we get a answer that is useful. Explain definition and explain in simple words both have different token and different context so the output will be slightly different for both. Prompting is like programming to get the best desired Ouput.`,
+  5:  `Yes, AI is a prediction engine. Its job is to predict the next best word given with all the information we provide. After learning more about how AI works I understood that we cannot trust it blindly. It doesn't check facts or truth. It also has a cut-off date so it won't have recent information. Sometimes AI can confidently share incorrect information which is called hallucinations. AI output is based on probability. So if it can't find a correct answer then it will fill in with the nearest possible answer. So we need to verify the answer that it generated.`,
+  6:  `Today's build helped me to understand how model was trained. Basically there are pre-training, fine tuning and RLHF. Pre-training is basically the entire internet is feed into the AI. Now with pre-training AI can be raw and it could be dangerous. We need to fine tune the system. Fine tuning helps AI to give structured, helpful and safe answers to us. Example if you ask to generate test cases it will generate in a structured output. Finally AI will learn from human feedback which is called Reinforcement learning with human feedback. Asking a question and AI will generate two different answers. A human has to select the best appropriate answer and the model will learn from human feedback.`,
+  7:  `Before joining the cohort my understanding about AI is that it's a super smart machine which answers whatever I ask. It knows everything and we can just rely on AI for everything. ChatGPT or claude you can use any AI and get things done as quickly as possible. But gradually my perspectives changed about AI. Its a prediction engine. Its job is to predict the next best token based on everything it knows. It's a big mathematical function. It is able to give you helpful answers because it was trained on vast data, almost everything on the internet. So it is able to understand how language works and how words go together. It's able to pattern matching. Also human feedback is added to AI. Humans helped the model to give thumbs up and down based on the response it provided. It's rewarded for answers that are helpful. Even if the answer is not true but AI will confidently say it because it's the probability and the pattern so it decides based on the probability. So there could be a wrong answer but AI says confidently which is called hallucinations. AI can also be biased because if the training data is biased or if the human who gave feedback can also be biased. Hence the AI is also biased. It's always necessary that we need to validate it's answers. AI doesn't know everything and it doesn't know if it doesn't know anything.`,
+  8:  `Before joining this cohort, I had this idea about AI where it is kind of an advanced Google search engine. If you ask any question, it gives you a smart reply and it would answer any question that you want to ask. I thought it is a perfect machine because it is almost giving you perfect answers, so that is going to be the only thing where humans are going to ask any questions moving forward. It is also going to take us all over a job in the future, so that's what my thinking about AI, or my perspective about AI, before I joined this cohort. After one week of learning AI byte by byte every day, now I understand that AI is kind of a prediction engine. It can only predict based on some mathematical function and probability. Because of this, it could also hallucinate, meaning even though it doesn't know the truth, it can confidently say that this is what it is. You cannot rely on everything for an AI. You need to be mindful of where the AI can fail and where the AI can give you good results. That perspective had changed; earlier I used to have a fear of AI, but right now I'm confident because I know, at the foundation level, what this AI is doing. One thing is for sure: my perspective totally changed on AI from a super smart question-answer to kind of a more just a prediction machine.`,
+  9:  `So, for today's learning, I picked up a use case in my day-to-day work. I asked a generic prompt to the AI, and it gave me an average output. I just tweaked my prompt to how I want the AI to act like and then I added some specificity, like I gave context, I gave instruction, I gave the output format. Then it gave me a detailed answer, which is very helpful. I understood that the quality of my output is based on the prompt. I need to design my prompt in such way that has more details and specificity. I should have a Role, Context, Problem statement, Instruction, output format.`,
+  10: `All my 3 tasks gave me a good output. These are simple tasks which I do everyday. It gave me a detailed output but if I follow it that may confuse my team. I need to reiterate this by giving examples of how I'm doing it everyday now so that it can understand and give more feedback. 1. Create a to-do list for my day to day work. As a QA engineer I will understand what work I need to get done morning and I will prepare a to-do list so that I won't miss anything. 2. I want you to create a template or a framework for posting my daily work status updates. We have a onshore and offshore team. So at the end of the day I need post my work updates to onshore team. 3. I want you to act as an experienced scrum master who can run daily stand-ups. My team don't have a scrum master so it's getting messed up daily morning. I want you to tell me how would you run a standup effectively.`,
+  11: `Adding a role changed the entire response and AI gives more contextual answer. My first prompt was around acting as a QA architect and asked solution for a problem and it did gave me top 3 suggestions that are helpful. When I removes the role from the prompt and it did generate a totally different response and the response structure also changed. Here is my prompt. Role: Act as a QA architect who have more than 50 years of experience in software testing and development. Context: I am a Lead QA engineer. I asked for a hike to my manager and they have asked me to start leveraging and do something useful for the team so that they can consider my hike. Task: I want you to give me Top 3 ideas on what I can do using AI that will give me a good visibility on my company.`,
+  12: `I was asking AI on how to become a great leader being and introvert. It gave me a output which is good and it was short. It didn't have much details on how can I learn it. Then I understood that my question is very generic and it didn't have any background about me and what problem I'm facing at work. I wrote another prompt asking AI to act as a leadership coach. Gave it a background, my struggle, objective, clear instruction. Then it empathised with me, made me comfortable and explained in detail on how to become a great leader. In short my prompt was missing: 1. Role 2. context or background 3. Objective or goal 4. Clear instruction 5. Output format or structure.`,
+  13: `Prompt chaining is interesting. Instead of giving everything in one prompt it breaks it into multiple prompts. Basically if the task is complex instead of one go we can split it into multiple prompts so that it learns from the previous Output. Example I want to build an agent which can read any PBI and generate test cases. Now i can split it into 4 sub prompts. Asking claude to Understand the problem. Design the agent behaviour. Write the system prompt for the agent. Test it by giving a PBI. I asked AI to run one by one with the previous context or answer. Then it gave me a good output. So if it's a complex task then we need to use prompt chaining.`,
+  14: `I would prefer claude AI as the one AI tool that I use everyday. Reason being claude responses are structured and clear. I asked a question to both claude and ChatGPT and literally got the same answers. Here are the prompts. Act as a prompting engineer. My goal is to become a prompting engineer. I want you to tell me 5 things that must be there in any prompt that I'm going to write. Act as a mortgage trainer. I am a beginner preparing a presentation for interns who have no knowledge of mortgages. Explain mortgage servicing in simple terms with real-world examples. Keep it detailed but easy to understand. Structure it like presentation content with headings and bullet points.`,
+  15: `Here is my prompt. It worked well, I asked claude to review it and correct me. It said my prompt is already strong. Role: Act as a leadership coach who trains leaders and corporates. You are the world's best leadership trainer, and you have coached or mentored more than one million people. Context: I am a lead QA engineer. I have been promoted as a lead QA engineer just in the past six months. Honestly, I have not been able to do a good job as a leader. I'm just trying to be a person who does the job every day. In multiple one-on-ones with my engineering manager, she gave me feedback that I am a good contributor, but I have to start thinking and working as a leader, take ownership of things, and start working as a leader. I'm also an introvert who doesn't speak much in meetings and I want to overcome everything. Objective: My goal is to become a wordclass leader who is kind, generous, lovable, speaks with clarity, proactive and patient. Instruction: I want you to teach me, guide me, and mentor me like I am your student on How can I become a great leader. Let's create a plan for me. I am going to do 66 days of leadership. Output: Let's create daily bytes for me to learn from you which I can implement or practice at my work. 66 days of learning and practicing.`,
+  16: `Here are my 3 sentences of context about me that will help AI generate useful results every other day. I am a Lead QA Engineer who prefers structured, step-by-step guidance with real-world examples that I can directly apply in my work and daily life. I am focused on improving my leadership, financial discipline, and decision-making, so prioritize practical frameworks, checklists, and clear action plans. Challenge my thinking when needed, avoid generic advice, and help me break complex problems into simple, executable steps with clear outcomes. I need to first enter this personal system prompt before any conversation with AI so that AI will know the context and give me usefull results.`,
+  17: `I would want AI to connect with my Outlook and read all emails and summarise me everyday morning. Connect with my Microsoft teams and slack and read all messages that summarise me what is the task for me and what I need to follow-up. I would want AI to connect with my ADO board and start writing end to end test cases and scenarios and write it the PBI. I want AI to connect with my test automation reports and summarise the failures. I would love AI to connect with my bank statements and give me analysis of spending and savings I did throughout the month.`,
+  18: `Until yesterday, I was working with AI where I can ask a question and AI will do some math functions, and then it will predict the next word. Based on my context, it will give me a relevant answer, which I really don't know whether it is true or not. Today, when I've just gone through this MCP, it's actually connecting to my Gmail and calendars, and it was able to fetch the real details, so I gave it my real data. When I used MCP for it, I was kind of surprised. I just asked it to fetch me the top critical emails or emails that I need to take action on as soon as possible, and then it was just listing out a couple of emails to me. That was great, because if I had to do this manually, I have to go open, log in to Gmail, go to the inbox, and read the emails one by one, which is going to be time-consuming. AI made it very easy, and thanks to MCP, it connected to my Gmail and calendar and listed out all the emails that need my attention, and it was so easy.`,
+  19: `The integration can handle a lot of things that I used to do manually, which is time-consuming and repetitive. Say, for example, let's take Gmail. On Gmail, I used to receive a lot of emails, like, for example, insurance reminder emails, a lot of job vacancies, emails, or, let's take, the payments that I have done or anything important from work which I need to take action on. Instead of me going to manually check things and take action, I would let the integration do it. When an email comes, I will ask the AI, and the integration will take care of extracting the content and understanding what is being asked in the email and can just list out or send a notification to my WhatsApp or Slack regarding these are the things that I need to take action on. The other thing that I would think of is, say, for example, all the expenses that I do or wherever I make a payment using PhonePay. I would let the integration help me with it, saying whenever I do a transaction using PhonePay, create an Excel sheet and track all the expenses that I have done.`,
+  20: `Every day, when I wake up, I used to go look into Slack, Microsoft Teams, and Outlook to understand if there is anything that has been assigned to me, or if my colleagues have any questions for me. Is there any project updates or release updates which I need to know? I also look into the emails to understand if there are any action items that are for me, or whether I need to follow up with any of the issues that we are going through. I used to do this the moment I wake up, and I had to go through all these things, which is going to be very big cognitive work and is also time-consuming. Moving forward, my morning is going to be a little smoother because I'm going to use the AI Brief. The AI Brief is going to highlight: what are the action items for me? What are the updates? What are the project-related updates? Team-related updates or any other across Outlook, Teams, and Slack. It is going to collect everything and give me a morning brief that will save a lot of time.`,
+  21: `RAG makes AI complete. RAG allows AI to provide external sources or data so that it can't tell you it doesn't know. If AI could search the below documents it will have more context and can give more helpful answers or decisions at work. Project related documents. Requirement documents. Company goals. Vision. Mission. Company policies. Products list. Strategy. Team size. Team members. Workflows. Tools. Technologies. Testing process. Team goals. Individual goals. Leadership goals. Team structure. Work culture. Working style. Communication style. Flowcharts. Wiki documents. These documents will give lot of context to AI which will change the way how I work.`,
+  22: `This week is all about context engineering. This week it started getting bit difficult as we have started diving into building stuffs. AI will give meaningful or relevant output only when it has context. This week learned about how to give Context to AI, MCP, RAG and integration. I was able to do my first integration using zapier. Setup a trigger in zapier and received my email. Also connected gmail to my claude and got a daily morning brief from AI. Also created a personal Context block for myself which I can use across chats. Finally learned RAG and used notebookllm tool where i gave a set of documents and asked it to synthesis. Also can ask any questions based on the document. Next week is going to be agents. I would like to learn about: What is an agent? Why do we need agents? How to create an agent? How to create an agentic workflows?`,
+  23: `At work we are putting up a lot of manual effort in analysing automation test execution reports. We have more than 10 apps which we do release every two weeks. So 4 people spend their time for 2 days to analyse the report. This can be delegated to AI. AI can do a wonderful job is analysing the report and come up with pass and fail percentage. Group data issues, functional issues and also highlight of any other. This would save a lot of manual effort. That time can be invested in writing more coverage and strengthening QA team. Help team in AI adoption. Try to identify gaps in requirements, process improvements.`,
+  24: `An agent will work based on ReAct framework. It can do reason, act, observe and decide. This will happen in loop until the goal is reached. Let's take an example of test report analysis. Agent will do this in 6 steps. Loop 1 — Understanding the goal. Loop 2 — Reading the reports. Loop 3 — Categorising failures. Loop 4 — Calculating percentages. Loop 5 — Writing the summary. Loop 6 — Sending it out. I want to stay in control on how the agent categorise the results. It can understand, read the report but on what basis it categorise the results is very important in my opinion so I want be in control. Calculation percentages, writing detailed summary and sending it out to slack I will leave it to the agent and trust it.`,
+  25: `It's great to see the automated workflow. My use case is simple. I want AI to send me a list of a summary of the tech emails I have received. It will give me a brief and summarise and send it to my email. I used zapier do create a 4 step workflow. Everyday 8 am, the summary of tech blogs will reach my email. I don't need to look into all emails instead just read the summary. This unlocks that I can automate workflows that is repetitive and don't need manual intervention. Once set it up and it will run everyday.`,
+  26: `Use Case 1 — Daily Nightwatch Report Analysis Agent. Goal: Auto-analyse Cucumber reports generated daily by Nightwatch cron job. Trigger: Every day after pipeline completes. Input: Cucumber JSON report from CI/CD. AI Step: Classify failures into data/functional/environment, calculate pass/fail %, flag anomalies. Output: Daily test health summary to QA team. Who it helps: Manual QA team — eliminates hours of daily report review across 4 people. Use Case 2 — Test Plan Generator Agent. Goal: Auto-generate test plans from API PBIs. Trigger: New PBIs assigned to QA in Jira. Input: PBI descriptions + Acceptance Criteria. AI Step: Generate positive, negative, edge cases, boundary conditions per AC. Output: Structured test plan ready for team review. Who it helps: QA team — saves days of manual planning per release. Use Case 3 — API Test Execution and Analysis Agent. Goal: Execute API tests and analyse every failure automatically. Trigger: After fortnightly release via CI/CD pipeline. Input: API test suite + endpoints + test data. AI Step: Run tests, classify failures, write bug reports, prioritise by severity. Output: Full report + Jira-ready bug reports + developer priority list. Who it helps: QA team — eliminates manual execution AND bug reporting.`,
+  27: `Designed a 5-specialist-agent newsletter system with Orchestrator. Orchestrator receives the topic, breaks into sub-tasks, assigns to specialist agents. Research Agent searches web, finds top 5 relevant sources, extracts key facts. Content Agent takes research brief, writes full newsletter draft. Proofreading Agent checks grammar, tone, factual accuracy. Formatting Agent formats for publishing platform — headings, subject line, preview text. Publishing Agent connects to Substack or Beehiiv, schedules at optimal send time, sends newsletter. The most critical handoff is Research to Content — if the research brief is weak, every downstream agent produces weaker output. If I had specialist agents for QA work: Research Agent reads PBIs, Test Plan Agent generates test cases, Execution Agent runs automated tests, Analysis Agent classifies failures, Reporting Agent sends summary. What I keep for myself: The judgment call on what constitutes a real bug vs environment noise — that requires domain knowledge and accountability no agent should own alone.`
+};
+
+/* ━━━━━━━━━━━━━━━━━━━━  STATE  ━━━━━━━━━━━━━━━━━━━━ */
+let activeDay     = 1;
+let pillStartDay  = 1;   /* first day shown in pill bar */
+
+/* ━━━━━━━━━━━━━━━━━━━━  NAVIGATION  ━━━━━━━━━━━━━━━━━━━━ */
+function nav(pageId) {
+  /* update sidebar active item */
+  document.querySelectorAll('.nav-item').forEach(el => {
+    el.classList.toggle('active', el.dataset.page === pageId);
+  });
+
+  /* show/hide pages */
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('show'));
+  document.getElementById('page-' + pageId).classList.add('show');
+
+  /* day nav only visible on home / day content */
+  document.getElementById('dayNav').style.display =
+    (pageId === 'home' || pageId === 'day') ? 'flex' : 'none';
+
+  closeSidebar();
+  window.scrollTo(0, 0);
+}
+
+function goToDay(n) {
+  activeDay = n;
+  renderDayContent(n);
+  centerPillsOn(n);
+  nav('day');
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━  PILL BAR  ━━━━━━━━━━━━━━━━━━━━ */
+function centerPillsOn(day) {
+  const half = Math.floor(PILL_COUNT / 2);
+  pillStartDay = Math.max(1, Math.min(day - half, TOTAL_DAYS - PILL_COUNT + 1));
+  renderPills();
+}
+
+function renderPills() {
+  for (let i = 0; i < PILL_COUNT; i++) {
+    const d    = pillStartDay + i;
+    const pill = document.getElementById('pill-' + i);
+    pill.textContent = 'DAY ' + d;
+    pill.dataset.day = d;
+    pill.className = 'day-pill ' + (d === activeDay ? 'current' : 'other');
+  }
+}
+
+function prevDay() {
+  if (activeDay > 1) goToDay(activeDay - 1);
+}
+function nextDay() {
+  if (activeDay < TOTAL_DAYS) goToDay(activeDay + 1);
+}
+
+/* attach pill click listeners once */
+for (let i = 0; i < PILL_COUNT; i++) {
+  document.getElementById('pill-' + i).addEventListener('click', function() {
+    goToDay(parseInt(this.dataset.day));
+  });
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━  DAY 1 FULL CONTENT  ━━━━━━━━━━━━━━━━━━━━ */
+function day1HTML() {
+  return `
+  <span class="back-btn" onclick="nav('home')">&#8592; Back to SheVibes</span>
+
+  <div class="day-label-row">
+    <span class="day-label">DAY 1</span>
+    <div class="day-check">&#10003;</div>
+  </div>
+  <hr class="div">
+  <div class="d-title">Onboarding</div>
+  <div class="d-theme">Welcome to She Vibes. Community agreement, tool setup, the She Vibes philosophy. Why this cohort exists.</div>
+  <hr class="div">
+
+  <!-- Why this cohort exists -->
+  <div class="c-section">
+    <div class="c-heading">Why this cohort exists</div>
+    <div class="c-body">
+      <p>Every day a new AI tool launches. Every week someone tells you that everything has changed. And you are sitting there thinking — where do I even start?</p>
+      <p>That overwhelm is real. It is also a signal. It means you care. It means you know something important is happening and you do not want to be left behind.</p>
+      <p>She Vibes exists for exactly that moment.</p>
+      <p>This is not a course where you memorise prompts and follow templates. A colouring book never made an artist. We are not here to give you fish every day. We are here to teach you how to fish — with AI, using your own thinking, in your own life.</p>
+    </div>
+  </div>
+
+  <!-- What you are signing up for -->
+  <div class="c-section">
+    <div class="c-heading">What you are signing up for</div>
+    <div class="c-body">
+      <p>66 days. One idea at a time. Every day, a small byte of learning. Every Sunday, we come together as a community for one hour to reflect, synthesise, and grow.</p>
+      <p>Think of it like this: right now, everybody uses AI the way everybody uses Excel. You open it, you get value out of it, you close it. But only a small percentage of people know how to use it at full potential — to write a formula, build a pivot table, make it work for them. We are moving you from casual user to confident practitioner. Someone who knows why something works, not just that it does.</p>
+      <p>By day 66, you will not know everything. Nobody does. But you will know how to think with AI. That is the skill that compounds forever.</p>
+    </div>
+  </div>
+
+  <!-- The learning contract -->
+  <div class="c-section">
+    <div class="c-heading">The learning contract</div>
+    <div class="c-body">
+      <p>Before day 2 begins, read this and agree to it.</p>
+      <ol>
+        <li><strong>Show up daily.</strong> Each day unlocks one idea. You can read past days but you cannot submit reflections for missed days. The discipline is the point.</li>
+        <li><strong>Reflect honestly.</strong> Your submission is not for Karthi to grade. It is for you to think out loud. There are no wrong answers. There is only thinking or not thinking.</li>
+        <li><strong>Sundays are sacred.</strong> Every Sunday we regroup for one hour as a community. This is where the real learning surfaces — from your reflections, from the group&rsquo;s patterns, from questions that deserve a proper answer.</li>
+        <li><strong>First come, first served.</strong> Each day, three people get their work reviewed live. If you want that, submit early and raise your hand.</li>
+        <li><strong>The community is part of the curriculum.</strong> 220 women are doing this alongside you. Some are beginners. Some know more. All of them are here to grow. Treat every reflection shared in the group as a gift.</li>
+      </ol>
+    </div>
+    <div class="green-box">
+      <span class="green-box-icon">&#9745;</span>
+      <span class="green-box-text">You have wholeheartedly accepted the learning contract</span>
+    </div>
+  </div>
+
+  <!-- Three zones -->
+  <div class="c-section">
+    <div class="c-heading">The three zones of She Vibes</div>
+    <div class="zones-grid">
+      <div class="zone-card">
+        <div class="zone-h">Think.</div>
+        <div class="zone-t">This is where your value lives. AI cannot think for you. It can only think with you — and only as well as you direct it.</div>
+      </div>
+      <div class="zone-card">
+        <div class="zone-h">Do.</div>
+        <div class="zone-t">AI has largely taken over execution. It writes faster, codes faster, formats faster. We will use this, not fight it.</div>
+      </div>
+      <div class="zone-card">
+        <div class="zone-h">Articulate.</div>
+        <div class="zone-t">AI can express your ideas clearly — when you give it the right context. Learning to give context is learning to articulate what you actually want.</div>
+      </div>
+    </div>
+    <div class="zones-footer">She Vibes focuses on the Think zone. Everything else follows from there.</div>
+  </div>
+
+  <!-- Weekly call -->
+  <div class="c-section">
+    <div class="c-heading">Weekly Call</div>
+    <button class="watch-btn">Watch the Recording &#8594;</button>
+  </div>
+
+  <!-- Stretch -->
+  <div class="c-section">
+    <div class="c-heading">Stretch &mdash; go further if you are ready</div>
+    <div class="stretch-note">This section is optional. It is here for those who are already comfortable with AI basics and want to push from day one. No pressure. Come back to it when it feels right.</div>
+    <div class="c-body">
+      <p>You have described your relationship with AI in one sentence. Now go one level deeper.</p>
+      <p>Pick one real task from your life right now — work, home, or a project you care about. Open any AI tool. Spend 10 minutes using it on that task. Then reflect: where did AI help your thinking, and where did it fall short?</p>
+      <p>Write a second paragraph after your main reflection capturing this. Not what AI produced — what you noticed about how you were thinking while using it.</p>
+      <p>This is the meta-skill we are building across 66 days. You just started it on day one.</p>
+    </div>
+  </div>
+
+  <!-- Reflection prompt -->
+  <div class="c-section">
+    <div class="c-heading">Today&rsquo;s reflection prompt</div>
+    <div class="prompt-box">
+      <p><strong>Describe your current relationship with AI in one sentence.</strong></p>
+      <p>Is it a tool? A toy? A mystery? Something you use but do not fully trust? Something exciting but overwhelming?</p>
+      <p>Write it honestly. There is no wrong answer. This is your Day 1 baseline. You will read it again on Day 66.</p>
+    </div>
+  </div>
+
+  <!-- Your reflection -->
+  <div class="c-section">
+    <div class="your-ref-h">Your Reflection</div>
+    <div class="cream-card">
+      <div class="cream-date">Day 1 &middot; Written earlier</div>
+      <p class="cream-p">I see AI as a tool that can solve any problems as well as something that is exciting but overwhelming. ChatGPT is the first one which I tried and it was just amazing to see the output it generated. I am using it for my day to day work like writing emails, generating SQL queries, analyse requirements, generate test cases. But I still feel I am not fully utilizing its potential. We mostly fail in doing or taking action on something but now AI is taking care of it, so we need to use it efficiently. Its like a smart friend whom you have always with you who can do wonders.</p>
+      <div class="reflected-badge">REFLECTED &#10003;</div>
+    </div>
+  </div>
+
+  <div class="footer">Bharath S &middot; She Vibes 66-Day AI Learning Journey &middot; Day 27 of 66</div>
+  `;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━  GENERIC DAY CONTENT  ━━━━━━━━━━━━━━━━━━━━ */
+function renderDayContent(n) {
+  const el      = document.getElementById('page-day');
+  const title   = DAY_TITLES[n]     || 'Day ' + n;
+  const theme   = DAY_THEMES[n]     || '';
+  const done    = n <= TODAY;
+
+  if (n === 1) { el.innerHTML = day1HTML(); return; }
+
+  const reflection = done ? DAY_REFLECTIONS[n] : null;
+
+  el.innerHTML = `
+    <span class="back-btn" onclick="nav('home')">&#8592; Back to SheVibes</span>
+    <div class="day-label-row">
+      <span class="day-label">DAY ${n}</span>
+      ${done ? '<div class="day-check">&#10003;</div>' : ''}
+    </div>
+    <hr class="div">
+    <div class="d-title">${esc(title)}</div>
+    <div class="d-theme">${esc(theme)}</div>
+    <hr class="div">
+
+    ${ done && reflection ? `
+    <div class="c-section">
+      <div class="your-ref-h">Your Reflection</div>
+      <div class="cream-card">
+        <div class="cream-date">Day ${n} &middot; Written earlier</div>
+        <p class="cream-p">${esc(reflection)}</p>
+        <div class="reflected-badge">REFLECTED &#10003;</div>
+      </div>
+    </div>` : `
+    <div class="coming-soon">
+      <div class="cs-day">Day ${n}</div>
+      <div class="cs-title">Content coming soon</div>
+    </div>` }
+
+    <div class="footer">Bharath S &middot; She Vibes 66-Day AI Learning Journey &middot; Day 27 of 66</div>
+  `;
+}
+
+function esc(str) {
+  return String(str)
+    .replace(/&/g,'&amp;')
+    .replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;');
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━  PROGRESS GRID  ━━━━━━━━━━━━━━━━━━━━ */
+(function buildGrid() {
+  const grid = document.getElementById('dayGrid');
+  for (let i = 1; i <= TOTAL_DAYS; i++) {
+    const el = document.createElement('div');
+    if (i < TODAY)       el.className = 'dcircle done';
+    else if (i === TODAY) el.className = 'dcircle today';
+    else                  el.className = 'dcircle upcoming';
+    el.textContent = i;
+    el.title = DAY_TITLES[i] ? `Day ${i}: ${DAY_TITLES[i]}` : `Day ${i}`;
+    if (i <= TODAY) el.addEventListener('click', () => goToDay(i));
+    grid.appendChild(el);
+  }
+})();
+
+/* ━━━━━━━━━━━━━━━━━━━━  REFLECTIONS LIST  ━━━━━━━━━━━━━━━━━━━━ */
+(function buildReflections() {
+  const list = document.getElementById('refList');
+  for (let i = TODAY; i >= 1; i--) {
+    const title = DAY_TITLES[i] || 'Day ' + i;
+    const ref   = DAY_REFLECTIONS[i] || '';
+    const card  = document.createElement('div');
+    card.className = 'ref-card';
+    card.innerHTML = `
+      <div class="ref-header" onclick="toggleRef(this)">
+        <div class="ref-meta">
+          <span class="ref-day">Day ${i}</span>
+          <span class="ref-name">${esc(title)}</span>
+          <span class="ref-date">Submitted</span>
+        </div>
+        <span class="ref-open">Open day &rsaquo;</span>
+      </div>
+      <div class="ref-body">
+        <div class="cream-card">
+          <div class="cream-date">Day ${i} &middot; Written earlier</div>
+          <p class="cream-p">${esc(ref)}</p>
+          <div class="reflected-badge">REFLECTED &#10003;</div>
+        </div>
+      </div>
+    `;
+    list.appendChild(card);
+  }
+})();
+
+function toggleRef(header) {
+  const body = header.nextElementSibling;
+  const isOpen = body.classList.contains('open');
+  document.querySelectorAll('.ref-body').forEach(b => b.classList.remove('open'));
+  if (!isOpen) body.classList.add('open');
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━  RESOURCES LIST  ━━━━━━━━━━━━━━━━━━━━ */
+(function buildResources() {
+  const list = document.getElementById('resList');
+  for (let i = TODAY; i >= 1; i--) {
+    const title = DAY_TITLES[i] || 'Day ' + i;
+    const card  = document.createElement('div');
+    card.className = 'res-card';
+    card.innerHTML = `
+      <div class="res-icon">&#128279;</div>
+      <span class="res-name">Day ${i} Links</span>
+      <span class="res-badge">Link</span>
+    `;
+    list.appendChild(card);
+  }
+})();
+
+/* ━━━━━━━━━━━━━━━━━━━━  MOBILE SIDEBAR  ━━━━━━━━━━━━━━━━━━━━ */
+function toggleSidebar() {
+  document.getElementById('sidebar').classList.toggle('open');
+  document.getElementById('overlay').classList.toggle('show');
+}
+function closeSidebar() {
+  document.getElementById('sidebar').classList.remove('open');
+  document.getElementById('overlay').classList.remove('show');
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━  INIT  ━━━━━━━━━━━━━━━━━━━━ */
+renderPills();
+nav('home');
+</script>
+</body>
+</html>
