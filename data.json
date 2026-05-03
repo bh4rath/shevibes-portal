@@ -4,8 +4,8 @@
     "user": "Bharath S",
     "cohort": "Cohort 0",
     "totalDays": 66,
-    "completedDays": 28,
-    "streak": 28
+    "completedDays": 29,
+    "streak": 29
   },
   "days": [
     {
@@ -399,6 +399,20 @@
       "reflectionPrompt": "What is the one action you would never want an agent to take without checking with you first — and why?",
       "myReflection": "I would want the agent to pause and ask me if it needed more information to take a decision instead of assuming. At any case if agent doesn't have any information or not clear with inputs then the agent should not assume anything and do the action instead. It should always pause and ask the human instead of taking any action which could harm the user. So I would never want an agent to take any action when it's going to assume anything. I would always want the human in the loop in critical applications. We cannot fully trust agents and they can hallucinate.",
       "referenceLinks": ["Building safe and reliable agents — Anthropic"]
+    },
+    {
+      "day": 29,
+      "title": "Reflection: Week 4",
+      "theme": "What would you automate in your life if you could? Share your agent idea on WhatsApp.",
+      "status": "completed",
+      "date": "2026-05-03",
+      "lesson": "This week's arc:\n\nFour weeks in. You understand AI — the math, the history, the prediction machine underneath. You can prompt well — role, context, task, chaining, iteration. You can connect AI to your world — APIs, MCPs, RAG, your own data. And now you understand agents — the ReAct loop, tool access, use case design, multi-agent systems, failure modes. You have gone from user to designer. The next four weeks, you build.",
+      "whyItMatters": "Next week you pick your path. Web, backend, full-stack, or agent builder. You've spent four weeks learning the foundation. The next four weeks you use it to build something real — something that didn't exist before you started She Vibes.\n\nThat thing you've been wanting to build? It starts Monday.\n\nSee you then.",
+      "buildTask": "Your Week 4 wins — take five minutes and write down:\n\n1. The agent you built or designed this week — even if it was just on paper\n2. One guardrail you'll always include in any agent you build\n3. Which specialist track you're choosing for weeks five through eight — and why",
+      "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nFour weeks of foundations. Before you move into building, do a personal audit. Open a blank document and answer three questions: What is the most time-consuming manual task in my work right now? What is the most mentally draining repeatable task? What decision do I make repeatedly that AI could help me make faster? For each answer, sketch the simplest possible AI-assisted version. One prompt, one automation, one agent. This becomes your personal build backlog for the next four weeks. Start with the one that would save you the most every week.",
+      "reflectionPrompt": "Post one of these on the group today:\n\n\"The agent use case I most want to build in the next four weeks is _.\"\n\n\"The failure mode that made me think hardest was __ — because __.\"\n\n\"Four weeks ago I couldn't __. Today I __.\"",
+      "myReflection": "",
+      "referenceLinks": ["Weekly Call — Join the Zoom Call"]
     }
   ]
 }
