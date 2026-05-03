@@ -1034,7 +1034,8 @@ function reflectionParas(text) {
 
 function footer() {
   const user = META.user || 'Bharath S';
-  return `<div class="footer">${esc(user)} &middot; She Vibes ${TOTAL_DAYS}-Day AI Learning Journey &middot; Day ${TODAY} of ${TOTAL_DAYS}</div>`;
+  const dayNum = String(activeDay).padStart(2, '0');
+  return `<div class="footer">${esc(user)} &middot; She Vibes ${TOTAL_DAYS}-Day AI Learning Journey &middot; Day ${dayNum} of ${TOTAL_DAYS}</div>`;
 }
 
 /* ━━━━━━━━━━━━━━━━━━━━  SECTION BUILDERS  ━━━━━━━━━━━━━━━━━━━━ */
