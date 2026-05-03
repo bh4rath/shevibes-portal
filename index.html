@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,19 +21,35 @@ h1, h2 {
 }
 
 :root {
+  --sidebar-w: 230px;
+  --nav-h:     60px;
+  --green:     #4CAF50;
+}
+
+:root[data-theme="dark"] {
   --bg:         #111013;
   --sidebar-bg: #1C1A1F;
   --active-bg:  rgba(245,197,24,0.08);
   --accent:     #F5C518;
-  --green:      #4CAF50;
   --card-bg:    #1C1A1F;
   --text:       #EDE8DA;
   --muted:      rgba(237,232,218,0.70);
   --border:     rgba(255,255,255,0.08);
   --cream:      #F5EDDA;
   --cream-text: #3D3425;
-  --sidebar-w:  230px;
-  --nav-h:      60px;
+}
+
+:root[data-theme="light"] {
+  --bg:         #F5F0E8;
+  --sidebar-bg: #EDE8DA;
+  --active-bg:  rgba(201,162,39,0.12);
+  --accent:     #C9A227;
+  --card-bg:    #EDE8DA;
+  --text:       #3D3425;
+  --muted:      #6B5F4A;
+  --border:     rgba(0,0,0,0.08);
+  --cream:      #D4C9A8;
+  --cream-text: #3D3425;
 }
 
 html, body {
@@ -230,17 +246,21 @@ button { font-family: 'M PLUS 1', sans-serif; }
 .day-nav {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 8px;
-  margin-bottom: 34px;
-  flex-wrap: wrap;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  background: transparent;
 }
+.day-nav::-webkit-scrollbar { display: none; }
 
 .day-arrow {
-  width: 33px; height: 33px;
-  border-radius: 6px;
-  background: var(--card-bg);
-  border: 1px solid var(--border);
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.15);
   color: var(--text);
   font-size: 14px;
   display: flex; align-items: center; justify-content: center;
@@ -248,22 +268,46 @@ button { font-family: 'M PLUS 1', sans-serif; }
   transition: background .15s;
   flex-shrink: 0;
 }
-.day-arrow:hover { background: rgba(255,255,255,.06); }
+[data-theme="light"] .day-arrow { border-color: rgba(0,0,0,0.18); }
+.day-arrow:hover { background: rgba(255,255,255,0.08); }
+[data-theme="light"] .day-arrow:hover { background: rgba(0,0,0,0.06); }
 
 .day-pill {
-  padding: 6px 15px;
-  border-radius: 22px;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: .5px;
+  min-width: 60px; height: 52px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 2px;
   cursor: pointer;
   border: none;
-  transition: background .15s, color .15s;
-  white-space: nowrap;
+  background: none;
+  transition: all .15s;
+  flex-shrink: 0;
 }
-.day-pill.current  { background: var(--accent); color: #000; }
-.day-pill.other    { background: var(--card-bg); color: var(--muted); border: 1px solid var(--border); }
-.day-pill.other:hover { background: rgba(255,255,255,.06); color: var(--text); }
+.pill-label {
+  font-family: 'M PLUS 1', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.pill-num {
+  font-family: 'Carter One', cursive;
+  font-size: 18px;
+  line-height: 1;
+}
+/* Completed */
+.day-pill.done      { border: 2px solid #4CAF50; color: #4CAF50; }
+/* Currently selected */
+.day-pill.current   { background: #F5C518; color: #111013; border: none; }
+[data-theme="light"] .day-pill.current { background: #F5C518; color: #1C1A1F; }
+/* Today's day when not selected */
+.day-pill.today-pill { border: 2px solid rgba(245,197,24,0.4); color: var(--text); }
+/* Future */
+.day-pill.other     { border: 2px solid rgba(255,255,255,0.15); color: rgba(237,232,218,0.4); cursor: default; }
+[data-theme="light"] .day-pill.other { border-color: rgba(0,0,0,0.18); color: #6B5F4A; }
+.day-pill.other:hover { background: none; }
 
 /* ─── SECTIONS ─── */
 .page { display: none; max-width: 720px; }
@@ -674,40 +718,34 @@ hr.div { border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 24p
 
 /* ─── RESPONSIVE ─── */
 @media (max-width: 768px) {
-  #sidebar { transform: translateX(-100%); }
-  #sidebar.open { transform: translateX(0); }
-  #overlay.show { display: block; }
-  #hamburger { display: flex; align-items: center; }
-  #navbar { left: 0; }
-  #main { margin-left: 0; padding: 24px 18px 60px; }
-  .stat-grid { grid-template-columns: 1fr 1fr; }
+  #sidebar  { display: none; }
+  #hamburger { display: none; }
+  #navbar   { left: 0; }
+  #main     { margin-left: 0; padding: 24px 18px 80px; }
+  .stat-grid  { grid-template-columns: 1fr 1fr; }
   .zones-grid { grid-template-columns: 1fr; }
-  .day-nav { gap: 5px; }
-  .day-pill { padding: 5px 11px; font-size: 11px; }
-  .d-title { font-size: 24px; }
+  .d-title    { font-size: 24px; }
+  #bottomNav  { display: flex; }
 }
 @media (max-width: 480px) {
   .stat-grid { grid-template-columns: 1fr; }
   .user-name { display: none; }
 }
 
-/* ─── LIGHT THEME ─── */
-body.light {
-  --bg:         #F5F3EF;
-  --sidebar-bg: #FFFFFF;
-  --active-bg:  rgba(245,197,24,0.14);
-  --card-bg:    #FFFFFF;
-  --text:       #2A2530;
-  --muted:      rgba(42,37,48,0.56);
-  --border:     rgba(0,0,0,0.10);
-}
-body.light .cream-card {
-  background: #EDE3CC;
+/* ─── LIGHT THEME OVERRIDES ─── */
+[data-theme="light"] .cream-card {
+  background: var(--cream);
   border: 1px solid rgba(0,0,0,0.08);
 }
-body.light .dcircle.upcoming {
+[data-theme="light"] .dcircle.upcoming {
   border-color: rgba(0,0,0,0.15);
   color: rgba(0,0,0,0.18);
+}
+[data-theme="light"] #sidebar {
+  border-right-color: rgba(0,0,0,0.08);
+}
+[data-theme="light"] #navbar {
+  border-bottom-color: rgba(0,0,0,0.08);
 }
 
 /* ─── PROGRESS BAR ─── */
@@ -718,7 +756,7 @@ body.light .dcircle.upcoming {
   margin-bottom: 28px;
   overflow: hidden;
 }
-body.light .prog-bar-wrap { background: rgba(0,0,0,0.09); }
+[data-theme="light"] .prog-bar-wrap { background: rgba(0,0,0,0.09); }
 .prog-bar-fill {
   height: 100%;
   background: var(--green);
@@ -741,6 +779,38 @@ body.light .prog-bar-wrap { background: rgba(0,0,0,0.09); }
 
 /* ─── MULTI-PARA CREAM CARD ─── */
 .cream-card .cream-p + .cream-p { margin-top: 10px; }
+
+/* ─── BOTTOM NAV (mobile only) ─── */
+#bottomNav {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  height: 64px;
+  background: var(--sidebar-bg);
+  border-top: 1px solid rgba(128,128,128,0.15);
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1000;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.bn-item {
+  display: flex; flex-direction: column;
+  align-items: center; gap: 3px;
+  cursor: pointer;
+  color: #888888;
+  transition: color .15s;
+  padding: 4px 8px;
+  border: none; background: none;
+}
+.bn-item.active { color: #F5C518; }
+[data-theme="light"] .bn-item.active { color: #C9A227; }
+.bn-icon  { font-size: 20px; line-height: 1; }
+.bn-label {
+  font-family: 'M PLUS 1', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
 </style>
 </head>
 <body>
@@ -916,6 +986,16 @@ body.light .prog-bar-wrap { background: rgba(0,0,0,0.09); }
 
 </main><!-- /main -->
 
+<!-- ════ BOTTOM NAV (mobile) ════ -->
+<nav id="bottomNav" aria-label="Bottom navigation">
+  <button class="bn-item active" data-page="home"        onclick="nav('home')">        <span class="bn-icon">🔥</span><span class="bn-label">Home</span></button>
+  <button class="bn-item"        data-page="links"       onclick="nav('links')">       <span class="bn-icon">🔗</span><span class="bn-label">All Links</span></button>
+  <button class="bn-item"        data-page="progress"    onclick="nav('progress')">    <span class="bn-icon">⊙</span><span class="bn-label">Progress</span></button>
+  <button class="bn-item"        data-page="reflections" onclick="nav('reflections')"> <span class="bn-icon">✏️</span><span class="bn-label">Reflections</span></button>
+  <button class="bn-item"        data-page="resources"   onclick="nav('resources')">   <span class="bn-icon">📖</span><span class="bn-label">Resources</span></button>
+  <button class="bn-item"        data-page="questions"   onclick="nav('questions')">   <span class="bn-icon">❓</span><span class="bn-label">Questions</span></button>
+</nav>
+
 <script>
 /* ━━━━━━━━━━━━━━━━━━━━  STATE  ━━━━━━━━━━━━━━━━━━━━ */
 let DAYS = [], META = {}, TODAY = 27, TOTAL_DAYS = 66;
@@ -1031,6 +1111,9 @@ function nav(pageId) {
   document.querySelectorAll('.nav-item').forEach(el => {
     el.classList.toggle('active', el.dataset.page === pageId);
   });
+  document.querySelectorAll('.bn-item').forEach(el => {
+    el.classList.toggle('active', el.dataset.page === pageId);
+  });
   document.querySelectorAll('.page').forEach(p => p.classList.remove('show'));
   document.getElementById('page-' + pageId).classList.add('show');
   document.getElementById('dayNav').style.display =
@@ -1058,9 +1141,17 @@ function renderPills() {
   for (let i = 0; i < PILL_COUNT; i++) {
     const d    = pillStartDay + i;
     const pill = document.getElementById('pill-' + i);
-    pill.textContent = 'DAY ' + d;
     pill.dataset.day = d;
-    pill.className   = 'day-pill ' + (d === activeDay ? 'current' : 'other');
+
+    let cls;
+    if (d === activeDay)                    cls = 'current';
+    else if (d < TODAY)                     cls = 'done';
+    else if (d === TODAY && d !== activeDay) cls = 'today-pill';
+    else                                    cls = 'other';
+    pill.className = 'day-pill ' + cls;
+
+    const topLabel = (d === TODAY && d !== activeDay) ? 'TODAY' : 'DAY';
+    pill.innerHTML = `<span class="pill-label">${topLabel}</span><span class="pill-num">${d}</span>`;
   }
 }
 
@@ -1295,11 +1386,11 @@ function closeSidebar() {
 /* ━━━━━━━━━━━━━━━━━━━━  THEME  ━━━━━━━━━━━━━━━━━━━━ */
 
 function applyTheme(light) {
-  document.body.classList.toggle('light', light);
-  document.getElementById('themeBtn').textContent = light ? '☾' : '☀';
+  document.documentElement.setAttribute('data-theme', light ? 'light' : 'dark');
+  document.getElementById('themeBtn').textContent = light ? '🌙' : '☀️';
 }
 function toggleTheme() {
-  const isLight = !document.body.classList.contains('light');
+  const isLight = document.documentElement.getAttribute('data-theme') !== 'light';
   applyTheme(isLight);
   try { localStorage.setItem('sv-theme', isLight ? 'light' : 'dark'); } catch (e) {}
 }
@@ -1340,7 +1431,7 @@ async function init() {
 
   try {
     const saved = localStorage.getItem('sv-theme');
-    if (saved === 'light') applyTheme(true);
+    if (saved) applyTheme(saved === 'light');
   } catch (e) {}
 
   document.getElementById('themeBtn').addEventListener('click', toggleTheme);
