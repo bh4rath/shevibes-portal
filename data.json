@@ -4,8 +4,8 @@
     "user": "Bharath S",
     "cohort": "Cohort 0",
     "totalDays": 66,
-    "completedDays": 27,
-    "streak": 27
+    "completedDays": 28,
+    "streak": 28
   },
   "days": [
     {
@@ -385,6 +385,20 @@
       "reflectionPrompt": "If you had a team of specialist agents working for you, what would each one do — and what would you keep for yourself?",
       "myReflection": "Day 27 build task completed.\n\nDesigned a multi-agent newsletter system for a solo creator:\n\nOrchestrator Agent — receives the topic, breaks it into sub-tasks, assigns to specialist agents, assembles final output.\n\nAgent 1 — Research Agent: Searches web, reads articles, finds top 5 relevant sources, extracts key facts and data. Hands off structured research brief to Content Agent.\n\nAgent 2 — Content Agent: Takes research brief, writes full newsletter draft — intro, body, takeaways, call to action. Hands off raw draft to Proofreading Agent.\n\nAgent 3 — Proofreading Agent: Checks grammar, clarity, tone, factual accuracy against research. Flags issues. Hands off corrected draft to Formatting Agent.\n\nAgent 4 — Formatting Agent: Formats for publishing platform — headings, spacing, subject line, preview text, footer. Hands off to Publishing Agent.\n\nAgent 5 — Publishing Agent: Connects to Substack or Beehiiv, schedules at optimal send time, sends newsletter. Confirms back to Orchestrator.\n\nKey insight: The most critical handoff is Research to Content. If the research brief is weak, every downstream agent produces weaker output.\n\nIf I had a team of specialist agents for my QA work:\n- Research Agent — reads PBIs and requirements\n- Test Plan Agent — generates test cases\n- Execution Agent — runs automated tests\n- Analysis Agent — classifies failures and calculates percentages\n- Reporting Agent — writes and sends summary to team\n\nWhat I would keep for myself: The judgment call on what constitutes a real bug vs environment noise. That requires domain knowledge and accountability that no agent should own alone.",
       "referenceLinks": ["Multi-agent frameworks — Anthropic Research"]
+    },
+    {
+      "day": 28,
+      "title": "When Agents Go Wrong",
+      "theme": "Failure modes, guardrails, human-in-the-loop. Knowing when to trust your agent and when to check.",
+      "status": "complete",
+      "date": "2026-05-02",
+      "lesson": "The Idea:\n\nAgents are powerful. They are also fallible. They can misunderstand a goal and pursue it confidently in the wrong direction. They can get into loops, retrying failed steps endlessly. They can hallucinate tool outputs — believing they did something they didn't. They can make irreversible actions: sending an email, deleting a file, posting publicly. This is why the most important concept in agent design is human-in-the-loop — knowing exactly which decisions your agent should make autonomously, and which ones it should pause and ask you about first. Not all automation should run unattended. The art is knowing the difference.",
+      "whyItMatters": "An agent without guardrails is not an assistant — it's a liability. The builders who ship reliable agents are the ones who think carefully about failure modes before they happen, not after. This is not pessimism. It is good engineering.",
+      "buildTask": "Take the agent use case you identified on Day 26 as most valuable. Now stress-test it. Ask any AI: \"Here is my agent use case: [paste it]. What are the five most likely ways this agent could go wrong? For each failure mode, suggest a guardrail.\" Share the failure modes and guardrails on WhatsApp.",
+      "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou mapped failure modes for your agent. Now write its operating rules — a short list of what it should always do, never do, and always check with you before doing. Think of it as an agent constitution. Then ask AI: \"Based on these rules, design the simplest possible human-in-the-loop checkpoint for this agent.\" A good checkpoint takes under 30 seconds of your time but prevents the five failures you just identified. That's the trade-off you're designing for.",
+      "reflectionPrompt": "What is the one action you would never want an agent to take without checking with you first — and why?",
+      "myReflection": "I would want the agent to pause and ask me if it needed more information to take a decision instead of assuming. At any case if agent doesn't have any information or not clear with inputs then the agent should not assume anything and do the action instead. It should always pause and ask the human instead of taking any action which could harm the user. So I would never want an agent to take any action when it's going to assume anything. I would always want the human in the loop in critical applications. We cannot fully trust agents and they can hallucinate.",
+      "referenceLinks": ["Building safe and reliable agents — Anthropic"]
     }
   ]
 }
