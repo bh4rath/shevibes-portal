@@ -132,7 +132,7 @@
       "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou compared two prompts today. Now go further. Take the same task and write five different versions of the prompt — each one adding a different element: role, tone, format, constraint, example. Run all five. Notice which dimension made the biggest difference for your specific use case. Then write a one-line \"prompt formula\" for this type of task that you'll reuse. You're building your own prompt library, personalised to your work and life.",
       "reflectionPrompt": "What was different between your first prompt and your second? What did adding context actually change?",
       "myReflection": "So, for today's learning, I picked up a use case in my day-to-day work. I asked a generic prompt to the AI, and it gave me an average output. I just tweaked my prompt to how I want the AI to act like and then I added some specificity, like I gave context, I gave instruction, I gave the output format. Then it gave me a detailed answer, which is very helpful. I understood that the quality of my output is based on the prompt. I need to design my prompt in such way that has more details and specificity. I should have a Role, Context, Problem statement, Instruction, output format.",
-      "referenceLinks": ["Prompting guide — Anthropic"]
+      "referenceLinks": [{"text": "Prompting guide — Anthropic", "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview"}]
     },
     {
       "day": 10,
