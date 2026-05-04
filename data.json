@@ -300,7 +300,7 @@
       "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nNotebookLM is RAG made simple. Now design your ideal personal knowledge base. What are the 10 most important documents in your professional life — the ones you refer to repeatedly, the ones that contain your core thinking? List them. Upload them to NotebookLM. Then ask it to synthesise across all of them: \"What are the recurring themes across these documents? What tensions exist? What questions am I not yet answering?\" You've just built a thinking partner that knows your body of work.",
       "reflectionPrompt": "What collection of documents — if AI could search them instantly — would change how you work?",
       "myReflection": "RAG makes AI complete. RAG allows AI to provide external sources or data so that it can't tell you it doesn't know. If AI could search the below documents it will have more context and can give more helpful answers or decisions at work.\n\nProject related documents.\nRequirement documents\nCompany goals\nVision\nMission\nCompany policies\nProducts list\nStrategy\nTeam size\nTeam members\nWorkflows\nTools\nTechnologies\nTesting process\nTeam goals\nIndividual goals\nLeadership goals\nTeam structure\nWork culture\nWorking style\nCommunication style\nFlowcharts\nWiki documents\n\nThese documents will give lot of context to AI which will change the way how I work.",
-      "referenceLinks": ["What is RAG? — IBM"]
+      "referenceLinks": [{"text": "What is RAG? — IBM", "url": "https://research.ibm.com/blog/retrieval-augmented-generation-RAG"}]
     },
     {
       "day": 22,
