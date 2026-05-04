@@ -1117,6 +1117,7 @@ a.ref-link-item:hover {
 let DAYS = [], META = {}, TODAY = 27, TOTAL_DAYS = 66;
 const PILL_COUNT = 5;
 let activeDay    = 1;
+let currentDay   = 1;
 let pillStartDay = 1;
 let curPage      = 'home';
 
@@ -1244,7 +1245,17 @@ function nav(pageId) {
   window.scrollTo(0, 0);
 }
 
+function selectDay(n) {
+  activeDay  = n;
+  currentDay = n;
+  centerPillsOn(n);
+  renderHome(n);
+  nav('home');
+}
+
 function openDayModal(n) {
+  currentDay = n;
+  renderHome(n);
   document.getElementById('dayModalContent').innerHTML = dayHTML(n);
   document.getElementById('dayModalDayLabel').textContent = 'DAY ' + String(n).padStart(2, '0');
   document.getElementById('dayModalPrev').disabled = n <= 1;
@@ -1261,7 +1272,8 @@ function closeModal() {
 }
 
 function goToDay(n) {
-  activeDay = n;
+  activeDay  = n;
+  currentDay = n;
   centerPillsOn(n);
   openDayModal(n);
 }
@@ -1306,7 +1318,7 @@ function shiftPillsForward() {
 
 for (let i = 0; i < PILL_COUNT; i++) {
   document.getElementById('pill-' + i).addEventListener('click', function () {
-    goToDay(parseInt(this.dataset.day));
+    selectDay(parseInt(this.dataset.day));
   });
 }
 
@@ -1317,6 +1329,7 @@ function dayHTML(n) {
   const d    = done ? dayData(n) : null;
   if (!done || !d) {
     return `
+      <span class="back-btn" onclick="closeModal()">&#8592; Back to SheVibes</span>
       <div class="day-label-row"><span class="day-label">DAY ${n}</span></div>
       <hr class="div">
       <div class="d-title">Day ${n}</div>
@@ -1330,6 +1343,7 @@ function dayHTML(n) {
     `;
   }
   return `
+    <span class="back-btn" onclick="closeModal()">&#8592; Back to SheVibes</span>
     <div class="day-label-row">
       <span class="day-label">DAY ${n}</span>
       <div class="day-check">&#10003;</div>
@@ -1355,13 +1369,27 @@ function renderDayContent(n) {
 
 /* ━━━━━━━━━━━━━━━━━━━━  HOME PAGE  ━━━━━━━━━━━━━━━━━━━━ */
 
-function renderHome() {
-  const d  = dayData(TODAY);
-  const el = document.getElementById('page-home');
-  if (!d) return;
+function renderHome(n) {
+  n = n || currentDay;
+  currentDay   = n;
+  activeDay    = n;
+  const el     = document.getElementById('page-home');
+  const done   = n <= TODAY;
+  const d      = done ? dayData(n) : null;
+  if (!done || !d) {
+    el.innerHTML = `
+      <div class="home-done-row">DAY ${n} &mdash; COMING SOON</div>
+      <div class="home-card">
+        <div class="home-title">Day ${n}</div>
+        <div class="home-sub">Content will be available once you reach this day.</div>
+      </div>
+      ${footer()}
+    `;
+    return;
+  }
   el.innerHTML = `
-    <div class="home-done-row">&#10003;&nbsp;COMPLETED &mdash; DAY ${TODAY}</div>
-    <div class="home-card" onclick="goToDay(${TODAY})" title="View Day ${TODAY} content">
+    <div class="home-done-row">&#10003;&nbsp;COMPLETED &mdash; DAY ${n}</div>
+    <div class="home-card" onclick="goToDay(${n})" title="View Day ${n} content">
       <div class="home-check">&#10003;</div>
       <div class="home-title">${esc(d.title)}</div>
       <div class="home-sub">${esc(d.theme)}</div>
@@ -1567,13 +1595,15 @@ async function init() {
     DAYS       = data.days;
     TODAY      = META.completedDays;
     TOTAL_DAYS = META.totalDays;
+    currentDay = TODAY;
+    activeDay  = TODAY;
   } catch (e) {
     console.warn('Could not load data.json — check that the file is served over HTTP.');
   }
 
   document.querySelector('.streak-num').textContent = META.streak || TODAY;
 
-  renderHome();
+  renderHome(TODAY);
   buildGrid();
   buildReflections();
   buildResources();
