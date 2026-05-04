@@ -328,7 +328,7 @@
       "stretchTask": "Stretch — go further if you are ready\n\nOptional. For those who want to go beyond the byte.\n\nYou identified the task you'd hand off. Now write the agent brief for it — as if you were briefing a new team member. What is the goal? What information does the agent need? What tools should it have access to? What does a good output look like? What should it not do? The discipline of writing a clear agent brief is the same discipline as writing a clear job description or delegation note. Ask AI to review your brief and tell you what's missing. This is the thinking skill that separates good delegators from great ones.",
       "reflectionPrompt": "What's the one task you most want to hand off to an agent — and what would you do with the time you got back?",
       "myReflection": "At work we are putting up a lot of manual effort in analysing automation test execution reports. We have more than 10 apps which we do release every two weeks. So 4 people spend their time for 2 days to analyse the report. This can be delegated to AI. AI can do a wonderful job is analysing the report and come up with pass and fail percentage. Group data issues, functional issues and also highlight of any other. This would save a lot of manual effort. That time can be invested in writing more coverage and strengthening QA team. Help team in AI adoption. Try to identify gaps in requirements, process improvements.",
-      "referenceLinks": ["Introducing Claude agents — Anthropic"]
+      "referenceLinks": [{"text": "Introducing Claude agents — Anthropic", "url": "https://www.anthropic.com/news/claude-agents"}]
     },
     {
       "day": 24,
