@@ -62,7 +62,7 @@
       "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou know AI sees tokens, not words. Now test it in your own work context. Take a paragraph you wrote recently — an email, a message, a document — and paste it into the OpenAI tokeniser linked above. Count the tokens. Then rewrite the same paragraph more concisely and count again. Now ask Claude or ChatGPT: \"Which version of this paragraph will give you better context to respond to?\" You're starting to think like a prompt engineer.",
       "reflectionPrompt": "Does knowing AI reads numbers instead of words change how you'll write prompts going forward?",
       "myReflection": "Today's build helped me to understand tokenization. AI understands numbers and not words. Any question that we ask an LLM, it's just split the sentence into multiple chunks called tokens. Then it assigns a unique number for all the tokens. Spaces and punctuations are all considered as token. Then what happens next is all the math. It generates the next best word based on the probability. So AI just understands numbers. The more detailed question we ask then it will navigate to different parts inside the modal and thus we get a answer that is useful. Explain definition and explain in simple words both have different token and different context so the output will be slightly different for both. Prompting is like programming to get the best desired Ouput.",
-      "referenceLinks": ["Tokenisation explained — OpenAI Tokeniser tool"]
+      "referenceLinks": [{"text": "Tokenisation explained — OpenAI Tokeniser tool", "url": "https://platform.openai.com/tokenizer"}]
     },
     {
       "day": 5,
