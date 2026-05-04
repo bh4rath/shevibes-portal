@@ -322,57 +322,68 @@ button { font-family: 'M PLUS 1', sans-serif; }
 }
 
 /* ─── HOME ─── */
-.home-done-row {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--green);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-  display: flex; align-items: center; gap: 6px;
-}
-
-.home-card {
-  background-color: rgba(20, 60, 30, 0.6);
-  border: 1px solid rgba(74, 181, 74, 0.25);
-  border-radius: 12px;
-  padding: 24px;
+.home-card-wrap {
   max-width: 780px;
   width: 100%;
-  margin: 0 auto;
+  margin: 24px auto 0;
+}
+.home-card {
+  background: linear-gradient(135deg, rgba(34,197,94,0.15), rgba(34,197,94,0.06), rgba(34,197,94,0.1));
+  border: 1.5px solid rgba(34,197,94,0.35);
+  box-shadow: rgba(34,197,94,0.08) 0px 0px 40px;
+  border-radius: 16px;
+  padding: 20px 24px;
   cursor: pointer;
-  transition: border-color .15s;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  display: block;
 }
-.home-card:hover { border-color: rgba(74, 181, 74, 0.5); }
+.home-card:hover  { transform: scale(1.01); }
+.home-card:active { transform: scale(0.99); }
 
+.home-card-top {
+  display: flex; align-items: center; gap: 8px;
+  margin-bottom: 12px;
+}
+.home-card-top-label {
+  color: rgb(74,222,128);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.home-card-body {
+  display: flex; align-items: center; gap: 12px;
+}
 .home-check {
-  width: 56px; height: 56px;
-  border-radius: 10px;
-  background-color: #4CAF50;
+  width: 56px; height: 56px; min-width: 56px;
+  border-radius: 12px;
+  background: rgb(74,222,128);
   display: flex; align-items: center; justify-content: center;
-  font-size: 28px;
-  margin-bottom: 18px;
+  flex-shrink: 0;
 }
-
+.home-card-text { flex: 1; min-width: 0; }
 .home-title {
-  font-size: 26px;
+  font-size: 18px;
   font-weight: 700;
   color: var(--text);
-  margin-bottom: 9px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 0 4px 0;
 }
-
 .home-sub {
-  font-size: 13.5px;
-  color: var(--muted);
-  line-height: 1.55;
-  margin-bottom: 18px;
+  font-size: 14px;
+  color: #888888;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 0 8px 0;
 }
-
 .home-badge {
   font-size: 14px;
   font-weight: 500;
-  color: #4CAF50;
-  margin-top: 8px;
+  color: rgb(74,222,128);
+  display: block;
 }
 
 /* ─── PAGE HEADERS ─── */
@@ -1378,29 +1389,50 @@ function renderDayContent(n) {
 
 function renderHome(n) {
   n = n || currentDay;
-  currentDay   = n;
-  activeDay    = n;
-  const el     = document.getElementById('page-home');
-  const done   = n <= TODAY;
-  const d      = done ? dayData(n) : null;
+  currentDay = n;
+  activeDay  = n;
+  const el   = document.getElementById('page-home');
+  const done = n <= TODAY;
+  const d    = done ? dayData(n) : null;
+
   if (!done || !d) {
     el.innerHTML = `
-      <div class="home-done-row">DAY ${n} &mdash; COMING SOON</div>
-      <div class="home-card">
-        <div class="home-title">Day ${n}</div>
-        <div class="home-sub">Content will be available once you reach this day.</div>
+      <div class="home-card-wrap">
+        <div class="home-card" style="cursor:default;">
+          <div class="home-card-top">
+            <span class="home-card-top-label">Day ${n} — Coming Soon</span>
+          </div>
+          <div class="home-card-body">
+            <div class="home-card-text">
+              <h3 class="home-title">Day ${n}</h3>
+              <p class="home-sub">Content will be available once you reach this day.</p>
+            </div>
+          </div>
+        </div>
       </div>
       ${footer()}
     `;
     return;
   }
+
   el.innerHTML = `
-    <div class="home-done-row">&#10003;&nbsp;COMPLETED &mdash; DAY ${n}</div>
-    <div class="home-card" onclick="goToDay(${n})" title="View Day ${n} content">
-      <div class="home-check">&#10003;</div>
-      <div class="home-title">${esc(d.title)}</div>
-      <div class="home-sub">${esc(d.theme)}</div>
-      <div class="home-badge">Challenge completed!</div>
+    <div class="home-card-wrap">
+      <div class="home-card" onclick="goToDay(${n})" title="View Day ${n} content">
+        <div class="home-card-top">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgb(74,222,128)" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+          <span class="home-card-top-label">Completed &mdash; Day ${n}</span>
+        </div>
+        <div class="home-card-body">
+          <div class="home-check">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0d0d0d" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>
+          </div>
+          <div class="home-card-text">
+            <h3 class="home-title">${esc(d.title)}</h3>
+            <p class="home-sub">${esc(d.theme)}</p>
+            <span class="home-badge">Challenge completed!</span>
+          </div>
+        </div>
+      </div>
     </div>
     ${footer()}
   `;
