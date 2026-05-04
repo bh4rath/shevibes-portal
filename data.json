@@ -356,7 +356,7 @@
       "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYour first agent runs. Now stress-test it. Give it five different inputs — vary the task description, the complexity, the length. Watch how the AI step handles each one. Where does it do well? Where does it produce generic or weak output? Now go back and improve the AI prompt inside your Zap based on what you learned. You're not just building an agent — you're iterating on it. That iteration instinct is the most important engineering habit you'll develop in She Vibes.",
       "reflectionPrompt": "What did it feel like to watch an automated workflow run without you doing the work? What does that unlock?",
       "myReflection": "It's great to see the automated workflow. My use case is simple. I want AI to send me a list of a summary of the tech emails I have received. It will give me a brief and summarise and send it to my email. I used zapier do create a 4 step workflow. Everyday 8 am, the summary of tech blogs will reach my email. I don't need to look into all emails instead just read the summary. This unlocks that I can automate workflows that is repetitive and don't need manual intervention. Once set it up and it will run everyday.",
-      "referenceLinks": ["Getting started with AI steps in Zapier — Zapier Blog"]
+      "referenceLinks": [{"text": "Getting started with AI steps in Zapier — Zapier Blog", "url": "https://zapier.com/blog/ai-automation/"}]
     },
     {
       "day": 26,
