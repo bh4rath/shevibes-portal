@@ -76,7 +76,7 @@
       "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nAI hallucinates because it predicts. You have intuition that also sometimes predicts wrong. Think of one domain in your work or life where you make quick calls based on pattern recognition — reading a room, estimating a timeline, judging a person's mood from a message. Ask AI: \"Help me build a checklist to verify my instinct in [that domain] before I act on it.\" Compare how you handle your own uncertainty versus how AI should handle its uncertainty. The insight here is about knowing when to pause and verify — in yourself and in the tool.",
       "reflectionPrompt": "Now that you know AI is predicting word by word — does that change how much you trust it? What will you verify from now on?",
       "myReflection": "Yes, AI is a prediction engine. Its job is to predict the next best word given with all the information we provide. After learning more about how AI works I understood that we cannot trust it blindly. It doesn't check facts or truth. It also has a cut-off date so it won't have recent information. Sometimes AI can confidently share incorrect information which is called hallucinations. AI output is based on probability. So if it can't find a correct answer then it will fill in with the nearest possible answer. So we need to verify the answer that it generated.",
-      "referenceLinks": ["How Large Language Models Work — Stephen Wolfram"]
+      "referenceLinks": [{"text": "How Large Language Models Work — Stephen Wolfram", "url": "https://writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/"}]
     },
     {
       "day": 6,
