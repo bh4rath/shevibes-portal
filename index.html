@@ -968,13 +968,13 @@ hr.div { border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 24p
 
   <!-- Day navigation bar -->
   <div class="day-nav" id="dayNav">
-    <button class="day-arrow" onclick="prevDay()" aria-label="Previous day">&#8592;</button>
+    <button class="day-arrow" onclick="shiftPillsBack()" aria-label="Previous days">&#8592;</button>
     <button class="day-pill current" id="pill-0">DAY 1</button>
     <button class="day-pill other"   id="pill-1">DAY 2</button>
     <button class="day-pill other"   id="pill-2">DAY 3</button>
     <button class="day-pill other"   id="pill-3">DAY 4</button>
     <button class="day-pill other"   id="pill-4">DAY 5</button>
-    <button class="day-arrow" onclick="nextDay()" aria-label="Next day">&#8594;</button>
+    <button class="day-arrow" onclick="shiftPillsForward()" aria-label="Next days">&#8594;</button>
   </div>
 
   <!-- ── HOME ── -->
@@ -1281,6 +1281,15 @@ function renderPills() {
 
 function prevDay() { if (activeDay > 1)          goToDay(activeDay - 1); }
 function nextDay() { if (activeDay < TOTAL_DAYS) goToDay(activeDay + 1); }
+
+function shiftPillsBack() {
+  pillStartDay = Math.max(1, pillStartDay - PILL_COUNT);
+  renderPills();
+}
+function shiftPillsForward() {
+  pillStartDay = Math.min(TOTAL_DAYS - PILL_COUNT + 1, pillStartDay + PILL_COUNT);
+  renderPills();
+}
 
 for (let i = 0; i < PILL_COUNT; i++) {
   document.getElementById('pill-' + i).addEventListener('click', function () {
