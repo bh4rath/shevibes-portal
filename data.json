@@ -188,7 +188,7 @@
       "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou've chained prompts for one task. Now map your most complex recurring work process as a prompt chain. Think of something that happens monthly or quarterly — a report, a review, a planning session. Write the full sequence of prompts you'd use to AI-assist that process from start to finish. You don't need to run them all today. Just write the chain. This is the beginning of building your own AI workflow — a repeatable, improvable process that compounds every time you use it.",
       "reflectionPrompt": "What did breaking the task into steps allow you to do that a single prompt couldn't?",
       "myReflection": "Prompt chaining is interesting. Instead of giving everything in one prompt it breaks it into multiple prompts. Basically if the task is complex instead of one go we can split it into multiple prompts so that it learns from the previous Output.\n\nExample I want to build an agent which can read any PBI and generate test cases.\n\nNow i can split it into 4 sub prompts.\n\nAsking claude to Understand the problem\n\nDesign the agent behaviour\n\nWrite the system prompt for the agent.\n\nTest it by giving a PBI.\n\nI asked AI to run one by one with the previous context or answer.\n\nThen it gave me a good output.\n\nSo if it's a complex task then we need to use prompt chaining.",
-      "referenceLinks": ["Chain complex prompts — Anthropic Prompting Guide"]
+      "referenceLinks": [{"text": "Chain complex prompts — Anthropic Prompting Guide", "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices#chain-complex-prompts"}]
     },
     {
       "day": 14,
