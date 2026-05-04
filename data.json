@@ -230,7 +230,7 @@
       "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nWrite your personal context block — a 10-line description of who you are, what you do, how you think, and what you use AI for. This is your personal system prompt. Every time you start a new AI conversation about your work or life, paste this at the top. Over the next week, notice how the quality of your interactions changes. Refine the block each time something feels missing. This is the beginning of your personal AI operating layer.",
       "reflectionPrompt": "What three sentences of context would make AI most useful to you personally — every single day?",
       "myReflection": "Here are my 3 sentences of context about me that will help AI generate useful results every other day.\n\nI am a Lead QA Engineer who prefers structured, step-by-step guidance with real-world examples that I can directly apply in my work and daily life.\n\nI am focused on improving my leadership, financial discipline, and decision-making, so prioritize practical frameworks, checklists, and clear action plans.\n\nChallenge my thinking when needed, avoid generic advice, and help me break complex problems into simple, executable steps with clear outcomes.\n\nI need to first enter this personal system prompt before any conversation with AI so that AI will know the context and give me usefull results.",
-      "referenceLinks": ["Context windows explained — Anthropic"]
+      "referenceLinks": [{"text": "Context windows explained — Anthropic", "url": "https://www.anthropic.com/research/claude-character"}]
     },
     {
       "day": 17,
