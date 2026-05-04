@@ -244,7 +244,7 @@
       "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou identified the three things you'd connect AI to. Now go one step further. Pick one of them and map out the workflow: what data flows in, what AI does with it, and what you get back. Draw it on paper, in Notion, or describe it in a voice memo. Then ask AI: \"Help me design this workflow in detail. What would I need to set up to make this real today?\" You may be surprised how close you already are.",
       "reflectionPrompt": "If AI could connect to three things in your digital life right now — what would they be, and what would you want it to do with them?",
       "myReflection": "I would want AI to connect with my Outlook and read all emails and summarise me everyday morning.\n\nConnect with my Microsoft teams and slack and read all messages that summarise me what is the task for me and what I need to follow-up.\n\nI would want AI to connect with my ADO board and start writing end to end test cases and scenarios and write it the PBI.\n\nI want AI to connect with my test automation reports and summarise the failures.\n\nI would love AI to connect with my bank statements and give me analysis of spending and savings I did throughout the month.",
-      "referenceLinks": ["What is an API — MuleSoft"]
+      "referenceLinks": [{"text": "What is an API — MuleSoft", "url": "https://www.mulesoft.com/resources/api/what-is-an-api"}]
     },
     {
       "day": 18,
