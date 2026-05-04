@@ -412,7 +412,7 @@
       "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nFour weeks of foundations. Before you move into building, do a personal audit. Open a blank document and answer three questions: What is the most time-consuming manual task in my work right now? What is the most mentally draining repeatable task? What decision do I make repeatedly that AI could help me make faster? For each answer, sketch the simplest possible AI-assisted version. One prompt, one automation, one agent. This becomes your personal build backlog for the next four weeks. Start with the one that would save you the most every week.",
       "reflectionPrompt": "Post one of these on the group today:\n\n\"The agent use case I most want to build in the next four weeks is _.\"\n\n\"The failure mode that made me think hardest was __ — because __.\"\n\n\"Four weeks ago I couldn't __. Today I __.\"",
       "myReflection": "",
-      "referenceLinks": ["Weekly Call — Join the Zoom Call"]
+      "referenceLinks": [{"text": "Weekly Call — Join the Zoom Call", "url": "https://zoom.us/rec/share/xnR2SupsrJdu4TMmArgOpvacMND5XKyPrexc19wsXU7rZBFxgFzB6NwcZey6GPuG.FYhsALfrUExeAUVJ"}]
     }
   ]
 }
