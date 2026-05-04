@@ -90,7 +90,7 @@
       "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nAI was fine-tuned on human feedback. You've been fine-tuned by your experiences too. Think of one strong professional opinion you hold — about how meetings should run, how feedback should be given, how projects get done. Ask AI the same question and compare its answer to yours. Then ask: \"What life experiences or data might have shaped your answer differently from mine?\" You're reverse-engineering bias in AI and in yourself simultaneously. That's the most human use of AI I can think of.",
       "reflectionPrompt": "If AI learned from human feedback — what do you think it learned about how women communicate, ask questions, and seek help?",
       "myReflection": "Today's build helped me to understand how model was trained. Basically there are pre-training, fine tuning and RLHF. Pre-training is basically the entire internet is feed into the AI. Now with pre-training AI can be raw and it could be dangerous. We need to fine tune the system. Fine tuning helps AI to give structured, helpful and safe answers to us. Example if you ask to generate test cases it will generate in a structured output. Finally AI will learn from human feedback which is called Reinforcement learning with human feedback. Asking a question and AI will generate two different answers. A human has to select the best appropriate answer and the model will learn from human feedback.",
-      "referenceLinks": ["Reinforcement Learning from Human Feedback — Anthropic"]
+      "referenceLinks": [{"text": "Reinforcement Learning from Human Feedback — Anthropic", "url": "https://arxiv.org/pdf/2204.05862"}]
     },
     {
       "day": 7,
