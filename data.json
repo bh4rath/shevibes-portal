@@ -34,7 +34,7 @@
       "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou now know AI is pattern-matching, not magic. So here is your challenge: find one moment this week where you caught AI being wrong — a confident mistake, an odd phrasing, an answer that felt off. Screenshot it. Then ask AI why it got it wrong. Share what it said. This is not a gotcha exercise. It is calibration. The people who use AI best are the ones who know its failure modes as well as its strengths.",
       "reflectionPrompt": "What's one thing you believed about AI before today that feels different now?",
       "myReflection": "I have been thinking that AI is kind of a customised google search engine. So Instead of googling you ask any question and it will fetch the relevant answer. But I was totally wrong. After today's build I clearly understood that AI is a super smart pattern matching engine. It's job is to predict the next best word, then next and thereby creating a helpful answer and all that is done in a fraction of a second. It has been trained with lots of lots of text so it creates a pattern. Like a kid learn the language from us, similarly it learns how words go together and learns the language. It doesn't have any feeling, emotions or it doesn't think like how we humans do. So whatever AI is generating we need to double check. We also need to understand where AI can go wrong. It can generate incorrect answers confidently.",
-      "referenceLinks": ["The Illustrated Transformer — Jay Alammar"]
+      "referenceLinks": [{"text": "The Illustrated Transformer — Jay Alammar", "url": "https://jalammar.github.io/illustrated-transformer/"}]
     },
     {
       "day": 3,
