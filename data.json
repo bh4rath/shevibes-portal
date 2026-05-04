@@ -174,7 +174,7 @@
       "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nDebugging AI is a skill. So is debugging yourself. Find a decision you made recently at work or at home that didn't go the way you wanted. Describe it to AI and ask: \"Based on what I've told you, what information was I missing when I made this decision, and what questions should I have asked myself first?\" Then ask: \"If you were advising me at the time, what would you have said?\" You're using AI to debug your thinking the same way you debug a prompt.",
       "reflectionPrompt": "What does a bad AI response actually tell you about what was missing from your prompt?",
       "myReflection": "I was asking AI on how to become a great leader being and introvert. It gave me a output which is good and it was short. It didn't have much details on how can I learn it. Then I understood that my question is very generic and it didn't have any background about me and what problem I'm facing at work. I wrote another prompt asking AI to act as a leadership coach. Gave it a background, my struggle, objective, clear instruction. Then it emapthisesd with me, made me comfortable and explained in detail on how to become a great leader.\n\nIn short my prompt was missing\n\n1. Role\n2. context or background\n3. Objective or goal\n4. Clear instruction\n5. Output format or structure.",
-      "referenceLinks": ["Claude prompting best practices — Anthropic"]
+      "referenceLinks": [{"text": "Claude prompting best practices — Anthropic", "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices"}]
     },
     {
       "day": 13,
