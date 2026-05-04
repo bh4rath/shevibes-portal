@@ -202,7 +202,7 @@
       "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou've compared two tools on one prompt. Now build a personal \"AI toolkit\" decision tree. Think of the five types of tasks you most commonly use AI for. For each one, decide which tool you'll default to and why. Then test your hypothesis: run the same task on your chosen tool versus your second choice. Does your default still win? This exercise builds tool intuition, not tool loyalty — and that's the point.",
       "reflectionPrompt": "If you could only use one AI tool from now on, which would it be — and what would you miss from the others?",
       "myReflection": "I would prefer claude AI as the one AI tool that I use everyday. Reason being claude responses are structured and clear. I asked a question to both claude and ChatGPT and literally got the same answers. Here are the prompts\n\nAct as a prompting engineer. My goal is to become a prompting engineer. I want you to tell me 5 things that must be there in any prompt that I'm going to write.\n\nAct as a mortgage trainer. I am a beginner preparing a presentation for interns who have no knowledge of mortgages. Explain mortgage servicing in simple terms with real-world examples. Keep it detailed but easy to understand. Structure it like presentation content with headings and bullet points.",
-      "referenceLinks": ["Comparing frontier AI models — Ethan Mollick, One Useful Thing"]
+      "referenceLinks": [{"text": "Comparing frontier AI models — Ethan Mollick, One Useful Thing", "url": "https://www.oneusefulthing.org/p/which-ai-to-use-now-an-updated-opinionated"}]
     },
     {
       "day": 15,
