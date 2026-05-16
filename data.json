@@ -4,8 +4,8 @@
     "user": "Bharath S",
     "cohort": "Cohort 0",
     "totalDays": 66,
-    "completedDays": 31,
-    "streak": 31
+    "completedDays": 32,
+    "streak": 32
   },
   "days": [
     {
@@ -441,6 +441,20 @@
       "reflectionPrompt": "What did you cut from your original idea — and does the smaller version still excite you?",
       "myReflection": "",
       "referenceLinks": [{"text": "Do Things That Don't Scale — Paul Graham", "url": "https://paulgraham.com/ds.html"}]
+    },
+    {
+      "day": 32,
+      "title": "Should I Build This?",
+      "theme": "Ethics, value, impact. Not everything worth building should be built. The judgment layer of a builder.",
+      "status": "completed",
+      "date": "2026-05-06",
+      "lesson": "The Idea:\n\nCan I build this and should I build this are two completely different questions. Should asks about value, impact, and ethics. Does this thing make someone's life better — or does it make it worse? Who benefits and who might be harmed? Does it respect people's privacy and data? Is it solving a real problem or just a problem I find interesting? The best builders ask should before they ask how. It adds only minutes to your planning. It can save you from building something you'll regret.",
+      "whyItMatters": "As AI makes building faster and cheaper, the judgment about what to build becomes more important, not less. Anyone can ship something now. The question is whether what you ship is worth having in the world.",
+      "buildTask": "Apply the should test to your project. Ask any AI: \"Here is what I want to build: [describe it]. Play devil's advocate. Who could this harm? What data does it need — and is collecting that data ethical? Is there a version of this that does more harm than good? What would make it genuinely valuable?\" Share your most uncomfortable finding on WhatsApp.",
+      "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou applied the should test to your project. Now write its ethical charter — a short document that states what your tool will always do, will never do, and how it will handle user data. Even if it's just for you and five users. Ask AI to review it and challenge you: \"What ethical edge cases have I missed?\" Then add a privacy section to your project brief. Products with ethical clarity ship with more confidence and earn more trust. This is not box-ticking. It is how good builders think.",
+      "reflectionPrompt": "Did this exercise change anything about your project — the scope, the design, or how you'll handle data?",
+      "myReflection": "",
+      "referenceLinks": [{"text": "Responsible AI principles — Anthropic", "url": ""}]
     }
   ]
 }
