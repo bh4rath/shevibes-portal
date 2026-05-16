@@ -426,7 +426,7 @@
       "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou've declared your track. Now write a one-page project brief. What problem does your project solve? Who has this problem right now? What does success look like on Day 66 — what can someone do with what you built? What's the simplest version that still solves the problem? Ask AI: \"Review this project brief and tell me what's unclear, what's missing, and what the riskiest assumption is.\" Fix the weak spots before you write a single line of code or prompt. Strong foundations ship faster than ambitious starts.",
       "reflectionPrompt": "What is the one thing you most want to have built by June 9th — and who would it serve?",
       "myReflection": "I would like to choose the agentic builder path because I would like to build agents and agentic workflows. I want to create an agentic workflows at work where when there is PBI added to project board. Then I want AI to fetch the PBI, read the acceptance criteria, flag any issues in the requirements. Then i want AI to create test cases. Then Once test cases are ready then I want the agent to write it back to the story or PBI. The I want the AI to create automation nightwatch test scripts. Then run it in pipeline and get the results",
-      "referenceLinks": [{"text": "How to choose your first project — Shawn Wang (swyx)", "url": ""}]
+      "referenceLinks": [{"text": "How to choose your first project — Shawn Wang (swyx)", "url": "https://www.swyx.io/learn-in-public"}]
     },
     {
       "day": 31,
