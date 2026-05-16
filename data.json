@@ -4,8 +4,8 @@
     "user": "Bharath S",
     "cohort": "Cohort 0",
     "totalDays": 66,
-    "completedDays": 32,
-    "streak": 32
+    "completedDays": 33,
+    "streak": 33
   },
   "days": [
     {
@@ -455,6 +455,20 @@
       "reflectionPrompt": "Did this exercise change anything about your project — the scope, the design, or how you'll handle data?",
       "myReflection": "",
       "referenceLinks": [{"text": "Responsible AI principles — Anthropic", "url": ""}]
+    },
+    {
+      "day": 33,
+      "title": "Architecture Thinking",
+      "theme": "Frontend, backend, database, API. How the pieces fit together before you write a single line.",
+      "status": "completed",
+      "date": "2026-05-07",
+      "lesson": "The Idea:\n\nEvery piece of software has an architecture — the way its parts fit together. Even the simplest app has a frontend (what you see), a backend (the logic), and a data layer (where things are stored). Understanding these three layers before you build means you make better decisions about tools, avoid dead ends, and can explain your project clearly to others. You don't need to be an engineer to think architecturally. You just need to be able to draw the boxes and the arrows between them.",
+      "whyItMatters": "Builders who start without thinking about architecture often get halfway through and realise their tools don't fit together, their data has nowhere to live, or their idea requires ten times more work than they thought. Fifteen minutes of architecture thinking saves weeks of rebuilding.",
+      "buildTask": "Draw the architecture of your project — literally draw it, even on paper. Three boxes minimum: what the user sees, what happens in the middle, where data is stored. Then ask any AI: \"Here is the architecture I've sketched for my project: [describe it]. Does this make sense? What am I missing? What would you change?\" Share your architecture diagram or description on WhatsApp.",
+      "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou drew your architecture. Now look at a tool you use every day and reverse-engineer its architecture. Pick one — WhatsApp, Instagram, Notion, Google Sheets. Ask AI: \"Describe the likely architecture of [tool] at a high level — frontend, backend, database, APIs. What are the hardest engineering problems they had to solve?\" Then compare it to yours. What architectural decisions did they make that you could learn from for your own project? Understanding how things are built is the fastest way to get better at building.",
+      "reflectionPrompt": "What was the part of your architecture you were least sure about — and what did AI suggest?",
+      "myReflection": "",
+      "referenceLinks": [{"text": "System Design 101 — ByteByteGo (free visual guide)", "url": ""}]
     }
   ]
 }
