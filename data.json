@@ -4,8 +4,8 @@
     "user": "Bharath S",
     "cohort": "Cohort 0",
     "totalDays": 66,
-    "completedDays": 29,
-    "streak": 29
+    "completedDays": 30,
+    "streak": 30
   },
   "days": [
     {
@@ -413,6 +413,20 @@
       "reflectionPrompt": "Post one of these on the group today:\n\n\"The agent use case I most want to build in the next four weeks is _.\"\n\n\"The failure mode that made me think hardest was __ — because __.\"\n\n\"Four weeks ago I couldn't __. Today I __.\"",
       "myReflection": "",
       "referenceLinks": [{"text": "Weekly Call — Join the Zoom Call", "url": "https://zoom.us/rec/share/xnR2SupsrJdu4TMmArgOpvacMND5XKyPrexc19wsXU7rZBFxgFzB6NwcZey6GPuG.FYhsALfrUExeAUVJ"}]
+    },
+    {
+      "day": 30,
+      "title": "Pick Your Path",
+      "theme": "Choose your specialist track: Web/Frontend, Backend, Full-Stack, or Agent Builder. Commit to your direction.",
+      "status": "completed",
+      "date": "2026-05-04",
+      "lesson": "The Idea:\n\nYou've spent four weeks building the foundation. Now you choose your direction. There are four specialist tracks for the next four weeks. Web/Frontend: you'll build things people can see and click — websites, landing pages, interfaces. Backend: you'll build the logic and data layer underneath — APIs, databases, automations. Full-Stack: you'll build both, end to end. Agent Builder: you'll focus on building AI-powered workflows and automations. There is no wrong choice. Pick the one that matches the thing you most want to exist in the world by Day 66.",
+      "whyItMatters": "Generalists learn everything and finish nothing. For the next four weeks, you are a specialist. You have one track, one project, one direction. Focus is what turns learning into shipping.",
+      "buildTask": "Declare your track on WhatsApp. Not \"I'm thinking about\" — a commitment. Then write two sentences: what you're building and who it's for. This is your public commitment to the cohort. The group will hold you to it.",
+      "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou've declared your track. Now write a one-page project brief. What problem does your project solve? Who has this problem right now? What does success look like on Day 66 — what can someone do with what you built? What's the simplest version that still solves the problem? Ask AI: \"Review this project brief and tell me what's unclear, what's missing, and what the riskiest assumption is.\" Fix the weak spots before you write a single line of code or prompt. Strong foundations ship faster than ambitious starts.",
+      "reflectionPrompt": "What is the one thing you most want to have built by June 9th — and who would it serve?",
+      "myReflection": "I would like to choose the agentic builder path because I would like to build agents and agentic workflows. I want to create an agentic workflows at work where when there is PBI added to project board. Then I want AI to fetch the PBI, read the acceptance criteria, flag any issues in the requirements. Then i want AI to create test cases. Then Once test cases are ready then I want the agent to write it back to the story or PBI. The I want the AI to create automation nightwatch test scripts. Then run it in pipeline and get the results",
+      "referenceLinks": [{"text": "How to choose your first project — Shawn Wang (swyx)", "url": ""}]
     }
   ]
 }
