@@ -4,8 +4,8 @@
     "user": "Bharath S",
     "cohort": "Cohort 0",
     "totalDays": 66,
-    "completedDays": 30,
-    "streak": 30
+    "completedDays": 31,
+    "streak": 31
   },
   "days": [
     {
@@ -427,6 +427,20 @@
       "reflectionPrompt": "What is the one thing you most want to have built by June 9th — and who would it serve?",
       "myReflection": "I would like to choose the agentic builder path because I would like to build agents and agentic workflows. I want to create an agentic workflows at work where when there is PBI added to project board. Then I want AI to fetch the PBI, read the acceptance criteria, flag any issues in the requirements. Then i want AI to create test cases. Then Once test cases are ready then I want the agent to write it back to the story or PBI. The I want the AI to create automation nightwatch test scripts. Then run it in pipeline and get the results",
       "referenceLinks": [{"text": "How to choose your first project — Shawn Wang (swyx)", "url": ""}]
+    },
+    {
+      "day": 31,
+      "title": "Can I Build This?",
+      "theme": "Technical feasibility thinking. What tools exist? What's the scope? How do you size a problem before you start?",
+      "status": "completed",
+      "date": "2026-05-05",
+      "lesson": "The Idea:\n\nBefore you write a single line of code, you need to answer one question honestly: can I actually build this? Not \"could a developer build this\" — can you, with the tools and time you have, build a working version in four weeks? Scope is everything. The graveyard of side projects is full of ideas that were too big, too vague, or too dependent on things the builder couldn't control. A simple tool that works beats a complex tool that doesn't exist. Today you learn to size a project before you start it.",
+      "whyItMatters": "The most common reason builders don't finish is not lack of skill — it's misjudged scope. Getting honest about what you can actually build in four weeks is not pessimism. It is the skill that separates people who ship from people who plan.",
+      "buildTask": "Take your declared project from yesterday. Break it into the smallest possible working version — the version with one feature, one user, one use case. Ask any AI: \"Here is what I want to build: [describe it]. What is the absolute minimum version I could build in four weeks as a beginner? What would I need to learn? What could go wrong?\" Share the AI's assessment and your reaction on WhatsApp.",
+      "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou sized your project. Now find three people who have the problem your project solves and interview them — in person, on WhatsApp, over a call. Ask each one: what do you currently do to solve this problem? What's the most frustrating part? What would a perfect solution look like? Bring their answers back to AI and ask: \"Based on this user research, does my planned minimum version actually solve the right problem?\" Adjust your project brief accordingly. Builders who talk to users before building save weeks of wrong work.",
+      "reflectionPrompt": "What did you cut from your original idea — and does the smaller version still excite you?",
+      "myReflection": "",
+      "referenceLinks": [{"text": "Do Things That Don't Scale — Paul Graham", "url": ""}]
     }
   ]
 }
