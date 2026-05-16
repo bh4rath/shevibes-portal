@@ -440,7 +440,7 @@
       "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou sized your project. Now find three people who have the problem your project solves and interview them — in person, on WhatsApp, over a call. Ask each one: what do you currently do to solve this problem? What's the most frustrating part? What would a perfect solution look like? Bring their answers back to AI and ask: \"Based on this user research, does my planned minimum version actually solve the right problem?\" Adjust your project brief accordingly. Builders who talk to users before building save weeks of wrong work.",
       "reflectionPrompt": "What did you cut from your original idea — and does the smaller version still excite you?",
       "myReflection": "",
-      "referenceLinks": [{"text": "Do Things That Don't Scale — Paul Graham", "url": ""}]
+      "referenceLinks": [{"text": "Do Things That Don't Scale — Paul Graham", "url": "https://paulgraham.com/ds.html"}]
     }
   ]
 }
