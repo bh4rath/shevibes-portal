@@ -4,8 +4,8 @@
     "user": "Bharath S",
     "cohort": "Cohort 0",
     "totalDays": 66,
-    "completedDays": 36,
-    "streak": 36
+    "completedDays": 37,
+    "streak": 37
   },
   "days": [
     {
@@ -511,6 +511,20 @@
       "reflectionPrompt": "Post one of these today:\n\n\"My project is __. I'm building it for __. By June 9th it will ___.\"\n\n\"The planning step that surprised me most was __ — because __.\"\n\n\"I'm most nervous about __ in the building weeks. But my plan for that is __.\"",
       "myReflection": "",
       "referenceLinks": [{"text": "Weekly Call — Watch the Recording", "url": ""}]
+    },
+    {
+      "day": 37,
+      "title": "Your First Build",
+      "theme": "Start building your chosen project. Day one of your specialist track. Write your first line of real code.",
+      "status": "completed",
+      "date": "2026-05-11",
+      "lesson": "The Idea:\n\nToday you write your first real line of code for your project. Not a tutorial. Not someone else's exercise. Yours. It will probably be small — a webpage that shows your project's title, a script that prints \"hello world\", a Notion template that structures your data. It doesn't matter how small. What matters is that it exists and it didn't yesterday. The first build is always the hardest because the blank page is the enemy. Today you defeat the blank page.",
+      "whyItMatters": "Every substantial thing ever built started with one line. The emotional barrier to the first commit is real. Getting over it today means everything else is iteration — and iteration is just practice.",
+      "buildTask": "Open your code editor (VS Code is recommended — download free at code.visualstudio.com). Create your project folder. Write the first file. For web builders: an index.html with your project's name and a one-sentence description. For backend builders: a main.py or index.js that prints your project idea to the terminal. For agent builders: a Zapier workflow with your first trigger. Run it. See something happen. Share a screenshot on WhatsApp with the words: \"Day 37. It exists.\"",
+      "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou wrote your first file. Now ask AI to review it and suggest the next three files or components you should build to get to a working prototype. Pick one of the three, build it today. Then come back and ask AI again. This is the loop: build the smallest next thing, show it to AI, get the next move. You're not planning ahead five steps — you're always one step ahead of yourself. That rhythm is how solo builders ship.",
+      "reflectionPrompt": "What was the hardest part of starting — and what finally got you to do it?",
+      "myReflection": "",
+      "referenceLinks": [{"text": "VS Code getting started — code.visualstudio.com", "url": "https://code.visualstudio.com/docs"}]
     }
   ]
 }
