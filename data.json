@@ -4,8 +4,8 @@
     "user": "Bharath S",
     "cohort": "Cohort 0",
     "totalDays": 66,
-    "completedDays": 39,
-    "streak": 39
+    "completedDays": 40,
+    "streak": 40
   },
   "days": [
     {
@@ -553,6 +553,20 @@
       "reflectionPrompt": "In your project, what decisions belong to the frontend and what belongs to the backend — and where is the boundary?",
       "myReflection": "",
       "referenceLinks": [{"text": "Frontend Developer Roadmap — roadmap.sh", "url": "https://roadmap.sh/frontend"}]
+    },
+    {
+      "day": 40,
+      "title": "APIs: How Things Talk to Each Other",
+      "theme": "APIs are how software communicates. Call one, receive data, display it. Your project connects to the world.",
+      "status": "completed",
+      "date": "2026-05-14",
+      "lesson": "The Idea:\n\nYou've heard the word API many times now. Today you call one. An API is a door that a service opens so that other software can talk to it. When your weather app shows you today's forecast, it called a weather API. When a website lets you log in with Google, it called Google's authentication API. Calling an API means sending a request — \"give me the weather for Mumbai\" — and receiving a response — a JSON object with temperature, humidity, conditions. JSON is just structured data. Once you've called one API and seen the response, APIs stop being abstract.",
+      "whyItMatters": "Almost every interesting thing you'll build will talk to at least one API. Your project almost certainly needs one — whether it's an AI API, a data API, or a service API. Getting comfortable with the request-response cycle today means you can connect your project to the world's data.",
+      "buildTask": "Call a free public API with no authentication required. Go to https://api.github.com/users/your-username in your browser — you'll see JSON data about a GitHub profile. Then use AI to write a small Python or JavaScript snippet that calls this API and prints the user's name and location. Run it. Share the output on WhatsApp.",
+      "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou called a public API. Now call the one your project actually needs. Find the API documentation for the service you identified in your reflection prompt. Look for a free tier or sandbox. Ask AI: \"Help me make my first API call to [service] using [your language]. Show me the request, the expected response, and how to extract the data I need.\" Run it. Even if the response is just raw JSON on screen, you've made the connection. Your project just touched the internet.",
+      "reflectionPrompt": "Which API would make your project ten times more useful if you could connect to it — and what data would it give you?",
+      "myReflection": "",
+      "referenceLinks": [{"text": "APIs for beginners — freeCodeCamp YouTube", "url": ""}]
     }
   ]
 }
