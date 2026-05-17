@@ -4,8 +4,8 @@
     "user": "Bharath S",
     "cohort": "Cohort 0",
     "totalDays": 66,
-    "completedDays": 35,
-    "streak": 35
+    "completedDays": 36,
+    "streak": 36
   },
   "days": [
     {
@@ -497,6 +497,20 @@
       "reflectionPrompt": "What was the moment the terminal stopped feeling scary — and what made it click?",
       "myReflection": "",
       "referenceLinks": [{"text": "Command line crash course — MDN Web Docs", "url": ""}]
+    },
+    {
+      "day": 36,
+      "title": "Reflection: Week 5",
+      "theme": "What are you building for the next three weeks? Share your project idea with the cohort.",
+      "status": "completed",
+      "date": "2026-05-10",
+      "lesson": "This week's arc:\n\nYou picked your path. You asked if you can build it and if you should. You drew the architecture. You planned with AI. You made peace with the terminal. You are no longer someone thinking about building — you are someone about to build. That is a real shift. Most people never get here.",
+      "whyItMatters": "Next week you build. No more planning. No more preparation. The first line of code, the first component, the first working thing. It will be messy. It will break. That is exactly right. See you Monday.",
+      "buildTask": "Your Week 5 wins — take five minutes and write down:\n\n1. Your project in one sentence — what it is and who it's for\n2. Your biggest known risk — and your mitigation\n3. What you're building in week one of your specialist track",
+      "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nBefore the building weeks begin, do one more thing: find one project built by someone at your level that you admire. It doesn't have to be perfect — it has to be real and finished. Study it. Ask AI: \"Here is a project I admire: [describe it]. Based on what I'm building, what can I learn from how this was put together?\" Then write one decision you're changing in your own project based on what you found. The best builders learn from what already works, then make it their own.",
+      "reflectionPrompt": "Post one of these today:\n\n\"My project is __. I'm building it for __. By June 9th it will ___.\"\n\n\"The planning step that surprised me most was __ — because __.\"\n\n\"I'm most nervous about __ in the building weeks. But my plan for that is __.\"",
+      "myReflection": "",
+      "referenceLinks": [{"text": "Weekly Call — Watch the Recording", "url": ""}]
     }
   ]
 }
