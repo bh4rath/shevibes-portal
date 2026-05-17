@@ -4,8 +4,8 @@
     "user": "Bharath S",
     "cohort": "Cohort 0",
     "totalDays": 66,
-    "completedDays": 42,
-    "streak": 42
+    "completedDays": 43,
+    "streak": 43
   },
   "days": [
     {
@@ -595,6 +595,20 @@
       "reflectionPrompt": "What data does your project need to store — and what happens to your project if that data disappears?",
       "myReflection": "",
       "referenceLinks": [{"text": "Supabase getting started — supabase.com/docs", "url": "https://supabase.com/docs"}]
+    },
+    {
+      "day": 43,
+      "title": "Reflection: Week 6",
+      "theme": "What's working? What broke? Share your build progress and one thing that surprised you.",
+      "status": "completed",
+      "date": "2026-05-17",
+      "lesson": "This week's arc:\n\nYou built something. It might be small. It might be rough. It might have broken three times. But it exists — and it didn't a week ago. You wrote code, called an API, set up a database, debugged with AI, and started to understand the difference between what happens in the browser and what happens on the server. That is a week most people never have.",
+      "whyItMatters": "Next week is Shipping. You'll learn Git, GitHub, and how to deploy your project so it lives on the internet and not just your laptop. By Sunday, your project will have a URL. Real, public, shareable. See you Monday.",
+      "buildTask": "Your Week 6 wins — take five minutes and write down:\n\n1. What your project can do today that it couldn't on Monday\n2. The most useful AI debugging moment this week\n3. What you're building next week — specifically",
+      "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nReflection day is also code review day. Paste your most important file into AI and ask: \"Review this code. What works well? What would a more experienced developer change? What's the most fragile part?\" Then make one improvement based on the feedback — just one. Not a rewrite. One targeted fix. This is how real code improves: weekly reviews, small improvements, compounding quality. Your codebase is a week old. Start treating it like something worth maintaining.",
+      "reflectionPrompt": "Post one of these today:\n\n\"Here's what my project looks like after Week 6: [screenshot or description]. Here's what's next.\"\n\n\"The moment this week when building clicked for me was _.\"\n\n\"I got stuck on __ and got unstuck by __.\"",
+      "myReflection": "",
+      "referenceLinks": [{"text": "Weekly Call — Join the Zoom Call", "url": ""}]
     }
   ]
 }
