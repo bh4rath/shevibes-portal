@@ -4,8 +4,8 @@
     "user": "Bharath S",
     "cohort": "Cohort 0",
     "totalDays": 66,
-    "completedDays": 40,
-    "streak": 40
+    "completedDays": 41,
+    "streak": 41
   },
   "days": [
     {
@@ -567,6 +567,20 @@
       "reflectionPrompt": "Which API would make your project ten times more useful if you could connect to it — and what data would it give you?",
       "myReflection": "",
       "referenceLinks": [{"text": "APIs for beginners — freeCodeCamp YouTube", "url": ""}]
+    },
+    {
+      "day": 41,
+      "title": "Debugging With AI",
+      "theme": "When your code breaks, AI is your pair programmer. How to describe errors, read stack traces, fix fast.",
+      "status": "completed",
+      "date": "2026-05-15",
+      "lesson": "The Idea:\n\nYour code will break. This is not failure — it is the job. Debugging is the process of finding and fixing what broke. Without AI, debugging meant searching Stack Overflow for hours, reading documentation, and guessing. With AI, debugging looks like this: copy the error message, paste it into Claude or ChatGPT, describe what you were trying to do, and ask what went wrong. Nine times out of ten, you get the answer in thirty seconds. The skill is not avoiding errors — it's reading them clearly enough to ask the right question.",
+      "whyItMatters": "Developers who are fast are not the ones who write perfect code. They are the ones who debug fast. AI has collapsed the time between \"something broke\" and \"I know why\" from hours to minutes. This is one of the biggest productivity unlocks of the AI era for builders.",
+      "buildTask": "Intentionally break something in your project — remove a semicolon, misname a variable, delete a bracket. Read the error message carefully. Then paste the error and your code into any AI tool and ask: \"What is wrong and how do I fix it?\" Compare what AI said to what you thought the problem was. Share the error, the AI diagnosis, and whether it was right on WhatsApp.",
+      "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou debugged one error. Now build your personal error log. Every time your project breaks from today until Day 66, write one line: what broke, what the error said, how you fixed it. Keep it in a Notion page or a text file. At the end of the week, paste the log into AI and ask: \"What patterns do you see in my errors? What should I learn or change about how I'm writing code?\" Your error log is the most honest record of what you're actually learning.",
+      "reflectionPrompt": "What's the difference between an error you could diagnose yourself and one where you genuinely needed AI?",
+      "myReflection": "",
+      "referenceLinks": [{"text": "Understanding Errors — The Odin Project", "url": ""}]
     }
   ]
 }
