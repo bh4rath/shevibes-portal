@@ -496,7 +496,7 @@
       "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou're comfortable in the terminal. Now go further. Inside your she-vibes-project folder, initialise a new Node or Python project using the terminal. Ask AI: \"Walk me through initialising a basic [Node/Python] project from the terminal — what commands do I run and in what order?\" Run each command it gives you. If something breaks, paste the error back into AI and ask it to explain what went wrong and how to fix it. You just practised the most important debugging loop in software development: error, ask, understand, fix, continue.",
       "reflectionPrompt": "What was the moment the terminal stopped feeling scary — and what made it click?",
       "myReflection": "",
-      "referenceLinks": [{"text": "Command line crash course — MDN Web Docs", "url": ""}]
+      "referenceLinks": [{"text": "Command line crash course — MDN Web Docs", "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"}]
     },
     {
       "day": 36,
@@ -538,7 +538,7 @@
       "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou know what language your project uses. Now write a function in it — the most useful small function your project needs. Something that takes an input and returns an output. Ask AI to walk you through writing it step by step, explaining every line as you go. Don't copy-paste. Type it yourself. Then break it intentionally — delete a bracket, misspell a variable. Read the error. Ask AI what the error means. Learning to read errors is the most underrated programming skill, and you just practised it on purpose.",
       "reflectionPrompt": "Which technology in your stack feels most foreign — and what's your plan to get comfortable with it?",
       "myReflection": "",
-      "referenceLinks": [{"text": "Python in 100 seconds — Fireship", "url": ""}]
+      "referenceLinks": [{"text": "Python in 100 seconds — Fireship", "url": "https://youtu.be/x7X9w_GIm1s?si=qkMudIfkCGd2WmMF"}]
     },
     {
       "day": 39,
@@ -566,7 +566,7 @@
       "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou called a public API. Now call the one your project actually needs. Find the API documentation for the service you identified in your reflection prompt. Look for a free tier or sandbox. Ask AI: \"Help me make my first API call to [service] using [your language]. Show me the request, the expected response, and how to extract the data I need.\" Run it. Even if the response is just raw JSON on screen, you've made the connection. Your project just touched the internet.",
       "reflectionPrompt": "Which API would make your project ten times more useful if you could connect to it — and what data would it give you?",
       "myReflection": "",
-      "referenceLinks": [{"text": "APIs for beginners — freeCodeCamp YouTube", "url": ""}]
+      "referenceLinks": [{"text": "APIs for beginners — freeCodeCamp YouTube", "url": "https://youtu.be/GZvSYJDk-us?si=baZh_WdcbiPR8BeZ"}]
     },
     {
       "day": 41,
@@ -580,7 +580,7 @@
       "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou debugged one error. Now build your personal error log. Every time your project breaks from today until Day 66, write one line: what broke, what the error said, how you fixed it. Keep it in a Notion page or a text file. At the end of the week, paste the log into AI and ask: \"What patterns do you see in my errors? What should I learn or change about how I'm writing code?\" Your error log is the most honest record of what you're actually learning.",
       "reflectionPrompt": "What's the difference between an error you could diagnose yourself and one where you genuinely needed AI?",
       "myReflection": "",
-      "referenceLinks": [{"text": "Understanding Errors — The Odin Project", "url": ""}]
+      "referenceLinks": [{"text": "Understanding Errors — The Odin Project", "url": "https://www.theodinproject.com/lessons/foundations-understanding-errors"}]
     },
     {
       "day": 42,
