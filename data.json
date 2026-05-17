@@ -4,8 +4,8 @@
     "user": "Bharath S",
     "cohort": "Cohort 0",
     "totalDays": 66,
-    "completedDays": 33,
-    "streak": 33
+    "completedDays": 34,
+    "streak": 34
   },
   "days": [
     {
@@ -469,6 +469,20 @@
       "reflectionPrompt": "What was the part of your architecture you were least sure about — and what did AI suggest?",
       "myReflection": "",
       "referenceLinks": [{"text": "System Design 101 — ByteByteGo (free visual guide)", "url": ""}]
+    },
+    {
+      "day": 34,
+      "title": "Planning With AI",
+      "theme": "Use AI to spec your project. Write requirements, break down tasks, anticipate blockers — before you build.",
+      "status": "completed",
+      "date": "2026-05-08",
+      "lesson": "The Idea:\n\nAI is not just for building — it is exceptional at planning. Give it your project idea, your timeline, your constraints, and your skill level, and it will produce a breakdown of tasks, flag the dependencies, identify the risks, and suggest what to build first. This is like having a senior engineer review your plan before you start. They won't build it for you — but they'll stop you from starting in the wrong place, underestimating the hard parts, or forgetting the things you didn't know to include.",
+      "whyItMatters": "A plan with AI is not just faster than a plan without it — it's better. AI has seen thousands of projects like yours. It knows where they go wrong. Use that knowledge before you need it, not after.",
+      "buildTask": "Ask any AI: \"I am building [describe your project]. I have four weeks, I am a beginner, and I can spend about one hour per day. Create a detailed week-by-week plan for me. What do I build in week one? What are the biggest risks to finishing? What should I do first?\" Refine the plan with follow-up questions until it feels realistic. Share your final plan on WhatsApp.",
+      "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou have your AI-generated plan. Now put it into a real project management tool — Notion, Trello, a simple Google Sheet. Add one column: Done. Add a second: Blocked. Come back to it every day during your build weeks and update it. Then ask AI at the start of each week: \"Here is my project status: [paste it]. What should I prioritise this week? What risk am I not paying enough attention to?\" A plan that gets reviewed weekly beats a plan that gets filed and forgotten.",
+      "reflectionPrompt": "What did AI include in your plan that you hadn't thought of — and what did it get wrong about your situation?",
+      "myReflection": "",
+      "referenceLinks": [{"text": "How AI will impact product management — Lenny Rachitsky", "url": ""}]
     }
   ]
 }
