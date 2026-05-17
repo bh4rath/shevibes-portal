@@ -4,8 +4,8 @@
     "user": "Bharath S",
     "cohort": "Cohort 0",
     "totalDays": 66,
-    "completedDays": 37,
-    "streak": 37
+    "completedDays": 38,
+    "streak": 38
   },
   "days": [
     {
@@ -525,6 +525,20 @@
       "reflectionPrompt": "What was the hardest part of starting — and what finally got you to do it?",
       "myReflection": "",
       "referenceLinks": [{"text": "VS Code getting started — code.visualstudio.com", "url": "https://code.visualstudio.com/docs"}]
+    },
+    {
+      "day": 38,
+      "title": "React, Node, Python — Demystified",
+      "theme": "What each language and framework actually does. When to use what. Stop being intimidated by the jargon.",
+      "status": "completed",
+      "date": "2026-05-12",
+      "lesson": "The Idea:\n\nThe words React, Node.js, and Python are everywhere. Here is what they actually mean. Python is a programming language — readable, beginner-friendly, excellent for AI, data, and backend logic. Node.js is a way of running JavaScript on a server, not just in a browser — used heavily for backends and APIs. React is a JavaScript library for building user interfaces — the thing that makes websites interactive and dynamic. They are not competitors. They are different tools for different layers of your project. You don't need to master all three. You need to know which one your project needs and why.",
+      "whyItMatters": "Half the intimidation of tech is vocabulary. When you understand what these words actually mean — and when you'd use each one — the landscape stops being a wall and starts being a map.",
+      "buildTask": "Ask any AI: \"Based on this project description: [describe yours], which of React, Node.js, or Python would I need — and why? What would each one do in my specific project? Which should I start with?\" Then look at your first file from yesterday and ask AI to explain every line. Share the explanation that surprised you most on WhatsApp.",
+      "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou know what language your project uses. Now write a function in it — the most useful small function your project needs. Something that takes an input and returns an output. Ask AI to walk you through writing it step by step, explaining every line as you go. Don't copy-paste. Type it yourself. Then break it intentionally — delete a bracket, misspell a variable. Read the error. Ask AI what the error means. Learning to read errors is the most underrated programming skill, and you just practised it on purpose.",
+      "reflectionPrompt": "Which technology in your stack feels most foreign — and what's your plan to get comfortable with it?",
+      "myReflection": "",
+      "referenceLinks": [{"text": "Python in 100 seconds — Fireship", "url": ""}]
     }
   ]
 }
