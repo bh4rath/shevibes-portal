@@ -454,7 +454,7 @@
       "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou applied the should test to your project. Now write its ethical charter — a short document that states what your tool will always do, will never do, and how it will handle user data. Even if it's just for you and five users. Ask AI to review it and challenge you: \"What ethical edge cases have I missed?\" Then add a privacy section to your project brief. Products with ethical clarity ship with more confidence and earn more trust. This is not box-ticking. It is how good builders think.",
       "reflectionPrompt": "Did this exercise change anything about your project — the scope, the design, or how you'll handle data?",
       "myReflection": "",
-      "referenceLinks": [{"text": "Responsible AI principles — Anthropic", "url": ""}]
+      "referenceLinks": [{"text": "Responsible AI principles — Anthropic", "url": "https://www.anthropic.com/responsible-scaling-policy"}]
     },
     {
       "day": 33,
@@ -468,7 +468,7 @@
       "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou drew your architecture. Now look at a tool you use every day and reverse-engineer its architecture. Pick one — WhatsApp, Instagram, Notion, Google Sheets. Ask AI: \"Describe the likely architecture of [tool] at a high level — frontend, backend, database, APIs. What are the hardest engineering problems they had to solve?\" Then compare it to yours. What architectural decisions did they make that you could learn from for your own project? Understanding how things are built is the fastest way to get better at building.",
       "reflectionPrompt": "What was the part of your architecture you were least sure about — and what did AI suggest?",
       "myReflection": "",
-      "referenceLinks": [{"text": "System Design 101 — ByteByteGo (free visual guide)", "url": ""}]
+      "referenceLinks": [{"text": "System Design 101 — ByteByteGo (free visual guide)", "url": "https://github.com/ByteByteGoHq/system-design-101"}]
     },
     {
       "day": 34,
@@ -482,7 +482,7 @@
       "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou have your AI-generated plan. Now put it into a real project management tool — Notion, Trello, a simple Google Sheet. Add one column: Done. Add a second: Blocked. Come back to it every day during your build weeks and update it. Then ask AI at the start of each week: \"Here is my project status: [paste it]. What should I prioritise this week? What risk am I not paying enough attention to?\" A plan that gets reviewed weekly beats a plan that gets filed and forgotten.",
       "reflectionPrompt": "What did AI include in your plan that you hadn't thought of — and what did it get wrong about your situation?",
       "myReflection": "",
-      "referenceLinks": [{"text": "How AI will impact product management — Lenny Rachitsky", "url": ""}]
+      "referenceLinks": [{"text": "How AI will impact product management — Lenny Rachitsky", "url": "https://www.lennysnewsletter.com/p/how-ai-will-impact-product-management"}]
     }
   ]
 }
