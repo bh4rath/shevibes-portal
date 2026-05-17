@@ -4,8 +4,8 @@
     "user": "Bharath S",
     "cohort": "Cohort 0",
     "totalDays": 66,
-    "completedDays": 38,
-    "streak": 38
+    "completedDays": 39,
+    "streak": 39
   },
   "days": [
     {
@@ -539,6 +539,20 @@
       "reflectionPrompt": "Which technology in your stack feels most foreign — and what's your plan to get comfortable with it?",
       "myReflection": "",
       "referenceLinks": [{"text": "Python in 100 seconds — Fireship", "url": ""}]
+    },
+    {
+      "day": 39,
+      "title": "Frontend vs Backend",
+      "theme": "What happens in the browser vs on the server. The invisible architecture behind every app you use.",
+      "status": "completed",
+      "date": "2026-05-13",
+      "lesson": "The Idea:\n\nFrontend is everything the user sees and touches — the layout, the buttons, the colours, the text on screen. It lives in the browser. Backend is everything that happens before the user sees anything — the logic, the calculations, the data retrieval, the authentication. It lives on a server. Most apps need both. A login form is frontend. Checking if the password is correct is backend. The result — \"welcome back\" or \"wrong password\" — travels from backend to frontend and appears on screen. Understanding where things live helps you build them in the right place.",
+      "whyItMatters": "When something breaks, knowing whether it's a frontend or backend problem tells you where to look. When you're designing a feature, knowing which layer handles which job makes the build faster and cleaner.",
+      "buildTask": "Build something that has both layers — even simply. For web builders: a form in HTML (frontend) that when submitted, logs the data to the console (the simplest possible backend response). For others: ask AI to describe the frontend and backend of your specific project in detail. Share the diagram or description on WhatsApp.",
+      "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou built a form today. Now make it do something useful — specifically for your project. What is the first piece of data your project needs to collect from a user? Build that form. Give every field a real label. Add a submit button. Then ask AI: \"What should happen on the backend when this form is submitted? Walk me through the logic step by step.\" You're not just learning frontend and backend as concepts — you're connecting them to something real that needs to exist.",
+      "reflectionPrompt": "In your project, what decisions belong to the frontend and what belongs to the backend — and where is the boundary?",
+      "myReflection": "",
+      "referenceLinks": [{"text": "Frontend Developer Roadmap — roadmap.sh", "url": "https://roadmap.sh/frontend"}]
     }
   ]
 }
