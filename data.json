@@ -4,8 +4,8 @@
     "user": "Bharath S",
     "cohort": "Cohort 0",
     "totalDays": 66,
-    "completedDays": 41,
-    "streak": 41
+    "completedDays": 42,
+    "streak": 42
   },
   "days": [
     {
@@ -581,6 +581,20 @@
       "reflectionPrompt": "What's the difference between an error you could diagnose yourself and one where you genuinely needed AI?",
       "myReflection": "",
       "referenceLinks": [{"text": "Understanding Errors — The Odin Project", "url": ""}]
+    },
+    {
+      "day": 42,
+      "title": "Databases 101",
+      "theme": "Where data lives. Tables, rows, queries. Connect your project to a simple database and watch it remember things.",
+      "status": "completed",
+      "date": "2026-05-16",
+      "lesson": "The Idea:\n\nA database is where your application remembers things. Without a database, every time a user closes your app, everything is gone. With a database, you can store users, posts, responses, records — and retrieve them later. The simplest mental model: a database is a collection of tables. A table is like a spreadsheet — rows and columns. Each row is a record. Each column is a field. SQL is the language you use to talk to a relational database. If your project needs to store anything that persists — sign-ups, submissions, content — it needs a database.",
+      "whyItMatters": "Most projects get stuck not because the frontend or backend is hard, but because the builder didn't think about data early enough. Knowing where your data lives and how it's structured before you build saves you from redesigning everything halfway through.",
+      "buildTask": "Set up a free Supabase account at supabase.com. Create a new project. Create one table that your project needs — for example, a users table with columns for name, email, and sign-up date. Use the Supabase interface, not code. Add three fake rows of data. Share a screenshot of your table on WhatsApp.",
+      "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou created a table manually. Now connect it to your project with code. Ask AI: \"Show me how to connect my [Python/JavaScript] project to Supabase and insert one row into my [table name] table.\" Run the code. Check Supabase — is the row there? You just made your project write to a real database. Now ask AI to show you how to read it back. You've just completed the full data cycle: create, write, read. Everything else is variation on this loop.",
+      "reflectionPrompt": "What data does your project need to store — and what happens to your project if that data disappears?",
+      "myReflection": "",
+      "referenceLinks": [{"text": "Supabase getting started — supabase.com/docs", "url": "https://supabase.com/docs"}]
     }
   ]
 }
