@@ -4,8 +4,8 @@
     "user": "Bharath S",
     "cohort": "Cohort 0",
     "totalDays": 66,
-    "completedDays": 34,
-    "streak": 34
+    "completedDays": 35,
+    "streak": 35
   },
   "days": [
     {
@@ -483,6 +483,20 @@
       "reflectionPrompt": "What did AI include in your plan that you hadn't thought of — and what did it get wrong about your situation?",
       "myReflection": "",
       "referenceLinks": [{"text": "How AI will impact product management — Lenny Rachitsky", "url": "https://www.lennysnewsletter.com/p/how-ai-will-impact-product-management"}]
+    },
+    {
+      "day": 35,
+      "title": "The Terminal Revisited",
+      "theme": "Comfort in the command line. Basic commands you'll use every day. Running code, navigating folders, installing tools.",
+      "status": "completed",
+      "date": "2026-05-09",
+      "lesson": "The Idea:\n\nThe terminal is the command line — the black window that looks intimidating and turns out to be just a place where you type instructions directly to your computer. No clicking, no menus. Just text. Developers live here. You don't need to live here — but you need to visit it regularly. The most important commands you'll use: ls to see what's in a folder, cd to move between folders, mkdir to create a folder, touch to create a file, and npm install or pip install to add tools to your project. That's it. Five commands covers 80% of what you'll need.",
+      "whyItMatters": "Every tool you'll use in the building weeks assumes you're comfortable opening a terminal and running a command. Getting comfortable with it now means nothing stops you next week.",
+      "buildTask": "Open the terminal on your laptop — Terminal on Mac, Command Prompt or WSL on Windows. Navigate to your desktop, create a folder called she-vibes-project, create a file inside it called notes.txt, and write \"Day 35 — I am comfortable here\" into it using the terminal. Share a screenshot on WhatsApp. If you get stuck, ask AI: \"Walk me through this step by step.\"",
+      "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou're comfortable in the terminal. Now go further. Inside your she-vibes-project folder, initialise a new Node or Python project using the terminal. Ask AI: \"Walk me through initialising a basic [Node/Python] project from the terminal — what commands do I run and in what order?\" Run each command it gives you. If something breaks, paste the error back into AI and ask it to explain what went wrong and how to fix it. You just practised the most important debugging loop in software development: error, ask, understand, fix, continue.",
+      "reflectionPrompt": "What was the moment the terminal stopped feeling scary — and what made it click?",
+      "myReflection": "",
+      "referenceLinks": [{"text": "Command line crash course — MDN Web Docs", "url": ""}]
     }
   ]
 }
