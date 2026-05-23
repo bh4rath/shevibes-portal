@@ -4,8 +4,8 @@
     "user": "Bharath S",
     "cohort": "Cohort 0",
     "totalDays": 66,
-    "completedDays": 47,
-    "streak": 47
+    "completedDays": 48,
+    "streak": 48
   },
   "days": [
     {
@@ -665,6 +665,20 @@
       "reflectionPrompt": "What does having your own domain say about how seriously you take what you're building?",
       "myReflection": "",
       "referenceLinks": [{"text": "How DNS works — howdns.works", "url": "https://howdns.works"}]
+    },
+    {
+      "day": 48,
+      "title": "Environment Variables and Secrets",
+      "theme": "API keys, passwords, secrets. How to keep them safe. The basics of production security every builder must know.",
+      "status": "completed",
+      "date": "2026-05-22",
+      "lesson": "The Idea:\n\nYour project probably connects to at least one external service — an AI API, a database, an email provider. Each of these gives you a key — a secret string of characters that proves it's you making the request. These keys must never be put directly into your code. Why? Because your code lives on GitHub — and GitHub is public. If your API key is in your code, anyone can find it, use your account, and rack up charges. Environment variables are the safe way to store secrets: they live outside your code, in a configuration file or in your deployment platform's settings, and your code reads them without exposing them.",
+      "whyItMatters": "API key leaks are one of the most common and costly mistakes junior builders make. Learning this now — before it matters — means you never make it.",
+      "buildTask": "Create a .env file in your project root. Add one variable: MY_PROJECT_NAME=\"She Vibes\". Add .env to your .gitignore file so it never gets pushed to GitHub. Then add the same variable in Vercel's Environment Variables settings. Ask AI: \"Show me how to read an environment variable in [your language] and use it in my code.\" Share a screenshot showing the variable in Vercel — not the value, just the key name — on WhatsApp.",
+      "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou secured your secrets. Now do a full security audit of your project. Ask AI: \"Review this project description: [describe yours]. What are the top five security risks I should know about for a project of this type? For each one, tell me how to prevent it.\" Then check your code against the list. Fix at least one thing. Security is not a feature you add later — it's a habit you build now, when the project is small and the fixes are easy.",
+      "reflectionPrompt": "What secrets does your project currently have — and where are they stored right now?",
+      "myReflection": "",
+      "referenceLinks": [{"text": "Using environment variables — vercel.com/docs", "url": "https://vercel.com/docs/environment-variables"}]
     }
   ]
 }
