@@ -4,8 +4,8 @@
     "user": "Bharath S",
     "cohort": "Cohort 0",
     "totalDays": 66,
-    "completedDays": 45,
-    "streak": 45
+    "completedDays": 46,
+    "streak": 46
   },
   "days": [
     {
@@ -637,6 +637,20 @@
       "reflectionPrompt": "What does it mean to you that your project is now publicly visible — even in its early, rough form?",
       "myReflection": "",
       "referenceLinks": [{"text": "GitHub Hello World — docs.github.com", "url": "https://docs.github.com/en/get-started/quickstart/hello-world"}]
+    },
+    {
+      "day": 46,
+      "title": "Deploying Your First Project",
+      "theme": "From laptop to the internet. Deploy on Vercel, Netlify, or Railway. Watch your project go live.",
+      "status": "completed",
+      "date": "2026-05-20",
+      "lesson": "The Idea:\n\nDeployment is the act of making your project accessible to anyone in the world — not just you, not just your laptop, but anyone with a browser and a URL. Until now, your project has lived on localhost. Local means private. Deployment means public. When you deploy, your code is copied to a server somewhere in the world — a computer that runs 24/7, connected to the internet, ready to serve your project to anyone who asks. You don't need to own the server. You don't need to manage it. Tools like Vercel, Netlify, and Railway do all of that for you. You connect your GitHub repo, click a button, and your project gets a URL.\n\nThe three tools:\n\nVercel — built for frontend projects. Ideal for React, Next.js, or any static HTML/CSS/JS site. Connect your GitHub repo and every push to main automatically redeploys. Free tier is generous. This is the fastest path to a live URL.\n\nNetlify — similar to Vercel. Great for static sites and simple backends. Has built-in form handling and serverless functions. Also free to start.\n\nRailway — built for backend projects and databases. If your project has a Python Flask or Node.js server, or a PostgreSQL database, Railway is where it goes. Slightly more setup but handles full-stack projects that Vercel can't.",
+      "whyItMatters": "A project that only lives on your laptop is invisible. A project with a URL is real. It exists in the world. It can be shared, tested, seen, and used. When someone asks what you built during She Vibes, you want to send them a link — not describe something that lives in a folder no one can open. Deployment is the difference between building something and shipping something. Most people never ship. Today you do.",
+      "buildTask": "Go to vercel.com and create a free account. Connect your GitHub account. Click \"New Project\" and import the repository you created on Day 45. Vercel will detect your project type and deploy it automatically. In under two minutes, you will have a live URL. Open it. It's your project — on the internet. Share that URL on WhatsApp. That's your milestone for today.",
+      "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYour project is live. Now send the URL to someone outside the cohort — a friend, a family member, a colleague — and ask them to open it on their phone. Watch what breaks. Watch what works. Ask them one question: \"What's the first thing you tried to do?\" Then fix one thing based on what they showed you. This is called user testing. It is the fastest way to find problems that you've stopped seeing because you built the thing. Real users find things developers never notice. You just ran your first external test. Now push the fix and watch Vercel redeploy automatically.",
+      "reflectionPrompt": "What did it feel like to open a URL and see something you built — live on the internet?",
+      "myReflection": "",
+      "referenceLinks": [{"text": "Deploying with Vercel — vercel.com/docs", "url": "https://vercel.com/docs"}]
     }
   ]
 }
