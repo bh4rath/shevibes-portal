@@ -4,8 +4,8 @@
     "user": "Bharath S",
     "cohort": "Cohort 0",
     "totalDays": 66,
-    "completedDays": 43,
-    "streak": 43
+    "completedDays": 44,
+    "streak": 44
   },
   "days": [
     {
@@ -609,6 +609,20 @@
       "reflectionPrompt": "Post one of these today:\n\n\"Here's what my project looks like after Week 6: [screenshot or description]. Here's what's next.\"\n\n\"The moment this week when building clicked for me was _.\"\n\n\"I got stuck on __ and got unstuck by __.\"",
       "myReflection": "",
       "referenceLinks": [{"text": "Weekly Call — Join the Zoom Call", "url": ""}]
+    },
+    {
+      "day": 44,
+      "title": "What is Git?",
+      "theme": "Version control. The safety net every builder needs. Commit, push, pull — the language of shipping.",
+      "status": "completed",
+      "date": "2026-05-18",
+      "lesson": "The Idea:\n\nGit is a version control system. That means it tracks every change you make to your code over time — who changed what, when, and why. Think of it as a time machine for your project. If you break something, you can go back. If you want to try something risky, you create a branch — a parallel version of your project — experiment, and merge it back if it works or delete it if it doesn't. Every professional developer uses Git. Every serious project lives in Git. Today you start using it too.",
+      "whyItMatters": "Without Git, a single bad change can destroy hours of work. With Git, nothing is ever truly lost. It is the safety net that lets you build boldly — because you know you can always go back.",
+      "buildTask": "Install Git at git-scm.com if you haven't already. Open your terminal, navigate to your project folder, and run three commands: git init (start tracking), git add . (stage all your files), git commit -m \"Day 44 — first commit\" (save a snapshot). Share a screenshot of your terminal showing the commit confirmation on WhatsApp.",
+      "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou made your first commit. Now make Git part of your daily habit. From today until Day 66, commit every time you complete something meaningful — not every line, but every working chunk. Write commit messages that describe what you built, not just \"update\" or \"fix\". At the end of each day, run git log and read your own history. Ask AI: \"Based on these commit messages, am I making consistent progress? What does my build velocity look like?\" Your commit history is your most honest progress diary.",
+      "reflectionPrompt": "What would you have lost from your project this week if you hadn't had the ability to go back in time?",
+      "myReflection": "",
+      "referenceLinks": [{"text": "Git the simple guide — rogerdudler.github.io", "url": "https://rogerdudler.github.io/git-guide/"}]
     }
   ]
 }
