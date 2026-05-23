@@ -87,20 +87,12 @@ button { font-family: 'M PLUS 1', sans-serif; }
 .pifo-logo {
   display: flex;
   align-items: center;
-  gap: 7px;
   margin-bottom: 16px;
 }
-.pifo-dot {
-  width: 10px; height: 10px;
-  border-radius: 50%;
-  background: var(--accent);
-  flex-shrink: 0;
-}
-.pifo-wordmark {
-  font-weight: 700;
-  font-size: 15px;
-  letter-spacing: .4px;
-  color: var(--text);
+.pifo-logo-img {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
 }
 
 .sb-back {
@@ -923,8 +915,7 @@ a.ref-link-item:hover {
 
   <div class="sb-top">
     <div class="pifo-logo">
-      <div class="pifo-dot"></div>
-      <span class="pifo-wordmark">pifo</span>
+      <img src="pifo-logo.jpg" alt="pifo" class="pifo-logo-img">
     </div>
     <div class="sb-back" onclick="nav('home')">&#8592; SheVibes</div>
     <div class="sb-title">SheVibes</div>
@@ -978,8 +969,7 @@ a.ref-link-item:hover {
   <div class="nb-left">
     <button id="hamburger" onclick="toggleSidebar()" aria-label="Toggle menu">&#9776;</button>
     <div class="pifo-logo" style="margin-bottom:0;">
-      <div class="pifo-dot"></div>
-      <span class="nb-logo">pifo</span>
+      <img src="pifo-logo.jpg" alt="pifo" class="pifo-logo-img">
     </div>
   </div>
   <div class="nb-right">
