@@ -608,7 +608,7 @@
       "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nReflection day is also code review day. Paste your most important file into AI and ask: \"Review this code. What works well? What would a more experienced developer change? What's the most fragile part?\" Then make one improvement based on the feedback — just one. Not a rewrite. One targeted fix. This is how real code improves: weekly reviews, small improvements, compounding quality. Your codebase is a week old. Start treating it like something worth maintaining.",
       "reflectionPrompt": "Post one of these today:\n\n\"Here's what my project looks like after Week 6: [screenshot or description]. Here's what's next.\"\n\n\"The moment this week when building clicked for me was _.\"\n\n\"I got stuck on __ and got unstuck by __.\"",
       "myReflection": "",
-      "referenceLinks": [{"text": "Weekly Call — Join the Zoom Call", "url": ""}]
+      "referenceLinks": [{"text": "Weekly Call — Join the Zoom Call", "url": "https://zoom.us/rec/share/tg4vydLBH0km9KXkc0yVwEFMrHqwRnSQYZ1ZlqYWLzZG72BvJAsIynDZs3SQLHgS.7kJT6CcmE1rb-6-W"}]
     },
     {
       "day": 44,
