@@ -4,8 +4,8 @@
     "user": "Bharath S",
     "cohort": "Cohort 0",
     "totalDays": 66,
-    "completedDays": 44,
-    "streak": 44
+    "completedDays": 45,
+    "streak": 45
   },
   "days": [
     {
@@ -623,6 +623,20 @@
       "reflectionPrompt": "What would you have lost from your project this week if you hadn't had the ability to go back in time?",
       "myReflection": "",
       "referenceLinks": [{"text": "Git the simple guide — rogerdudler.github.io", "url": "https://rogerdudler.github.io/git-guide/"}]
+    },
+    {
+      "day": 45,
+      "title": "GitHub Basics",
+      "theme": "Your project lives on GitHub. Create a repo, push your code, share it with the world.",
+      "status": "completed",
+      "date": "2026-05-19",
+      "lesson": "The Idea:\n\nGit lives on your laptop. GitHub lives on the internet. GitHub is where you push your Git repository — your code and its history — so it's backed up, shareable, and deployable. A repository is simply a project folder that Git is tracking. When you push your repo to GitHub, it becomes accessible from anywhere. Other people can see it (if it's public), collaborate on it, and tools like Vercel can read it to deploy your project automatically. GitHub is where code goes to live.",
+      "whyItMatters": "Your laptop can break. GitHub doesn't. Every project you ever build should live on GitHub. It's your portfolio, your backup, and your deployment gateway — all in one place.",
+      "buildTask": "Create a free account at github.com. Create a new repository called she-vibes-project. Connect your local project to it using: git remote add origin [your repo URL] then git push -u origin main. Refresh GitHub in your browser — you should see your code there. Share the GitHub link on WhatsApp. Your code is now on the internet.",
+      "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYour code is on GitHub. Now write a proper README for it. A README is the first thing anyone sees when they visit your repository. Ask AI: \"Write a README for my project: [describe it]. Include what it does, who it's for, how to run it locally, and what's coming next.\" Push the README to GitHub. Now your project has a face. This is also the beginning of your public portfolio — the record of what you built during She Vibes that will exist long after June 9th.",
+      "reflectionPrompt": "What does it mean to you that your project is now publicly visible — even in its early, rough form?",
+      "myReflection": "",
+      "referenceLinks": [{"text": "GitHub Hello World — docs.github.com", "url": "https://docs.github.com/en/get-started/quickstart/hello-world"}]
     }
   ]
 }
