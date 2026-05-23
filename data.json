@@ -4,8 +4,8 @@
     "user": "Bharath S",
     "cohort": "Cohort 0",
     "totalDays": 66,
-    "completedDays": 48,
-    "streak": 48
+    "completedDays": 49,
+    "streak": 49
   },
   "days": [
     {
@@ -679,6 +679,20 @@
       "reflectionPrompt": "What secrets does your project currently have — and where are they stored right now?",
       "myReflection": "",
       "referenceLinks": [{"text": "Using environment variables — vercel.com/docs", "url": "https://vercel.com/docs/environment-variables"}]
+    },
+    {
+      "day": 49,
+      "title": "Shipping is a Mindset",
+      "theme": "Done is better than perfect. How to ship fast, iterate faster. The builder's relationship with the finish line.",
+      "status": "completed",
+      "date": "2026-05-23",
+      "lesson": "The Idea:\n\nDone is not perfect. Done is live. The mindset shift that separates builders who ship from builders who polish forever is this: version one is supposed to be rough. Its job is not to impress — its job is to exist so that version two can be better. Every product you use started as something embarrassing. Twitter was a side project. Instagram launched with no DMs. Google was a Stanford research paper. The pattern is always the same: ship something real, watch how people use it, make it better. The loop only starts when you ship.",
+      "whyItMatters": "Perfectionism is procrastination with better branding. The moment you decide your project is good enough to share — even if it's not good enough to be proud of — is the moment you become a builder.",
+      "buildTask": "Make one improvement to your live project — fix one thing that bothers you, add one feature you've been putting off, improve one piece of copy. Commit it, push it to GitHub, watch Vercel redeploy automatically. That automatic redeploy — code to live in under two minutes — is the shipping superpower. Share what you changed and why on WhatsApp.",
+      "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou shipped an improvement today. Now write your project's public launch post — even if you're not ready to publish it. Describe what you built, why you built it, what problem it solves, and what you learned building it. Write it for LinkedIn or Twitter. Ask AI to review it for clarity and impact. Don't publish it yet if you're not ready. But having it written means shipping is one click away. The builders who announce publicly ship faster — because the announcement creates the accountability.",
+      "reflectionPrompt": "What would \"good enough to share\" look like for your project — and are you there yet?",
+      "myReflection": "",
+      "referenceLinks": [{"text": "Fear of shipping — seths.blog", "url": "https://seths.blog/2010/06/fear-of-shipping/"}]
     }
   ]
 }
