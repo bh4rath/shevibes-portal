@@ -4,8 +4,8 @@
     "user": "Bharath S",
     "cohort": "Cohort 0",
     "totalDays": 66,
-    "completedDays": 46,
-    "streak": 46
+    "completedDays": 47,
+    "streak": 47
   },
   "days": [
     {
@@ -651,6 +651,20 @@
       "reflectionPrompt": "What did it feel like to open a URL and see something you built — live on the internet?",
       "myReflection": "",
       "referenceLinks": [{"text": "Deploying with Vercel — vercel.com/docs", "url": "https://vercel.com/docs"}]
+    },
+    {
+      "day": 47,
+      "title": "Domains and DNS",
+      "theme": "Your project has a URL. What happens behind the scenes. Buy a domain, connect it, own your corner of the internet.",
+      "status": "completed",
+      "date": "2026-05-21",
+      "lesson": "The Idea:\n\nRight now your project lives at a URL like she-vibes-project.vercel.app. That works — but it's not yours. A domain is an address you own. yourname.com, shevibes.in, whatever you choose. DNS — Domain Name System — is the system that translates that human-readable address into the IP address of the server where your project lives. Buying a domain costs about ₹800–1500 per year. Connecting it to Vercel takes five minutes. After that, your project has a home that belongs to you.",
+      "whyItMatters": "Your project's domain is its identity. When you share it on LinkedIn or WhatsApp, a custom domain signals that this is real — not a side experiment. It's a small investment with a large signal.",
+      "buildTask": "Go to Namecheap (namecheap.com) or GoDaddy. Search for a domain that fits your project — keep it short, memorable, and relevant. You don't have to buy it today. But price it, decide if it's worth it, and if yes — buy it and connect it to your Vercel project using their custom domain settings. Share your domain name — purchased or just decided — on WhatsApp.",
+      "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou have a domain or you've decided on one. Now think about your digital identity beyond this project. Ask AI: \"Help me design a personal domain strategy. I want one domain that can house my portfolio, my current project, and future projects. What naming convention and subdomain structure would you recommend?\" Your domain is not just for this project — it's the beginning of your public presence as a builder. Invest 20 minutes thinking about what you want that presence to say.",
+      "reflectionPrompt": "What does having your own domain say about how seriously you take what you're building?",
+      "myReflection": "",
+      "referenceLinks": [{"text": "How DNS works — howdns.works", "url": "https://howdns.works"}]
     }
   ]
 }
