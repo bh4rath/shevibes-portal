@@ -273,12 +273,13 @@ button { font-family: 'M PLUS 1', sans-serif; }
 .day-nav::-webkit-scrollbar { display: none; }
 
 .day-arrow {
-  width: 32px; height: 32px;
+  width: 34px; height: 34px;
   border-radius: 50%;
   background: transparent;
   border: 1.5px solid var(--border);
   color: var(--text);
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: 700;
   display: flex; align-items: center; justify-content: center;
   cursor: pointer;
   transition: background .15s;
@@ -1020,13 +1021,12 @@ a.ref-link-item:hover {
 
   <!-- Day navigation bar -->
   <div class="day-nav" id="dayNav">
-    <button class="day-arrow" onclick="shiftPillsBack()" aria-label="Previous days">&#8592;</button>
+    <button class="day-arrow" onclick="shiftPillsBack()" aria-label="Previous days">&lt;</button>
     <button class="day-pill current" id="pill-0">DAY 1</button>
     <button class="day-pill other"   id="pill-1">DAY 2</button>
     <button class="day-pill other"   id="pill-2">DAY 3</button>
     <button class="day-pill other"   id="pill-3">DAY 4</button>
-    <button class="day-pill other"   id="pill-4">DAY 5</button>
-    <button class="day-arrow" onclick="shiftPillsForward()" aria-label="Next days">&#8594;</button>
+    <button class="day-arrow" onclick="shiftPillsForward()" aria-label="Next days">&gt;</button>
   </div>
 
   <!-- ── HOME ── -->
@@ -1159,7 +1159,7 @@ a.ref-link-item:hover {
 <script>
 /* ━━━━━━━━━━━━━━━━━━━━  STATE  ━━━━━━━━━━━━━━━━━━━━ */
 let DAYS = [], META = {}, TODAY = 27, TOTAL_DAYS = 66;
-const PILL_COUNT = 5;
+const PILL_COUNT = 4;
 let activeDay    = 1;
 let currentDay   = 1;
 let pillStartDay = 1;
