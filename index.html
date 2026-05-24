@@ -22,37 +22,46 @@ h1, h2 {
 
 :root {
   --sidebar-w: 230px;
-  --nav-h:     48px;
+  --nav-h:     56px;
+}
+@media (min-width: 640px) {
+  :root { --nav-h: 64px; }
 }
 
 :root[data-theme="dark"] {
-  --bg:         #111013;
-  --sidebar-bg: #1C1A1F;
-  --active-bg:  rgba(245,158,11,0.10);
-  --accent:     #f59e0b;
-  --pill-active:#92400e;
-  --card-bg:    #1C1A1F;
-  --text:       #f3f4f6;
-  --muted:      rgba(243,244,246,0.55);
-  --border:     rgba(255,255,255,0.09);
-  --cream:      #F5EDDA;
-  --cream-text: #3D3425;
-  --green:      #22c55e;
+  --bg:           #0e0d12;
+  --sidebar-bg:   #18161d;
+  --active-bg:    rgba(245,197,24,0.10);
+  --accent:       #f5c518;
+  --gold-primary: #f5c518;
+  --gold-tint:    rgba(245,197,24,0.12);
+  --gold-border:  rgba(245,197,24,0.28);
+  --pill-active:  #92400e;
+  --card-bg:      #1e1b24;
+  --text:         #f3f4f6;
+  --muted:        rgba(243,244,246,0.50);
+  --border:       rgba(255,255,255,0.08);
+  --cream:        #F5EDDA;
+  --cream-text:   #3D3425;
+  --green:        #22c55e;
 }
 
 :root[data-theme="light"] {
-  --bg:         #f8f8f4;
-  --sidebar-bg: #ffffff;
-  --active-bg:  rgba(180,83,9,0.07);
-  --accent:     #b45309;
-  --pill-active:#92400e;
-  --card-bg:    #ffffff;
-  --text:       #111827;
-  --muted:      #6b7280;
-  --border:     rgba(0,0,0,0.09);
-  --cream:      #fef9ef;
-  --cream-text: #3d3425;
-  --green:      #16a34a;
+  --bg:           #f8f8f4;
+  --sidebar-bg:   #ffffff;
+  --active-bg:    rgba(180,83,9,0.07);
+  --accent:       #b45309;
+  --gold-primary: #b45309;
+  --gold-tint:    rgba(180,83,9,0.08);
+  --gold-border:  rgba(180,83,9,0.22);
+  --pill-active:  #92400e;
+  --card-bg:      #ffffff;
+  --text:         #111827;
+  --muted:        #6b7280;
+  --border:       rgba(0,0,0,0.09);
+  --cream:        #fef9ef;
+  --cream-text:   #3d3425;
+  --green:        #16a34a;
 }
 
 html, body {
@@ -71,19 +80,19 @@ button { font-family: 'M PLUS 1', sans-serif; }
 /* ─── SIDEBAR ─── */
 #sidebar {
   position: fixed;
-  top: 0; left: 0;
+  top: var(--nav-h); left: 0;
   width: var(--sidebar-w);
-  height: 100vh;
+  height: calc(100vh - var(--nav-h));
   background: var(--sidebar-bg);
   border-right: 1px solid var(--border);
   display: flex;
   flex-direction: column;
-  z-index: 300;
+  z-index: 200;
   transition: transform .24s ease;
 }
 
 .sb-top {
-  padding: 20px 16px 14px;
+  padding: 16px 16px 12px;
   border-bottom: 1px solid var(--border);
 }
 
@@ -93,9 +102,14 @@ button { font-family: 'M PLUS 1', sans-serif; }
   margin-bottom: 16px;
 }
 .pifo-logo-img {
-  height: 26px;
-  width: auto;
+  width: 88px;
+  height: auto;
   object-fit: contain;
+  display: block;
+}
+/* In navbar the logo has margin-bottom: 0 via inline style — no change needed */
+@media (min-width: 640px) {
+  .pifo-logo-img { width: 104px; }
 }
 
 .sb-back {
@@ -176,27 +190,28 @@ button { font-family: 'M PLUS 1', sans-serif; }
 /* ─── NAVBAR ─── */
 #navbar {
   position: fixed;
-  top: 0;
-  left: var(--sidebar-w);
-  right: 0;
+  top: 0; left: 0; right: 0;
   height: var(--nav-h);
-  background: var(--sidebar-bg);
+  background: rgba(255,255,255,0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 24px;
-  z-index: 100;
-  gap: 12px;
+  padding: 0 12px;
+  z-index: 300;
+}
+[data-theme="dark"] #navbar {
+  background: rgba(14,13,18,0.88);
 }
 
 .nb-left  { display: flex; align-items: center; gap: 8px; }
-.nb-right { display: flex; align-items: center; gap: 14px; }
-
+.nb-right { display: flex; align-items: center; gap: 8px; }
 .nb-logo  { font-weight: 700; font-size: 16px; color: var(--text); }
 
 #hamburger {
-  display: none;
+  display: block;
   background: none;
   border: none;
   color: var(--text);
@@ -207,36 +222,45 @@ button { font-family: 'M PLUS 1', sans-serif; }
 }
 
 .theme-btn {
-  background: var(--card-bg);
-  border: 1.5px solid var(--border);
-  font-size: 15px;
-  color: var(--muted);
+  width: 32px; height: 32px;
+  background: var(--gold-tint);
+  border: 1px solid var(--gold-border);
+  color: var(--gold-primary);
   cursor: pointer;
-  padding: 6px 10px;
+  padding: 0;
   border-radius: 8px;
-  transition: border-color .15s;
-  line-height: 1;
+  display: flex; align-items: center; justify-content: center;
+  transition: transform .2s ease, opacity .15s;
+  flex-shrink: 0;
 }
-.theme-btn:hover { border-color: var(--accent); color: var(--accent); }
+.theme-btn:hover  { transform: scale(1.10); }
+.theme-btn:active { transform: scale(0.95); }
+@media (min-width: 640px) {
+  .theme-btn { width: 36px; height: 36px; }
+}
 
-.user-name { font-size: 13px; color: var(--text); font-weight: 500; }
+.user-name { font-size: 12px; color: var(--text); font-weight: 500; }
+@media (min-width: 640px) { .user-name { font-size: 14px; } }
 .avatar {
-  width: 34px; height: 34px;
+  width: 32px; height: 32px;
   border-radius: 50%;
-  background: #b45309;
-  color: #fff;
-  font-size: 12px;
+  background: var(--gold-primary);
+  color: var(--bg);
+  font-size: 11px;
   font-weight: 700;
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
+}
+@media (min-width: 640px) {
+  .avatar { width: 36px; height: 36px; font-size: 12px; }
 }
 
 /* ─── MAIN ─── */
 #main {
   margin-left: var(--sidebar-w);
   margin-top: var(--nav-h);
-  padding: 32px 40px;
-  max-width: 900px;
+  padding: 28px 36px;
+  max-width: calc(var(--sidebar-w) + 760px);
   min-height: calc(100vh - var(--nav-h));
   background: var(--bg);
 }
@@ -273,12 +297,12 @@ button { font-family: 'M PLUS 1', sans-serif; }
 .day-nav::-webkit-scrollbar { display: none; }
 
 .day-arrow {
-  width: 34px; height: 34px;
-  border-radius: 50%;
+  width: 30px; height: 30px;
+  border-radius: 8px;
   background: transparent;
   border: 1.5px solid var(--border);
   color: var(--text);
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
   display: flex; align-items: center; justify-content: center;
   cursor: pointer;
@@ -413,6 +437,39 @@ button { font-family: 'M PLUS 1', sans-serif; }
   font-weight: 500;
   color: #16a34a;
   display: block;
+}
+
+/* TODAY card variant */
+.home-card--today {
+  background: rgba(180,83,9,0.08);
+  border: 1.5px solid rgba(180,83,9,0.30);
+}
+.home-card--today:hover { border-color: rgba(180,83,9,0.55); box-shadow: 0 2px 16px rgba(180,83,9,0.10); }
+[data-theme="dark"] .home-card--today {
+  background: rgba(245,197,24,0.08);
+  border-color: rgba(245,197,24,0.28);
+}
+[data-theme="dark"] .home-card--today:hover { border-color: rgba(245,197,24,0.5); }
+.home-card-top-label--today { color: var(--accent); }
+.home-today-num {
+  width: 60px; height: 60px; min-width: 60px;
+  border-radius: 14px;
+  background: var(--gold-primary);
+  color: var(--bg);
+  font-family: 'Carter One', cursive;
+  font-size: 24px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.home-open-btn {
+  display: inline-block;
+  background: var(--gold-primary);
+  color: var(--bg);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 8px;
+  margin-top: 2px;
 }
 
 /* ─── PAGE HEADERS ─── */
@@ -767,18 +824,16 @@ hr.div { border: none; border-top: 1px solid var(--border); margin: 24px 0; }
 /* ─── RESPONSIVE ─── */
 #bottomNav { display: none; }
 @media (max-width: 768px) {
-  #sidebar  { display: none; }
-  #hamburger { display: none; }
-  #navbar   { left: 0; }
-  #main     { margin-left: 0; padding: 24px 18px 80px; }
+  #sidebar    { display: none; }
+  #hamburger  { display: block; }
+  #main       { margin-left: 0; padding: 20px 16px 88px; }
   .stat-grid  { grid-template-columns: 1fr 1fr; }
   .zones-grid { grid-template-columns: 1fr; }
   .d-title    { font-size: 24px; }
   #bottomNav  { display: flex; }
 }
 @media (max-width: 480px) {
-  .stat-grid { grid-template-columns: 1fr; }
-  .user-name { display: none; }
+  .stat-grid  { grid-template-columns: 1fr; }
 }
 
 /* ─── THEME OVERRIDES ─── */
@@ -949,9 +1004,6 @@ a.ref-link-item:hover {
 <nav id="sidebar" role="navigation" aria-label="Main navigation">
 
   <div class="sb-top">
-    <div class="pifo-logo">
-      <img src="pifo-logo.jpg" alt="pifo" class="pifo-logo-img">
-    </div>
     <div class="sb-back" onclick="nav('home')">&#8592; SheVibes</div>
     <div class="sb-title">SheVibes</div>
     <div class="sb-sub">Cohort 0</div>
@@ -1008,7 +1060,9 @@ a.ref-link-item:hover {
     </div>
   </div>
   <div class="nb-right">
-    <button id="themeBtn" class="theme-btn" title="Toggle theme">&#9728;</button>
+    <button id="themeBtn" class="theme-btn" title="Toggle theme" aria-label="Toggle theme">
+      <svg id="themeSvg" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+    </button>
     <span class="user-name">Bharath S</span>
     <div class="avatar">BS</div>
   </div>
@@ -1631,7 +1685,12 @@ function closeSidebar() {
 
 function applyTheme(light) {
   document.documentElement.setAttribute('data-theme', light ? 'light' : 'dark');
-  document.getElementById('themeBtn').textContent = light ? '🌙' : '☀️';
+  const svg = document.getElementById('themeSvg');
+  if (svg) {
+    svg.innerHTML = light
+      ? '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>'   /* moon for light mode */
+      : '<circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>'; /* sun for dark mode */
+  }
 }
 function toggleTheme() {
   const isLight = document.documentElement.getAttribute('data-theme') !== 'light';
