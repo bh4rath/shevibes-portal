@@ -4,8 +4,8 @@
     "user": "Bharath S",
     "cohort": "Cohort 0",
     "totalDays": 66,
-    "completedDays": 53,
-    "streak": 53
+    "completedDays": 54,
+    "streak": 54
   },
   "days": [
     {
@@ -749,6 +749,20 @@
       "reflectionPrompt": "What would you want to know if someone on your team was using AI to contribute to a shared project?",
       "myReflection": "",
       "referenceLinks": [{"text": "Co-Intelligence: Living and Working with AI — Ethan Mollick", "url": "https://www.oneusefulthing.org"}]
+    },
+    {
+      "day": 54,
+      "title": "Reviewing AI-Generated Code",
+      "theme": "You're responsible for what AI writes. How to read, understand, and take ownership of AI-generated code.",
+      "status": "completed",
+      "date": "2026-05-28",
+      "lesson": "The Idea:\n\nAI can write code faster than you can read it. That speed is the trap. When you copy AI-generated code without understanding it, you own the output but not the knowledge. If it breaks, you don't know why. If it has a security flaw, you shipped it. If someone asks you to explain it, you can't. The rule is simple: never ship code you can't explain. This doesn't mean you write every line yourself — it means you read every line, you ask AI to explain what you don't understand, and you take responsibility for what goes live under your name.",
+      "whyItMatters": "The value of a builder is not the ability to generate code. It's the ability to make good decisions about code. AI handles the generation. You handle the judgment. That judgment is yours and it cannot be delegated.",
+      "buildTask": "Pick a piece of AI-generated code in your project — a function, a component, a script. Read it line by line. For every line you don't fully understand, ask AI: \"Explain this line to me. What does it do? Why is it written this way? Are there any risks?\" Keep asking until you can explain the whole thing yourself. Share the most interesting thing you learned on WhatsApp.",
+      "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou explained one piece of AI code today. Now do a full ownership audit of your project. Go through every file. Mark each function or component: green if you fully understand it, yellow if you mostly do, red if you couldn't explain it under pressure. Then take your red items back to AI one by one and work through them until they're green. Your goal before Day 66: no red in your codebase. A project you fully understand is a project you can confidently present, defend, and extend.",
+      "reflectionPrompt": "What would you do differently in your project if you knew you'd have to explain every line of code in a live interview?",
+      "myReflection": "",
+      "referenceLinks": [{"text": "How I use LLMs to help me write code — Simon Willison", "url": "https://simonwillison.net/2023/Mar/27/ai-enhanced-development/"}]
     }
   ]
 }
