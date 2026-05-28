@@ -4,8 +4,8 @@
     "user": "Bharath S",
     "cohort": "Cohort 0",
     "totalDays": 66,
-    "completedDays": 49,
-    "streak": 49
+    "completedDays": 50,
+    "streak": 50
   },
   "days": [
     {
@@ -693,6 +693,20 @@
       "reflectionPrompt": "What would \"good enough to share\" look like for your project — and are you there yet?",
       "myReflection": "",
       "referenceLinks": [{"text": "Fear of shipping — seths.blog", "url": "https://seths.blog/2010/06/fear-of-shipping/"}]
+    },
+    {
+      "day": 50,
+      "title": "Reflection: Week 7",
+      "theme": "Is your project live? Share the link. Celebrate what you shipped, even if it's small.",
+      "status": "completed",
+      "date": "2026-05-24",
+      "lesson": "This week's arc:\n\nYou shipped. Not someday. This week. Your project has a URL, a GitHub repository, a database, and environment variables that keep your secrets safe. You know what Git is, how deployment works, why domains matter, and how to push a change and watch it go live in under two minutes. Most people who say they want to build something never get here. You did.",
+      "whyItMatters": "Next week is Collaboration — the final foundation week. You'll learn how to work with other humans when AI is in the loop, how to review and own AI-generated code, and how to think about the ethics and responsibility of what you've built. Then it's Challenge Week. One week to build something end-to-end, ship it, and tell the world about it.\n\nSee you Monday.",
+      "buildTask": "Your Week 7 wins — take five minutes and write down:\n\n1. Your live project URL — write it down somewhere permanent\n2. One thing that broke during deployment and how you fixed it\n3. What your project needs to be ready for the challenge week",
+      "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nFifty days in. Do a full project retrospective. Open a blank doc and write three sections: what's working well, what's technically broken or rough, and what you would do differently if you started over. Then ask AI: \"Based on this retrospective, what should I prioritise in my final two weeks to have the strongest possible project by Day 66?\" A builder who reflects is a builder who compounds. Most people only look forward. The ones who look back get better faster.",
+      "reflectionPrompt": "Post one of these today:\n\n\"My project is live at [URL]. Here's what it does and what's still rough.\"\n\"The most satisfying moment this week was __ — because __.\"\n\"The thing I want to add in Week 8 before Challenge Week is _.\"",
+      "myReflection": "",
+      "referenceLinks": [{"text": "Weekly Call — Watch the Recording", "url": ""}]
     }
   ]
 }
