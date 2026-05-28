@@ -4,8 +4,8 @@
     "user": "Bharath S",
     "cohort": "Cohort 0",
     "totalDays": 66,
-    "completedDays": 50,
-    "streak": 50
+    "completedDays": 51,
+    "streak": 51
   },
   "days": [
     {
@@ -707,6 +707,20 @@
       "reflectionPrompt": "Post one of these today:\n\n\"My project is live at [URL]. Here's what it does and what's still rough.\"\n\"The most satisfying moment this week was __ — because __.\"\n\"The thing I want to add in Week 8 before Challenge Week is _.\"",
       "myReflection": "",
       "referenceLinks": [{"text": "Weekly Call — Watch the Recording", "url": ""}]
+    },
+    {
+      "day": 51,
+      "title": "Building With Others",
+      "theme": "How to work on the same codebase with another person. Branches, pull requests, code review basics.",
+      "status": "completed",
+      "date": "2026-05-25",
+      "lesson": "The Idea:\n\nMost real software is built by more than one person. And the moment more than one person touches a codebase, you need structure. Git branches are how this works. Instead of everyone writing to the same file, each person works on their own branch — a parallel copy of the project — and merges their changes back when ready. A pull request is the formal act of saying \"I've made changes, please review them before merging.\" Code review is someone else reading your code before it goes live. It catches bugs, spreads knowledge, and keeps quality high.",
+      "whyItMatters": "Even if you're building solo right now, understanding branches and pull requests means you can collaborate on any open source project, bring someone else into your project, and operate like a professional from day one.",
+      "buildTask": "Create a new branch in your project: git checkout -b day-51-experiment. Make one small change to your project on this branch. Commit it. Then create a pull request on GitHub — even if you're merging it yourself. Write a description of what you changed and why. Merge it. Share a screenshot of your merged pull request on WhatsApp.",
+      "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou created and merged a branch. Now find one woman in the cohort whose project interests you and ask her to review one file from your project — not as a developer, but as a user or a reader. Share the file, ask her: what is unclear, what feels fragile, what question does it leave unanswered? Then do the same for her. You've just done your first human code review. The combination of AI review and human review is the highest-quality feedback loop available to a solo builder.",
+      "reflectionPrompt": "What would change about how you build if you knew someone else would always read your code before it shipped?",
+      "myReflection": "",
+      "referenceLinks": [{"text": "Understanding GitHub flow — docs.github.com", "url": "https://docs.github.com/en/get-started/quickstart/github-flow"}]
     }
   ]
 }
