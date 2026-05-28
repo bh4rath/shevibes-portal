@@ -4,8 +4,8 @@
     "user": "Bharath S",
     "cohort": "Cohort 0",
     "totalDays": 66,
-    "completedDays": 51,
-    "streak": 51
+    "completedDays": 52,
+    "streak": 52
   },
   "days": [
     {
@@ -721,6 +721,20 @@
       "reflectionPrompt": "What would change about how you build if you knew someone else would always read your code before it shipped?",
       "myReflection": "",
       "referenceLinks": [{"text": "Understanding GitHub flow — docs.github.com", "url": "https://docs.github.com/en/get-started/quickstart/github-flow"}]
+    },
+    {
+      "day": 52,
+      "title": "Communicating Your Architecture",
+      "theme": "How to explain what you built and why. Diagrams, documentation, readme files. The builder as communicator.",
+      "status": "completed",
+      "date": "2026-05-26",
+      "lesson": "The Idea:\n\nA builder who can't explain what they've built is only half a builder. The other half is communication — the ability to describe your architecture clearly to someone who wasn't there when you made the decisions. A README is the front door of your project: what it does, why it exists, how to set it up, and how to contribute. A diagram shows how the pieces fit together. Good documentation is not a nice-to-have — it is the difference between a project that lives and one that dies the moment you stop working on it.",
+      "whyItMatters": "When you explain your project clearly, three things happen: you find the gaps in your own thinking, others can contribute, and your project becomes shareable — on LinkedIn, in job applications, in funding conversations. Documentation is how your work speaks when you're not in the room.",
+      "buildTask": "Write a README for your project. Include: what it does in one sentence, who it's for, how to set it up from scratch, what technologies it uses, and what you're planning to add next. Commit it to your GitHub repository as README.md. Share your GitHub link on WhatsApp — the README is now the first thing people see when they visit.",
+      "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYour README explains your project. Now draw its architecture diagram and add it to the README. Use any tool — Excalidraw, Figma, even a photograph of a paper sketch. Show the frontend, backend, database, and any external APIs. Label the arrows. Ask AI: \"Review this architecture diagram description: [describe it]. Is it accurate? What's missing? What would a senior developer ask about this design?\" A project with a clear diagram gets taken more seriously than one without. It shows you understand what you built.",
+      "reflectionPrompt": "If someone found your project on GitHub right now with no context, what would they understand — and what would confuse them?",
+      "myReflection": "",
+      "referenceLinks": [{"text": "How to write a great README — makeareadme.com", "url": "https://www.makeareadme.com"}]
     }
   ]
 }
