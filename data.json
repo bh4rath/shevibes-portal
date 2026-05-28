@@ -4,8 +4,8 @@
     "user": "Bharath S",
     "cohort": "Cohort 0",
     "totalDays": 66,
-    "completedDays": 52,
-    "streak": 52
+    "completedDays": 53,
+    "streak": 53
   },
   "days": [
     {
@@ -735,6 +735,20 @@
       "reflectionPrompt": "If someone found your project on GitHub right now with no context, what would they understand — and what would confuse them?",
       "myReflection": "",
       "referenceLinks": [{"text": "How to write a great README — makeareadme.com", "url": "https://www.makeareadme.com"}]
+    },
+    {
+      "day": 53,
+      "title": "AI in the Team",
+      "theme": "Working with humans when AI is also in the loop. When to show your AI-assisted work and how to own it.",
+      "status": "completed",
+      "date": "2026-05-27",
+      "lesson": "The Idea:\n\nWhen AI is part of how you build, collaboration gets more complicated. Your teammate might not know which parts of the code AI wrote and which parts you did. Your manager might not know how much of the output was AI-assisted. Your client might not know that the design was generated. None of this is inherently wrong — but it requires intentionality. The norm emerging in the best teams is transparency: you say which parts AI helped with, you take responsibility for all of it, and you use AI to raise the floor, not to hide the ceiling.",
+      "whyItMatters": "Trust in collaborative work is built on honesty. The builders and teams that will earn lasting trust are the ones who are clear about how they work — not the ones who pretend AI didn't help. Owning your AI-assisted work is a mark of confidence, not a confession.",
+      "buildTask": "Write a short personal policy for yourself — one paragraph — on how you'll use AI in collaborative work. When will you disclose it? How will you ensure you understand what AI built for you? What will you always do yourself? Share it on WhatsApp. It doesn't have to be perfect. It just has to be honest.",
+      "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou wrote your personal AI policy. Now take it to your actual workplace. Look at one real project or deliverable you're currently collaborating on with others. Ask yourself: where am I using AI in this work, and have I been transparent about it? Draft a message to your team or manager that introduces how you're working with AI — not defensively, but confidently. Ask AI to help you write it. The act of using AI to communicate your AI use policy is the most meta, and most honest, thing you can do today.",
+      "reflectionPrompt": "What would you want to know if someone on your team was using AI to contribute to a shared project?",
+      "myReflection": "",
+      "referenceLinks": [{"text": "Co-Intelligence: Living and Working with AI — Ethan Mollick", "url": "https://www.oneusefulthing.org"}]
     }
   ]
 }
