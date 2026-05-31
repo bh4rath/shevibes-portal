@@ -4,8 +4,8 @@
     "user": "Bharath S",
     "cohort": "Cohort 0",
     "totalDays": 66,
-    "completedDays": 55,
-    "streak": 55
+    "completedDays": 56,
+    "streak": 56
   },
   "days": [
     {
@@ -777,6 +777,20 @@
       "reflectionPrompt": "What is the most ethically significant decision you've made in your project — and would you make it the same way now?",
       "myReflection": "",
       "referenceLinks": [{"text": "AI Principles — ai.google", "url": "https://ai.google/responsibility/principles/"}]
+    },
+    {
+      "day": 56,
+      "title": "The Builder's Responsibility",
+      "theme": "What you build, you own. Impact, consequences, and the mindset of a conscious builder in the AI era.",
+      "status": "completed",
+      "date": "2026-05-30",
+      "lesson": "The Idea:\n\nYou have spent seven weeks learning to build. You can now create things that didn't exist before. Things that other people will use, interact with, rely on. That is power — and power without reflection is careless. The builder's responsibility is this: think about impact before you ship, not after. Who will use this? Who could misuse it? What happens if it breaks? What happens if it works exactly as designed — is that still good? The best builders hold these questions alongside the technical ones. Not to slow down, but to build better.",
+      "whyItMatters": "The world will remember what people built with AI in this era. The question is not whether you built something impressive — it's whether you built something worth building. You get to decide that. Every day. Starting now.",
+      "buildTask": "Write your builder's manifesto — a short, personal statement of what you commit to as someone who now builds with AI. Three to five sentences. What do you stand for? What will you never build? What will you always check before you ship? Share it on WhatsApp. Read everyone else's. This is who your cohort is.",
+      "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou wrote your manifesto. Now find one person in your life — outside the cohort — who is not technical and share it with them. Ask them: does this make you trust me as a builder? What would you add? What would you question? The people most affected by what builders make are often the least consulted. This conversation is a small act of that correction. Report back what you heard.",
+      "reflectionPrompt": "Eight weeks ago you came in overwhelmed. What kind of builder do you want to be — and what does that mean about what you'll do next?",
+      "myReflection": "",
+      "referenceLinks": [{"text": "Technology is Not Neutral — Stephanie Hare", "url": "https://stephaniehare.com"}]
     }
   ]
 }
