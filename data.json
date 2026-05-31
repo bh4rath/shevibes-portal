@@ -4,8 +4,8 @@
     "user": "Bharath S",
     "cohort": "Cohort 0",
     "totalDays": 66,
-    "completedDays": 56,
-    "streak": 56
+    "completedDays": 57,
+    "streak": 57
   },
   "days": [
     {
@@ -791,6 +791,20 @@
       "reflectionPrompt": "Eight weeks ago you came in overwhelmed. What kind of builder do you want to be — and what does that mean about what you'll do next?",
       "myReflection": "",
       "referenceLinks": [{"text": "Technology is Not Neutral — Stephanie Hare", "url": "https://stephaniehare.com"}]
+    },
+    {
+      "day": 57,
+      "title": "Reflection: Week 8",
+      "theme": "Who have you become over these 8 weeks? Share your biggest shift on WhatsApp.",
+      "status": "completed",
+      "date": "2026-05-31",
+      "lesson": "This week's arc:\n\nYou learned how to work with others — how to use branches and pull requests, how to document your work, how to be honest about AI in your process, how to own the code you ship, how to think ethically about what you build, and what it means to take responsibility for your work in the world. These are not soft skills. They are the skills that determine whether you build things that last and things that matter.",
+      "whyItMatters": "Challenge Week starts Monday. No curriculum. No prompts. No steps. Just you, your tools, and six days to build something end-to-end, ship it, write about it, and teach what you learned. This is what all eight weeks were for. See you on the other side.",
+      "buildTask": "Your Week 8 wins — take five minutes and write down:\n\n1. Your builder's manifesto — the version you're proud to put your name on\n2. The one ethical question your project still has open\n3. What you're building for Challenge Week — your clearest description yet",
+      "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nEight weeks of foundation. Before Challenge Week begins, do one final audit of your entire project from a collaboration lens. Ask AI: \"Review this project description: [describe yours]. If a new developer joined your team tomorrow, what would they need to know to contribute? What documentation is missing? What decisions need to be explained?\" Then write a 10-line \"project handoff note\" — as if you were handing this to someone else. The discipline of making your work legible to others is the discipline that makes your own thinking clearer. Challenge Week starts Monday. You are ready.",
+      "reflectionPrompt": "Post one of these today:\n\n\"My builder's manifesto: _.\"\n\"The hardest thing I grappled with this week was _ — and here's where I landed.\"\n\"Eight weeks of She Vibes has changed me in this way: _.\"",
+      "myReflection": "",
+      "referenceLinks": [{"text": "Weekly Call — Join the Zoom Call", "url": ""}]
     }
   ]
 }
