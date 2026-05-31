@@ -4,8 +4,8 @@
     "user": "Bharath S",
     "cohort": "Cohort 0",
     "totalDays": 66,
-    "completedDays": 54,
-    "streak": 54
+    "completedDays": 55,
+    "streak": 55
   },
   "days": [
     {
@@ -763,6 +763,20 @@
       "reflectionPrompt": "What would you do differently in your project if you knew you'd have to explain every line of code in a live interview?",
       "myReflection": "",
       "referenceLinks": [{"text": "How I use LLMs to help me write code — Simon Willison", "url": "https://simonwillison.net/2023/Mar/27/ai-enhanced-development/"}]
+    },
+    {
+      "day": 55,
+      "title": "Ethics in the Wild",
+      "theme": "Privacy, bias, misuse. Real questions builders face. Not hypothetical — things that will show up in your work.",
+      "status": "completed",
+      "date": "2026-05-29",
+      "lesson": "The Idea:\n\nEthics in building is not abstract. It shows up in specific, practical decisions. Does your app collect data it doesn't need? Does it work for people with disabilities? Does it make assumptions about users based on their gender, location, or language? Does it give AI the ability to make decisions that affect people's lives without human review? These are not philosophy questions — they are design questions. And they have answers. The best builders ask them early, not after something goes wrong.",
+      "whyItMatters": "As AI makes building faster and more accessible, the responsibility to build thoughtfully falls on more people. You are now one of those people. What you build matters. The choices you make in design and data have consequences in the real world.",
+      "buildTask": "Audit your project for three things: data privacy (what data are you collecting and do you need it all?), accessibility (can someone using a screen reader or a slow phone use your project?), and bias (does your project make any assumptions about who the user is?). Ask AI to help: \"Audit my project description for privacy, accessibility, and bias issues. Be specific.\" Share your most important finding on WhatsApp.",
+      "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou audited your project. Now write a public ethics statement for it — a short paragraph on your project's homepage or README that tells users how their data is handled, what AI does in your product, and what decisions are still made by humans. Ask AI to draft it, then rewrite it in your own voice. Publishing an ethics statement is rare at the indie builder level. It immediately signals that you build with intention. It also holds you accountable to it — which is the point.",
+      "reflectionPrompt": "What is the most ethically significant decision you've made in your project — and would you make it the same way now?",
+      "myReflection": "",
+      "referenceLinks": [{"text": "AI Principles — ai.google", "url": "https://ai.google/responsibility/principles/"}]
     }
   ]
 }
