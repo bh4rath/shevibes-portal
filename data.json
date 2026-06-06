@@ -4,8 +4,8 @@
     "user": "Bharath S",
     "cohort": "Cohort 0",
     "totalDays": 66,
-    "completedDays": 60,
-    "streak": 60
+    "completedDays": 61,
+    "streak": 61
   },
   "days": [
     {
@@ -845,6 +845,20 @@
       "buildTask": "Go through your project as if you were a user who has no idea how it's supposed to work. Click things in the wrong order. Submit empty forms. Use it on your phone. Use it on a slow connection. Try the things you assumed nobody would do.\n\nFor each thing that breaks, log it: what happened, what you expected, and whether it's a critical bug or something you can live with for now.\n\nThen prioritise. Fix the two or three things that would stop a real user from getting value from your project. Leave the cosmetic stuff for later.\n\nShare your bug list on WhatsApp — and which ones you fixed.",
       "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou tested it yourself. Now find two people who have never seen your project and ask them to use it for five minutes while you watch — silently. Don't explain anything. Don't help. Just observe where they hesitate, what they click first, what confuses them. Take notes. Then ask AI: \"Based on these observations: [describe what you saw], what are the top three UX improvements I should make before shipping?\" Real user observation in five minutes tells you more than a week of solo testing. Do it today while you still have time to fix things.",
       "reflectionPrompt": "What did your users find that you missed — and what does that tell you about what you assumed?",
+      "myReflection": "",
+      "referenceLinks": []
+    },
+    {
+      "day": 61,
+      "title": "Challenge: Fix It",
+      "theme": "Take what broke and fix it. Iterate, improve, refine. Your project gets better today.",
+      "status": "completed",
+      "date": "2026-06-04",
+      "lesson": "The challenge:\n\nYesterday you found the cracks. Today you fix them — and then you make the project better.\n\nA reminder about done: done is not the same as perfect. Done means it works, it does what it promises, and a real person can use it without help from you. If your project meets that bar — it's ready to ship tomorrow.",
+      "whyItMatters": "This is the day to move fast and close the gap between what your project is and what you said it would be. Use AI aggressively today — for debugging, for code suggestions, for design decisions.",
+      "buildTask": "Work through your priority bug list from yesterday. Fix what blocks users first. Then, with whatever time is left, add the one feature or improvement that would make the biggest difference to someone using your project.\n\nNot the most impressive feature. Not the one that would look best in a demo. The one that makes the experience meaningfully better for the person it's built for.\n\nShare an updated screenshot on WhatsApp. Show what changed.",
+      "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYour core bugs are fixed. Now invest an hour in something that will outlast the challenge week: write a proper test scenario document for your project. List ten things a user might do, and confirm each one works as expected. Ask AI: \"Based on this project description: [yours], write a QA checklist I can run through before every major update.\" Save it alongside your code. Every time you add a new feature from here on, run this checklist first. You've just built a quality practice, not just a quality product.",
+      "reflectionPrompt": "After fixing and improving today — are you proud of what you're about to ship? If not, what's the one thing still standing between you and proud?",
       "myReflection": "",
       "referenceLinks": []
     }
