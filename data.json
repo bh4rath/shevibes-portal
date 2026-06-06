@@ -4,8 +4,8 @@
     "user": "Bharath S",
     "cohort": "Cohort 0",
     "totalDays": 66,
-    "completedDays": 61,
-    "streak": 61
+    "completedDays": 62,
+    "streak": 62
   },
   "days": [
     {
@@ -859,6 +859,20 @@
       "buildTask": "Work through your priority bug list from yesterday. Fix what blocks users first. Then, with whatever time is left, add the one feature or improvement that would make the biggest difference to someone using your project.\n\nNot the most impressive feature. Not the one that would look best in a demo. The one that makes the experience meaningfully better for the person it's built for.\n\nShare an updated screenshot on WhatsApp. Show what changed.",
       "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYour core bugs are fixed. Now invest an hour in something that will outlast the challenge week: write a proper test scenario document for your project. List ten things a user might do, and confirm each one works as expected. Ask AI: \"Based on this project description: [yours], write a QA checklist I can run through before every major update.\" Save it alongside your code. Every time you add a new feature from here on, run this checklist first. You've just built a quality practice, not just a quality product.",
       "reflectionPrompt": "After fixing and improving today — are you proud of what you're about to ship? If not, what's the one thing still standing between you and proud?",
+      "myReflection": "",
+      "referenceLinks": []
+    },
+    {
+      "day": 62,
+      "title": "Challenge: Ship It",
+      "theme": "Deploy. Go live. Your project is now on the internet. Screenshot it, share it, own it.",
+      "status": "completed",
+      "date": "2026-06-05",
+      "lesson": "The challenge:\n\nToday you ship. Whatever state your project is in — it goes live today.\n\nWhat shipping means: shipping is not the end. It's the beginning. Version one exists. Now you can improve it, share it, get feedback, and build version two. The loop only starts when you ship. You just started the loop.",
+      "whyItMatters": "Version one exists. Now you can improve it, share it, get feedback, and build version two. The loop only starts when you ship.",
+      "buildTask": "Do a final deployment. Push your latest code to GitHub. Vercel will redeploy automatically. Check the live URL — does it work? Does it load? Does it do the core thing it promises?\n\nThen do three things:\n\n1. Share the URL — post your live project link in the WhatsApp group. No caveats, no \"it's not finished yet\", no apologies. Just the link and one sentence about what it does.\n\n2. Share it outside the group — send the URL to one person who isn't in She Vibes. Ask them to try it and tell you what they think.\n\n3. Screenshot this moment — you'll want to remember it.",
+      "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou shipped. Now write your version 2 backlog. Open a Notion page or a doc and list every feature, fix, and improvement you didn't get to this week. Prioritise the list: what would make the biggest difference to a real user? What would take less than an hour to add? What requires a new skill you don't have yet? Ask AI: \"Review this backlog: [paste it]. What should I build next, and what should I park for later?\" Version 2 starts today. Even if you don't build it until next month. The habit of shipping and then planning the next version is how solo products grow.",
+      "reflectionPrompt": "You said on Day 58 that done looks like three things. Are those three things true today? If not — which ones are, and what does that tell you about scope and planning for next time?",
       "myReflection": "",
       "referenceLinks": []
     }
