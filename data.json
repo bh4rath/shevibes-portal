@@ -4,8 +4,8 @@
     "user": "Bharath S",
     "cohort": "Cohort 0",
     "totalDays": 66,
-    "completedDays": 58,
-    "streak": 58
+    "completedDays": 59,
+    "streak": 59
   },
   "days": [
     {
@@ -819,6 +819,20 @@
       "reflectionPrompt": "Does your challenge brief excite you — or does it feel safe? If it feels safe, make it slightly harder.",
       "myReflection": "",
       "referenceLinks": [{"text": "Your Week 5 planning notes — trust the process", "url": ""}]
+    },
+    {
+      "day": 59,
+      "title": "Challenge: Build It",
+      "theme": "Build day one of your challenge project. No instructions, no tiers. Just you, your tools, and what you've learned.",
+      "status": "completed",
+      "date": "2026-06-02",
+      "lesson": "The challenge:\n\nToday you build. Not plan. Not prepare. Build.\n\nOpen your editor, your Zapier account, your Lovable project — whatever your stack is — and start. The goal for today is to have something working, however rough. A page that loads. A workflow that runs. A component that renders. Something real.",
+      "whyItMatters": "A reminder: you know how to do this. You've been building for three weeks. Trust what you've learned and keep moving forward.",
+      "buildTask": "Set a timer for 60 minutes. Build without stopping to research, without asking AI for explanations, without optimising. Just build. If you get stuck, ask AI for the specific fix, get unstuck, and keep moving. At the end of the 60 minutes, stop and assess: what exists now that didn't this morning?\n\nThe rule for today: a working rough version beats a perfect unfinished one. Always.\n\nShare a screenshot of what you built today on WhatsApp — even if it's ugly. Especially if it's ugly.",
+      "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nAfter your 60-minute build sprint, do a second one — but this time focus entirely on one thing that scares you in the project. The feature you've been avoiding. The integration you're not sure will work. The part you've been building around. Give it 45 minutes of focused attention with AI as your pair programmer. The things we avoid are almost always smaller than they feel. Find out today so you have the rest of the week to work with what you discover.",
+      "reflectionPrompt": "What surprised you about the build today — either harder or easier than you expected?",
+      "myReflection": "",
+      "referenceLinks": []
     }
   ]
 }
