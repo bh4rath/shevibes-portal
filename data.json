@@ -4,8 +4,8 @@
     "user": "Bharath S",
     "cohort": "Cohort 0",
     "totalDays": 66,
-    "completedDays": 59,
-    "streak": 59
+    "completedDays": 60,
+    "streak": 60
   },
   "days": [
     {
@@ -831,6 +831,20 @@
       "buildTask": "Set a timer for 60 minutes. Build without stopping to research, without asking AI for explanations, without optimising. Just build. If you get stuck, ask AI for the specific fix, get unstuck, and keep moving. At the end of the 60 minutes, stop and assess: what exists now that didn't this morning?\n\nThe rule for today: a working rough version beats a perfect unfinished one. Always.\n\nShare a screenshot of what you built today on WhatsApp — even if it's ugly. Especially if it's ugly.",
       "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nAfter your 60-minute build sprint, do a second one — but this time focus entirely on one thing that scares you in the project. The feature you've been avoiding. The integration you're not sure will work. The part you've been building around. Give it 45 minutes of focused attention with AI as your pair programmer. The things we avoid are almost always smaller than they feel. Find out today so you have the rest of the week to work with what you discover.",
       "reflectionPrompt": "What surprised you about the build today — either harder or easier than you expected?",
+      "myReflection": "",
+      "referenceLinks": []
+    },
+    {
+      "day": 60,
+      "title": "Challenge: Break It",
+      "theme": "Test it. Break it intentionally. Debug it. Find its limits. A builder who doesn't test doesn't ship.",
+      "status": "completed",
+      "date": "2026-06-03",
+      "lesson": "The challenge:\n\nToday you test your project by trying to break it. Not by accident — on purpose.\n\nThe testing mindset: a builder who never tests is not a builder — they're a guesser. Testing is how you find out whether what you built is what you intended. It takes courage to look for flaws in your own work. Do it anyway.",
+      "whyItMatters": "A builder who doesn't test doesn't ship. Testing is how you find out whether what you built is what you intended.",
+      "buildTask": "Go through your project as if you were a user who has no idea how it's supposed to work. Click things in the wrong order. Submit empty forms. Use it on your phone. Use it on a slow connection. Try the things you assumed nobody would do.\n\nFor each thing that breaks, log it: what happened, what you expected, and whether it's a critical bug or something you can live with for now.\n\nThen prioritise. Fix the two or three things that would stop a real user from getting value from your project. Leave the cosmetic stuff for later.\n\nShare your bug list on WhatsApp — and which ones you fixed.",
+      "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou tested it yourself. Now find two people who have never seen your project and ask them to use it for five minutes while you watch — silently. Don't explain anything. Don't help. Just observe where they hesitate, what they click first, what confuses them. Take notes. Then ask AI: \"Based on these observations: [describe what you saw], what are the top three UX improvements I should make before shipping?\" Real user observation in five minutes tells you more than a week of solo testing. Do it today while you still have time to fix things.",
+      "reflectionPrompt": "What did your users find that you missed — and what does that tell you about what you assumed?",
       "myReflection": "",
       "referenceLinks": []
     }
