@@ -4,8 +4,8 @@
     "user": "Bharath S",
     "cohort": "Cohort 0",
     "totalDays": 66,
-    "completedDays": 62,
-    "streak": 62
+    "completedDays": 63,
+    "streak": 63
   },
   "days": [
     {
@@ -873,6 +873,20 @@
       "buildTask": "Do a final deployment. Push your latest code to GitHub. Vercel will redeploy automatically. Check the live URL — does it work? Does it load? Does it do the core thing it promises?\n\nThen do three things:\n\n1. Share the URL — post your live project link in the WhatsApp group. No caveats, no \"it's not finished yet\", no apologies. Just the link and one sentence about what it does.\n\n2. Share it outside the group — send the URL to one person who isn't in She Vibes. Ask them to try it and tell you what they think.\n\n3. Screenshot this moment — you'll want to remember it.",
       "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou shipped. Now write your version 2 backlog. Open a Notion page or a doc and list every feature, fix, and improvement you didn't get to this week. Prioritise the list: what would make the biggest difference to a real user? What would take less than an hour to add? What requires a new skill you don't have yet? Ask AI: \"Review this backlog: [paste it]. What should I build next, and what should I park for later?\" Version 2 starts today. Even if you don't build it until next month. The habit of shipping and then planning the next version is how solo products grow.",
       "reflectionPrompt": "You said on Day 58 that done looks like three things. Are those three things true today? If not — which ones are, and what does that tell you about scope and planning for next time?",
+      "myReflection": "",
+      "referenceLinks": []
+    },
+    {
+      "day": 63,
+      "title": "Challenge: Write About It",
+      "theme": "Write a LinkedIn post about what you built. What was it? What did you learn? What surprised you? Post it.",
+      "status": "completed",
+      "date": "2026-06-06",
+      "lesson": "The challenge:\n\nToday you write your LinkedIn post. This is not optional. This is part of the challenge.\n\nYour post has five parts:\n\n1. The hook — one sentence that makes someone stop scrolling. Not \"I'm proud to share...\" — something specific. \"I spent 66 days learning to build with AI. Here's what I made.\"\n\n2. The story — two to three sentences. What did you build? Who is it for? What problem does it solve?\n\n3. The learning — one to two sentences. What was the hardest thing? What surprised you?\n\n4. The link — your live project URL. No apologies.\n\n5. The thanks — one sentence crediting She Vibes, PiFo, your cohort.",
+      "whyItMatters": "Sixty-five women in your cohort posting on LinkedIn about what they built is sixty-five pieces of evidence that women build with AI. That evidence matters. Post it.",
+      "buildTask": "Use AI to help you draft your LinkedIn post using the five-part structure. Then rewrite it in your own voice. Then post it.\n\nTag #SheVibes #PiFo #BuildWithAI\n\nShare the post link on WhatsApp when it's live.",
+      "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou wrote one post. Now write a second, shorter one — a thread or a standalone note — about the specific role AI played in your build. Not the tools you used, but the moments. The time AI unstuck you at 11pm. The prompt that unlocked the whole architecture. The debugging session that saved two hours. Concrete, specific, honest. These micro-stories are more useful to other builders than any tutorial. You have them. Share them. Ask AI to help you pull the best three moments from your build diary or memory and shape them into a post worth reading.",
+      "reflectionPrompt": "What felt vulnerable about posting publicly — and did you post anyway?",
       "myReflection": "",
       "referenceLinks": []
     }
