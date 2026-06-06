@@ -4,8 +4,8 @@
     "user": "Bharath S",
     "cohort": "Cohort 0",
     "totalDays": 66,
-    "completedDays": 57,
-    "streak": 57
+    "completedDays": 58,
+    "streak": 58
   },
   "days": [
     {
@@ -805,6 +805,20 @@
       "reflectionPrompt": "Post one of these today:\n\n\"My builder's manifesto: _.\"\n\"The hardest thing I grappled with this week was _ — and here's where I landed.\"\n\"Eight weeks of She Vibes has changed me in this way: _.\"",
       "myReflection": "",
       "referenceLinks": [{"text": "Weekly Call — Join the Zoom Call", "url": ""}]
+    },
+    {
+      "day": 58,
+      "title": "Challenge: Plan It",
+      "theme": "Pick one thing to build end-to-end. Plan it fully — architecture, tools, timeline. Write it up and share.",
+      "status": "completed",
+      "date": "2026-06-01",
+      "lesson": "The challenge:\n\nThis week is yours. No curriculum. No template. No guided steps. You have six days to build something end-to-end — plan it, build it, break it, fix it, ship it, and tell the world about it. Today is planning day.\n\nDecide what you're building for Challenge Week. It can be your existing project taken further, or something brand new. It must be small enough to ship in five days and meaningful enough to be proud of.\n\nWrite your challenge brief:\n\nWhat I'm building: One sentence — what does it do?\n\nWho it's for: One sentence — who uses it and why do they care?\n\nWhat done looks like: Three bullet points — what will exist by Friday that doesn't exist today?\n\nMy biggest risk: One sentence — what could stop me?\n\nMy mitigation: One sentence — what's my plan if that happens?",
+      "whyItMatters": "Share your brief on WhatsApp before noon today. The cohort will hold you to it.",
+      "buildTask": "Write your challenge brief and share it on WhatsApp before noon. Commit to what you're building, who it's for, what done looks like, your biggest risk, and your mitigation plan.",
+      "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYour challenge brief is written. Now make it public before you start building. Post it on LinkedIn or Twitter — not as a finished thing, but as a commitment. \"I'm spending this week building [X]. Here's what I'm starting with and what done looks like by Friday.\" Tag She Vibes and PiFo. Public commitments have a different gravity than private ones. You'll feel it the moment you hit post. That feeling is accountability working. Use it.",
+      "reflectionPrompt": "Does your challenge brief excite you — or does it feel safe? If it feels safe, make it slightly harder.",
+      "myReflection": "",
+      "referenceLinks": [{"text": "Your Week 5 planning notes — trust the process", "url": ""}]
     }
   ]
 }
