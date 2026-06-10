@@ -4,8 +4,8 @@
     "user": "Bharath S",
     "cohort": "Cohort 0",
     "totalDays": 66,
-    "completedDays": 63,
-    "streak": 63
+    "completedDays": 64,
+    "streak": 64
   },
   "days": [
     {
@@ -887,6 +887,20 @@
       "buildTask": "Use AI to help you draft your LinkedIn post using the five-part structure. Then rewrite it in your own voice. Then post it.\n\nTag #SheVibes #PiFo #BuildWithAI\n\nShare the post link on WhatsApp when it's live.",
       "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou wrote one post. Now write a second, shorter one — a thread or a standalone note — about the specific role AI played in your build. Not the tools you used, but the moments. The time AI unstuck you at 11pm. The prompt that unlocked the whole architecture. The debugging session that saved two hours. Concrete, specific, honest. These micro-stories are more useful to other builders than any tutorial. You have them. Share them. Ask AI to help you pull the best three moments from your build diary or memory and shape them into a post worth reading.",
       "reflectionPrompt": "What felt vulnerable about posting publicly — and did you post anyway?",
+      "myReflection": "",
+      "referenceLinks": []
+    },
+    {
+      "day": 64,
+      "title": "Challenge: Teach It",
+      "theme": "Explain one thing you learned to someone who wasn't in this cohort. Teaching is the final proof of understanding.",
+      "status": "completed",
+      "date": "2026-06-07",
+      "lesson": "You know something now that you didn't know 64 days ago. Today you teach it to someone who doesn't know it yet.",
+      "whyItMatters": "Teaching is the final test of understanding. If you can explain it clearly to someone who knows nothing, you own it. If you can't, you know exactly what to go back and learn more deeply. Either way, you win.\n\nAnd the person you taught today? They started their journey because of you.",
+      "buildTask": "Find one person — a friend, a sister, a colleague, anyone — who feels the way you felt on Day 1: overwhelmed, confused, like AI is happening to them and they have no control over it. Spend 20 minutes with them. Teach them one thing you've learned. It can be the simplest thing — how to write a better prompt, what a token is, how to debug with AI. It doesn't need to be your most sophisticated insight. It needs to be the thing that would have helped them most if someone had told them 64 days ago.\n\nThen share what you taught and their reaction on WhatsApp.",
+      "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou taught one person. Now create something that teaches many. Write a 5-point guide — \"Five things I wish I knew before I started building with AI\" — based entirely on your personal experience over these 64 days. Not generic advice. Yours. The mistakes, the breakthroughs, the moments that changed how you think. Ask AI to help you structure it, then rewrite every point in your own voice. Publish it — on LinkedIn, on a personal blog, as a Notion page you share publicly. This is your first piece of original thought leadership as a builder. It didn't exist before She Vibes. Now it does.",
+      "reflectionPrompt": "What happened when you tried to explain something you've learned — did you find you understood it better than you thought, or did you find gaps you didn't know were there?",
       "myReflection": "",
       "referenceLinks": []
     }
