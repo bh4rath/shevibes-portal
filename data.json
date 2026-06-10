@@ -4,8 +4,8 @@
     "user": "Bharath S",
     "cohort": "Cohort 0",
     "totalDays": 66,
-    "completedDays": 64,
-    "streak": 64
+    "completedDays": 65,
+    "streak": 65
   },
   "days": [
     {
@@ -901,6 +901,20 @@
       "buildTask": "Find one person — a friend, a sister, a colleague, anyone — who feels the way you felt on Day 1: overwhelmed, confused, like AI is happening to them and they have no control over it. Spend 20 minutes with them. Teach them one thing you've learned. It can be the simplest thing — how to write a better prompt, what a token is, how to debug with AI. It doesn't need to be your most sophisticated insight. It needs to be the thing that would have helped them most if someone had told them 64 days ago.\n\nThen share what you taught and their reaction on WhatsApp.",
       "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nYou taught one person. Now create something that teaches many. Write a 5-point guide — \"Five things I wish I knew before I started building with AI\" — based entirely on your personal experience over these 64 days. Not generic advice. Yours. The mistakes, the breakthroughs, the moments that changed how you think. Ask AI to help you structure it, then rewrite every point in your own voice. Publish it — on LinkedIn, on a personal blog, as a Notion page you share publicly. This is your first piece of original thought leadership as a builder. It didn't exist before She Vibes. Now it does.",
       "reflectionPrompt": "What happened when you tried to explain something you've learned — did you find you understood it better than you thought, or did you find gaps you didn't know were there?",
+      "myReflection": "",
+      "referenceLinks": []
+    },
+    {
+      "day": 65,
+      "title": "Challenge: Reflect on the Journey",
+      "theme": "Day 1 you vs Day 65 you. Write the before and after. Not just what you learned — who you became.",
+      "status": "completed",
+      "date": "2026-06-08",
+      "lesson": "Tomorrow is the last day. Today you look back.",
+      "whyItMatters": "Tomorrow is the last day of She Vibes. But it is not the end of building. You have a live project, a GitHub profile, a set of skills, a cohort of women who built alongside you, and a completely different relationship with technology than you had 65 days ago. That doesn't go away tomorrow. It compounds.",
+      "buildTask": "Write your before and after. Not a summary — a contrast. Who were you on April 5th, and who are you today? What did you believe about AI that turned out to be wrong? What did you build that you didn't think you could? What did you discover about how you learn?\n\nUse this structure:\n\nBefore She Vibes, I thought:\n___\n\nNow I know:\n___\n\nBefore She Vibes, I couldn't:\n___\n\nNow I can:\n___\n\nBefore She Vibes, I felt:\n___\n\nNow I feel:\n___\n\nWrite it for yourself first. Then share the version you're comfortable sharing on WhatsApp.",
+      "stretchTask": "Stretch — push yourself further\n\nOptional. For those who want to go beyond the byte.\n\nGo back and read your Day 1 reflection — the one sentence you wrote about your relationship with AI. Read it carefully. Then write a new sentence today: your Day 65 version. Put them side by side. Share both on WhatsApp without commentary — just the before and after. Let the distance speak for itself. That gap between those two sentences is 65 days of showing up. It is evidence of what consistent small effort produces. Keep it somewhere you can find it when you doubt yourself next time.",
+      "reflectionPrompt": "What is the most important thing She Vibes changed about how you see yourself — not just as a builder, but as a person navigating the AI era?",
       "myReflection": "",
       "referenceLinks": []
     }
